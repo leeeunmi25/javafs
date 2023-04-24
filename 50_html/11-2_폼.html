@@ -8,22 +8,33 @@
 </head>
 <body>
     <h1>폼</h1>
+    <!-- 목록 선택만 가능 -->
     <select name="" id="">
         <optgroup label="프론트엔드">
-            <option value="">HTML</option>
-            <option value="">CSS</option>
-            <option value="">JavaScript</option>
-            <option value="">JQuery</option>
-            <option value="">Vue.js</option>
-            <option value="">React</option>
-            <option value="">TypeScript</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="jquery">JQuery</option>
+            <option value="vue.js">Vue.js</option>
+            <option value="react">React</option>
+            <option value="typescript">TypeScript</option>
         </optgroup>
         <optgroup label="백엔드">
-            <option value="">Java</option>
-            <option value="">MySQL</option>
+            <option value="java">Java</option>
+            <option value="mysql">MySQL</option>
         </optgroup>
     </select>   
     
-    
+    <!-- 선택 및 입력 가능 목록 가능 -->
+    <!-- datalist의 id 속성과 input의 list 속성의 값이 같아야 한다. -->
+    <input type="text" list="lang" name="lang">
+    <datalist id="lang" >
+        <option value="html">
+        <option value="css">
+        <option value="javascript">
+        <option value="jquery">
+        <option value="vue.js">
+    </datalist>
+
 </body>
 </html>
