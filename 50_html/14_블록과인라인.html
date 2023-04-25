@@ -15,28 +15,36 @@
             1) 위에서 아래로 배치(세로 배치)
             2) 와이어 프레임 구현은 블록레벨요소로 한다. 
             3) 블록레벨요소는 블록레벨요소와 인라인요소를 자식으로 가질수 있다.
-            div, header, nav, section, article, aside, footer, address, h1~h6, p, hr, ur, ul, ol, li, dl, dt, dd, blocquote, address, form, fieldset, table, thead, tbody, tfoot, ...
+            4) div, header, nav, section, article, aside, footer, address, h1~h6, p, hr, ur, ul, ol, li, dl, dt, dd, blocquote, address, form, fieldset, table, thead, tbody, tfoot, ...
         2.인라인요소:
             1) 왼쪽에서 오른쪽으로 배치(가로 배치)
             2) 인라인요소는 블록레벨요소를 자식으로 가질 수 없다. 
                 (단, a태그는 예외) 
-            span, b, strong, i, em, mark, small, sup, sub, ins, del, img, a, br, q, abbr, cite, input, label, textarea, select, button, ...
+            3) span, b, strong, i, em, mark, small, sup, sub, ins, del, img, a, br, q, abbr, cite, input, label, textarea, select, button, ...
      -->
 
     <h2>블록 레벨 요소</h2>
-    <div>div1</div>
-    <header>header</header>
-    <nav>nav</nav>
-    <main>main</main>
-    <section>section</section>
-    <footer>footer</footer>
+    <div>
+        <div>div1</div>
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <section>
+            <h2>제목</h2>
+        </section>
+        <footer>footer</footer>
+    </div>
     
+
     <h2>인라인 요소</h2>
-    <span>span1</span>
-    <a href="#"></a>
-    <b>b</b>
-    <i>i</i>
-    <input type="text">
-    <laber for="label"></laber>   
+    <span>
+        <span>span</span>
+        <a href="#">a</a>
+        <b>b</b>
+        <i>i</i>
+        <input type="text" id="aaa">
+        <laber for="aaa">label</laber> 
+    </span>
+      
 </body>
 </html>
