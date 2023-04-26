@@ -24,22 +24,48 @@
             홀수: 2n-1 또는 odd
         */
 
+        p:first-of-type {color: red;}
+       p:nth-of-type(1) {color: blue;}
+       p:nth-of-type(2) {color: blue;}
+       /* n은 1,2,3,4, ... */
+       /* 2 * n -> 2,4,6,8, ... */
+       /* 3 * n -> 3,6,9,12, ... */
+       p:nth-of-type(3n-1) {color: blue;}
+        /* nth-of-type는 위에서 아래로 센다. */
+        /* nth-last-of-type는 아래에서 위로 센다 */
+       p:last-of-type {color: orange;}
+       p:nth-of-type(12) {color: brown;}
+       p:nth-last-of-type(1) {color: aqua}
+
+       div p:nth-of-type(2) {background-color: yellow;}
+
     </style>
 </head>
 <body>
-    <h1>의사 클래스 선택자</h1>
-    <h2>~of-type</h2>
-    <p>1 번째 요소입니다.</p>
-    <p>2 번째 요소입니다.</p>
-    <p>3 번째 요소입니다.</p>
-    <p>4 번째 요소입니다.</p>
-    <p>5 번째 요소입니다.</p>
-    <p>6 번째 요소입니다.</p>
-    <p>7 번째 요소입니다.</p>
-    <p>8 번째 요소입니다.</p>
-    <p>9 번째 요소입니다.</p>
-    <p>10 번째 요소입니다.</p>
+    <h1>의사 클래스 선택자 - 1번째 요소</h1>
+    <div>
+        <h2>~of-type - 2번째 요소</h2>
+        <p>3 번째 요소입니다.</p>
+        <p>4 번째 요소입니다.</p>
+        <p>5 번째 요소입니다.</p>
+        <p>6 번째 요소입니다.</p>
+    </div>
+
+    <div>
+        <h2>~of-type - 2번째 요소</h2>
+        <p>7 번째 요소입니다.</p>
+        <p>8 번째 요소입니다.</p>
+        <p>9 번째 요소입니다.</p>
+        <p>10 번째 요소입니다.</p>
+    </div>
+
+  
+    <h2>~of-type - 2번째 요소</h2>
     <p>11 번째 요소입니다.</p>
     <p>12 번째 요소입니다.</p>
+    <p>13 번째 요소입니다.</p>
+    <p>14 번째 요소입니다.</p>
+    
+   
 </body>
 </html>
