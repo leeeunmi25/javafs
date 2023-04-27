@@ -40,9 +40,9 @@
             box-shadow: 5px 10px;
         }
 
-        /* (2) .bs2의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 색상을 #888로 지정하시오. */
-        .bs2 {
-            box-shadow: 5px 10px #888;
+        /* (2) .bs2의 마우스 호버 시 박스 그림자를 가로 위치 0px, 세로 위치 0px, 흐림효과 5px 색상을 반투명 빨강으로 지정하시오. */
+        .bs2:hover {
+            box-shadow: 0px 0px 5px rgba(255,0,0,0.5);
         }
 
         /* (3) .bs3의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 흐림 정도를 8px, 색상을 #888로 지정하시오. */
@@ -64,6 +64,10 @@
         .bs6 {
             box-shadow: 5px 5px 5px #aaa inset;
         }
+
+        .bs7 {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        }
     </style>
 </head>
 <body>
@@ -74,5 +78,6 @@
     <div class="bs4">box-shadow</div>
     <div class="bs5">box-shadow</div>
     <div class="bs6">box-shadow</div>
+    <div class="bs7">box-shadow</div>
 </body>
 </html>
