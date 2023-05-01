@@ -11,23 +11,25 @@
             width: 100px;
             height: 100px;
             background-color: gray;
-        }
+        }   
 
         .container {
             display: flex;
+            flex-direction: row;
+            outline: 1px solid lime;
         }
 
-        /* (1) .fldr에 방향을 row로 지정하시오. */
+        /* (1) .fldr에 방향을 row(행, 가로, 왼쪽->오른쪽)로 지정하시오. (기본값) */
+        .fldr {flex-direction: row;}
 
+        /* (2) .fldc에 방향을 column(열, 세로 위->아래)로 지정하시오. */
+        .fldc {flex-direction: column;}
 
-        /* (2) .fldc에 방향을 column로 지정하시오. */
+        /* (3) .fldrr에 방향을 row-reverse(거꾸로, 역방향, 오른쪽->왼쪽)로 지정하시오. */
+        .fldrr {flex-direction: row-reverse;}
 
-
-        /* (3) .fldrr에 방향을 row-reverse로 지정하시오. */
-
-
-        /* (4) .fldcr에 방향을 column-reverse로 지정하시오. */
-
+        /* (4) .fldcr에 방향을 column-reverse(아래->위)로 지정하시오. */
+        .fldcr {flex-direction: column-reverse;}
 
     </style>
 </head>
