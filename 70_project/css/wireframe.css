@@ -15,7 +15,7 @@ section > p {
 }
 /* 블록레벨요소의 가로 가운데 배치 */
 .container {
-    width: 960;
+    width: 960px;
     margin: 0 auto;
 }
 
@@ -32,8 +32,14 @@ nav {
 }
 
 /* section2 */
+.number {
+    height: 135px;
+    background: darkorange;
+}
     
 /* section3 */
+
+
 /* section4 */
 
 /* footer */
