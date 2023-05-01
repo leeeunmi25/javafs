@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* reset */
+* {
+    margin: 0;
+}
+
+/* common */
+h2 {
+    height: 135px;
+    background: chartreuse;
+}     
+section > p {
+    height: 54px;
+    background: darkcyan;
+}
+/* 블록레벨요소의 가로 가운데 배치 */
+.container {
+    width: 960;
+    margin: 0 auto;
+}
+
+/* header */
+nav {
+    height: 54px;
+    background: antiquewhite
+}
+
+/* section1 */
+#home {
+    height: 1053px;
+    background: brown;
+}
+
+/* section2 */
+    
+/* section3 */
+/* section4 */
+
+/* footer */

@@ -5,16 +5,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.clearfix::after {
-    content:'';
-    clear:both;
-    display: block;
-}
-/* header::after contents::after footer::after { 
-    content:'';
-    clear:both;
-    display: block;
-} */
 
 /* 공통 */
 #wrap {
@@ -23,8 +13,8 @@
     margin: 0 auto;
     /* background: yellow;  */
 }
-.logo, nav, #contents div, footer div {
-    float: left;
+header, #contents, footer {
+    display:flex;
 }
 
 /* 헤더 */
