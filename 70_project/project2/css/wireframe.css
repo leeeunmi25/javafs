@@ -1,0 +1,57 @@
+
+@charset "utf-8";
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #000;
+    background: #fff;
+}
+a {
+    color:#000
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 54px;
+    padding: 0 32px;
+    background: #777;
+}
+.logo {
+    float: left;
+}
+nav {
+    float: right;
+}
+nav li {
+    display: inline-block;
+}
+
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
+
+/* section1 */
+#main_img {
+    position: relative;
+}
+#main_img2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #555;
+    padding: 8px, 24px;
+}
+/* section2 */
+/* section3 */
+/* section4 */
