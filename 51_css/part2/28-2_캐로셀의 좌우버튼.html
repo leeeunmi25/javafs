@@ -6,13 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        
+        /* body * {outline: 1px solid lime;} */
+        .parent {
+            position: relative;
+            height: 500px;
+            background: lightblue;
+        }
+        /* position:absoulte로 지정하면 width: 콘텐츠 크기;*/
+        /* position:relative로 지정하면 width: 100%;*/
+        /* position:relative; 자기자신 자리는 차지하고 있다. */
+        .controls {
+            position: absolute;
+            width: 100%;
+            height: 78px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .controls a {
+            position: absolute; 
+            transform: translateX(-50%);
+        }
+
+        /* calc(값1 연산자 값2) */
+        /* 산술연산자: + - * / */
+        /* 연산자와 피연산자 (값1, 값2) 사이는 한 칸 공백으로 띄운다. */
+        #prev {left: calc(50% - 480px);}
+        #next {left: calc(50% + 480px);}
     </style>
 </head>
 <body>
-    <h1>부모 요소에 자식 요소의 정중앙 배치</h1>
+    <h1>캐로셀(carousel)의 좌우버튼 배치</h1>
     <div class="parent">
-        <div>정중앙 배치</div>
+        <div class="controls">
+            <a href="#" id="prev"><img src="../assets/btn_slide_prev.png" alt="btn_slide_prev"></a>
+            <a href="#" id="next"><img src="../assets/btn_slide_next.png" alt="btn_slide_next"></a>
+        </div>
+        <div class="pager">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+        </div>
     </div>
 </body>
 </html>
