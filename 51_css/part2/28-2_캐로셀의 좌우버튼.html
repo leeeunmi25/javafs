@@ -7,9 +7,9 @@
     <title>HTML+CSS</title>
     <style>
         /* body * {outline: 1px solid lime;} */
-        .parent {
+        .carousel {
             position: relative;
-            height: 500px;
+            height: 700px;
             background: lightblue;
         }
         /* position:absoulte로 지정하면 width: 콘텐츠 크기;*/
@@ -33,17 +33,37 @@
         /* 연산자와 피연산자 (값1, 값2) 사이는 한 칸 공백으로 띄운다. */
         #prev {left: calc(50% - 480px);}
         #next {left: calc(50% + 480px);}
+
+        .pager {
+            position: absolute;
+            left: 50px;
+            transform: translateX(-50%);
+            bottom: 100px;
+        }
+        .pager a {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 8px;
+            border-radius: 50%;
+            background: black;
+            /* 짧은 텍스트를 숨기기 */
+            text-indent: -9999em;
+        }
+        .pager a.avtive{
+            background: red;
+        }
     </style>
 </head>
 <body>
     <h1>캐로셀(carousel)의 좌우버튼 배치</h1>
-    <div class="parent">
+    <div class="carousel">
         <div class="controls">
             <a href="#" id="prev"><img src="../assets/btn_slide_prev.png" alt="btn_slide_prev"></a>
             <a href="#" id="next"><img src="../assets/btn_slide_next.png" alt="btn_slide_next"></a>
         </div>
         <div class="pager">
-            <a href="#">1</a>
+            <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
         </div>
