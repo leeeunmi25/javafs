@@ -7,7 +7,176 @@
     <title>Bose_이은미</title>
     <link rel="stylesheet" href="css/wireframe_bose.css">
     <style>
-        /* css 내용 */
+    @charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    background: #fff;
+}
+
+a {
+    color: #000
+}
+
+/* 목록의 마커 제거 */
+li {
+    list-style: none;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 54px;
+    padding: 0 32px;
+    background: #777;
+}
+
+.logo {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+}
+
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 81px;
+}
+
+.section h2 {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section h2+p {
+    margin-bottom: 32px;
+}
+
+/* section1 */
+#main_img {
+    position: relative;
+    border: 1px #000 solid;
+}
+
+#main_img2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #555;
+    padding: 8px, 24px;
+}
+
+/* section2 ,3 common*/
+#Product li,
+#Emplyee li {
+    float: left;
+    width: 362px;
+    border: 1px #000 solid;
+}
+
+#Product ul::after,
+#Emplyee ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#Product li:not(:nth-of-type(4n)),
+#Emplyee li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+/* section2 */
+#Product h2 {
+    margin-bottom: 48px;
+}
+
+#Product h3 {
+    position: relative;
+}
+
+#Product h3 {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px;
+}
+
+/* section3 */
+#Emplyee li h3 {
+    margin: 16px 0 8px;
+   
+}
+
+#Emplyee li p {
+    margin: 8px 0;
+}
+
+#Emplyee  a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 8px, 0;
+    border: 1px #000 solid;
+}
+
+/* section4 */
+#contact input {
+    display: block;
+    margin: 10px 0;
+}
+
+#contact input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}       
+
+#contact button {
+    background: #000;
+    color: #fff;
+    display: block;
+    height: 30px;
+    margin: 40px 0;
+    text-align: center;
+    padding: 10px 25px 25px;
+}
+
+/* footer */
+footer {
+    height: 81px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 32px;
+}
     </style>
 </head>
 <body>
