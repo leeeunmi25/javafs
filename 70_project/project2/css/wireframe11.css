@@ -103,6 +103,10 @@ section {
     display: block;
     margin: 10px 0;
 } 
+#contact input + button {
+    background: black;
+    color: white;
+}
 
 /* footer */
 footer {
