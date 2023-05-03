@@ -99,6 +99,10 @@ section {
     padding: 8px, 0;
 }
 /* section4 */
+#contact input {
+    display: block;
+    margin: 10px 0;
+} 
 
 /* footer */
 footer {
