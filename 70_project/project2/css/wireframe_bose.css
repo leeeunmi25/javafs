@@ -67,6 +67,7 @@ section {
 /* section1 */
 #main_img {
     position: relative;
+    border: 1px #000 solid;
 }
 
 #main_img2 {
@@ -75,7 +76,7 @@ section {
     top: 50%;
     transform: translate(-50%, -50%);
     background: #555;
-    padding: 8px, 24px;  
+    padding: 8px, 24px;
 }
 
 /* section2 ,3 common*/
@@ -83,6 +84,7 @@ section {
 #Emplyee li {
     float: left;
     width: 362px;
+    border: 1px #000 solid;
 }
 
 #Product ul::after,
@@ -118,6 +120,7 @@ section {
 /* section3 */
 #Emplyee li h3 {
     margin: 16px 0 8px;
+   
 }
 
 #Emplyee li p {
@@ -129,6 +132,7 @@ section {
     background: #ccc;
     text-align: center;
     padding: 8px, 0;
+    border: 1px #000 solid;
 }
 
 /* section4 */
