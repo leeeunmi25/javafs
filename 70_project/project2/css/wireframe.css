@@ -1,20 +1,24 @@
 @charset "utf-8";
+
 /* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     color: #000;
     background: #fff;
 }
+
 a {
-    color:#000
+    color: #000
 }
+
 /* 목록의 마커 제거 */
 li {
-    list-style:none;
+    list-style: none;
 }
 
 /* header */
@@ -27,12 +31,15 @@ header {
     padding: 0 32px;
     background: #777;
 }
+
 .logo {
     float: left;
 }
+
 nav {
     float: right;
 }
+
 nav li {
     display: inline-block;
 }
@@ -42,63 +49,112 @@ section {
     width: 1496px;
     margin: 0 auto;
 }
+
 .section {
     padding-top: 81px;
 }
+
 .section h2 {
     margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid #ccc;
 }
-.section h2 + p {
+
+.section h2+p {
     margin-bottom: 32px;
 }
+
 /* section1 */
 #main_img {
     position: relative;
 }
+
 #main_img2 {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     background: #555;
-    padding: 8px, 24px;
+    padding: 8px, 24px;  
 }
+
 /* section2 ,3 common*/
-#menu li, #event li{
+#house li,
+#about li {
     float: left;
     width: 362px;
 }
 
-#menu ul::after, #event ul::after {
+#house ul::after,
+#about ul::after {
     content: '';
     clear: both;
     display: block;
 }
 
-#menu li:not(:nth-of-type(4n)), #event li:not(:nth-of-type(4n)) {
+#house li:not(:nth-of-type(4n)),
+#about li:not(:nth-of-type(4n)) {
     margin-right: 16px;
+    margin-bottom: 16px;
 }
 
 /* section2 */
-#menu h2 {
+#house h2 {
     margin-bottom: 48px;
 }
+
+#house h3 {
+    position: relative;
+}
+
+#house h3 {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px;
+}
+
 /* section3 */
-#event li h3 {
+#about li h3 {
     margin: 16px 0 8px;
 }
-#event li p {
+
+#about li p {
     margin: 8px 0;
 }
-#event a {
+
+#about a {
     display: block;
     background: #ccc;
     text-align: center;
     padding: 8px, 0;
 }
+
 /* section4 */
+#contact input {
+    display: block;
+    margin: 10px 0;
+}
+
+#contact input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}       
+
+#contact button {
+    background: #000;
+    color: #fff;
+    display: block;
+    height: 30px;
+    margin: 40px 0;
+    text-align: center;
+    padding: 10px 25px 25px;
+}
 
 /* footer */
 footer {
