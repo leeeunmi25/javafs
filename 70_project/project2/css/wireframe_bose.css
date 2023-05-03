@@ -79,35 +79,35 @@ section {
 }
 
 /* section2 ,3 common*/
-#house li,
-#about li {
+#Product li,
+#Emplyee li {
     float: left;
     width: 362px;
 }
 
-#house ul::after,
-#about ul::after {
+#Product ul::after,
+#Emplyee ul::after {
     content: '';
     clear: both;
     display: block;
 }
 
-#house li:not(:nth-of-type(4n)),
-#about li:not(:nth-of-type(4n)) {
+#Product li:not(:nth-of-type(4n)),
+#Emplyee li:not(:nth-of-type(4n)) {
     margin-right: 16px;
     margin-bottom: 16px;
 }
 
 /* section2 */
-#house h2 {
+#Product h2 {
     margin-bottom: 48px;
 }
 
-#house h3 {
+#Product h3 {
     position: relative;
 }
 
-#house h3 {
+#Product h3 {
     position: absolute;
     background: #000;
     color: #fff;
@@ -116,15 +116,15 @@ section {
 }
 
 /* section3 */
-#about li h3 {
+#Emplyee li h3 {
     margin: 16px 0 8px;
 }
 
-#about li p {
+#Emplyee li p {
     margin: 8px 0;
 }
 
-#about a {
+#Emplyee  a {
     display: block;
     background: #ccc;
     text-align: center;
