@@ -10,15 +10,27 @@
     <!-- <ling> 방식 또는 @improt 방식 둘 중 하나만 사용한다. -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap'); */
-        /* @font-face {
-            font-family: 'SeoulNamsanL';
-            src: url('/51_css/assets/font/SeoulNamsanL.ttf');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+        /* 
+            font-family: 이름; -> 이름은 임의로 정한다.
+        
+            @font-face {
+                font-family: 이름;
+                src: url('경로/폰트명');
+            } 
+            
+            예)
+            @font-face {
+                font-family: aladdin;
+                src: url('font/aladdin.ttf');
+            } 
             
             아래 주소로 표현시 html문서를 서버에 올려서 확인
             src: url('http://id.dothome.co.kr/font/SeoulNamsanL.ttf');
             src: url('/font/SeoulNamsanL.ttf');
-        } */
+            } 
+        */
 
         /* 
             CDN(Content Delivery Network, 콘텐츠 전송 네트워크)은 지리적으로 분산된 여러 개의 서버를 통해 웹 콘텐츠를 사용자와 가까운 곳에서 전송함으로써 전송 속도를 높입니다.
@@ -35,14 +47,39 @@
             아리따 글꼴: https://www.apgroup.com/int/ko/about-us/visual-identity/arita-typeface/arita-typeface.html
         */
 
+        /* 
+            *.ttf/otf
+            *.woff
+            *.eot
+        */
+
         /* 윈도우에 설치되어 있는 폰트 위치 -> C:\Windows\Fonts */
 
         /* (1) .ff1에 구글 Noto Sans KR 폰트를 CDN 방식으로 지정해 보세요. */
-        .ff1 {font-family: 'Nanum Gothic', sans-serif;}
+        .ff1 {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
 
-        /* (2) .ff2에 서울 SeoulNamsanL 폰트를 @font-face 규칙을 사용하여 지정해 보세요. */
+        /* (2) .ff2에 알라딘 폰트를 @font-face 규칙을 사용하여 지정해 보세요. */
+        /* 한글은 한글 폰트로, 영문은 영문 폰트로 사용한다. */
+        @font-face {
+            font-family: aladdin;
+            src: url('../assets/font/aladdin.ttf');
+        }
 
+        @font-face {
+            font-family: 'SeoulNamsanM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
+        .ff2 {
+            font-family: aladdin, 'Noto Sans KR', sans-serif;
+        }
+        .ff3 {
+            font-family: 'SeoulNamsanM', 'Noto Sans KR', sans-serif;
+        }
     </style>
 </head>
 
@@ -50,8 +87,10 @@
     <h1>웹 폰트</h1>
     <p>구글 웹 폰트(Google Web Font) 지정 안함.</p>
     <p class="ff1">구글 웹 폰트(Google Web Font) 지정 했음.</p>
+    <p>알라딘 서체(Aladdin Font) 지정 안함.</p>
+    <p class="ff2">알라딘 서체(Aladdin Font) 지정 했음.</p>
     <p>서울 서체(Seoul Font) 지정 안함.</p>
-    <p class="ff2">서울 서체(Seoul Font) 지정 했음.</p>
+    <p class="ff3">서울 서체(Seoul Font) 지정 했음.</p>
 </body>
 
 </html>
