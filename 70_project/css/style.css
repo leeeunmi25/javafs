@@ -23,6 +23,11 @@ img {
 }
 
 /* header */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
 header ul {
     height: 54px;
     padding: 0 32px;  
@@ -31,7 +36,13 @@ header ul {
     align-items: center;
 }
 header li {
-    margin: 0 20px;
+    margin: 0 8px;
+}
+header a {
+    padding: 4px 16px;
+}
+header a:hover {
+    background: #ccc;
 }
 /* section1 */
 #home {
@@ -49,6 +60,7 @@ header li {
 .logo a {
     color: #fff;
 }
+
 /* section2 */
 /* section3 */
 /* section4 */
