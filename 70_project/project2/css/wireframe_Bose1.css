@@ -4,12 +4,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* 링크 디자인 */
 a {
     color: #000;
     text-decoration: none;
+    background: #fff;
 }
 
 /* 목록의 마커 제거 */
@@ -22,8 +24,8 @@ section,
 footer,
 section li,
 #main_img h2,
-#menu h3,
-#menu img,
+#product h3,
+#product img,
 header:not(nav) {
     border: 1px solid #000;
 }
@@ -32,7 +34,7 @@ img {
     border-bottom: 1px solid #000;
 }
 
-#news img {
+#contact img {
     margin-bottom: 10px;
     border-top: 1px solid #000;
 }
@@ -42,7 +44,7 @@ img {
     border-left: none;
 }
 
-#menu li {
+#product li {
     border: none;
 }
 
@@ -52,7 +54,7 @@ section li {
     border-bottom: none;
 }
 
-#menu,
+#product,
 #main_img {
     border-top: none;
 }
@@ -126,42 +128,42 @@ section li {
 }
 
 /* section 2 */
-#menu {
+#product {
     position: relative;
 }
 
-#menu h3 {
+#product h3 {
     position: absolute;
     padding: 5px;
 }
 
-#menu li:nth-of-type(1) {
+#product li:nth-of-type(1) {
     margin-bottom: 27px;
 }
 
-#menu ul { 
+#product ul { 
     margin-right: 0.5px;
 }
 
-#menu img {
+#product img {
     margin-bottom: -5px;
 }
 
-#menu h2 {
+#product h2 {
     margin-bottom: 48px;
 }
 
 /* section 3 */
-#event li h3 {
+#about li h3 {
     margin: 16px 0 8px;
 }
 
-#event li p {
+#about  li p {
     margin: 8px 0;
 }
 
 /* 이벤트 목록 버튼 디자인 */
-#event li a {
+#about  li a {
     display: block;
     background: #ccc;
     text-align: center;
