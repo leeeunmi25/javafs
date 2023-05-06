@@ -7,11 +7,13 @@
     box-sizing: border-box;
 }
 
-/* 링크 디자인 */
-a {
+body {
     color: #000;
-    text-decoration: none;
     background: #fff;
+}
+
+a {
+    text-decoration: #000; 
 }
 
 /* 목록의 마커 제거 */
@@ -67,13 +69,13 @@ li:nth-of-type(4) {
 header {
     box-sizing: border-box;
     position: fixed;
-    z-index: 99;
+    z-index: 9999;
     width: 100%;
-    display: flex;
+    display: inline-flex; /*flex*/
     justify-content: space-between;
-    background: #fff;
+    background: #7f7f7f;
     padding: 0 32px;
-    height: 54px;
+    height: 54px;   
 }
 
 /* 네비게이션 정렬 */
@@ -183,7 +185,7 @@ input {
 
 /* botton style */
 button {
-    height: 36px;
+    height: 48px;
     width: 160px;
     background: #000;
     border-style: none;
@@ -201,4 +203,6 @@ button:hover {
 footer {
     text-align: center;
     padding: 32px;
+    background: #000;
+    color:#fff;
 }
