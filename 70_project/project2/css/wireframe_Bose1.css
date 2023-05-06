@@ -73,7 +73,7 @@ header {
     width: 100%;
     display: inline-flex; /*flex*/
     justify-content: space-between;
-    background: #7f7f7f;
+    background: #777;
     padding: 0 32px;
     height: 54px;   
 }
@@ -132,6 +132,10 @@ section li {
 }
 
 /* section 2 */
+#product h2 {
+    margin-bottom: 48px;
+}
+
 #product {
     position: relative;
 }
@@ -141,20 +145,16 @@ section li {
     padding: 5px;
 }
 
-#product li:nth-of-type(1) {
-    margin-bottom: 27px;
+#product ul { 
+    margin-right: 1px;
 }
 
-#product ul { 
-    margin-right: 0.5px;
+#product li:nth-of-type(4n) {
+    margin-bottom: 27px;
 }
 
 #product img {
     margin-bottom: -5px;
-}
-
-#product h2 {
-    margin-bottom: 48px;
 }
 
 /* section 3 */
