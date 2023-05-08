@@ -12,9 +12,15 @@
             border: 1px solid red;
             margin: 20px;
         }
-
         /* 
-            
+            사파리, 크롬: -webkit-
+            오페라: -o-
+            IE: -ms-
+            파이어폭스: -moz-
+
+        */
+        /* 
+            그라데이션(Gradation)은 하나의 색채에서 다른 색채로 변하는 단계, 혹은 그러한 기법
 
             background: 값;
                 값: linear-gradinet, radial-gradinet, conic-gradient
@@ -29,6 +35,7 @@
 
         /* .lg1에 위 blue, 아래 white의 선형 그라디언트를 지정해 보세요. */
             .lg1 {
+                background: -webkit-linear-gradient(blue, white);
                 background: linear-gradient(blue, white);
                 background: linear-gradient(to bottom, blue, white);
                 background: linear-gradient(180deg, blue, white);
