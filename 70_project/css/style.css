@@ -55,12 +55,12 @@ header i {
 #home {
     position: relative;
     background-image: url(../images/my4.jpg);
-    /* background-repeat: no-repeat; */
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 25%;
     background-attachment: fixed;
     height: 930px;
+   
     /* background: url(../images/my4.jpg) no-repeat 50% 10%/contain fixed; */
     
 }
