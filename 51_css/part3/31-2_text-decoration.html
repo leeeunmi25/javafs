@@ -6,17 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* .tdn에 텍스트 장식을 제거해 보세요. */
+        a {
+            color: rgb(0, 255, 106);
+        }
+        a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
 
+        /* 
+            필수로 써야한다.
+            text-decoration-line: 라인종류;
+                값: none, underline, overline, ling-through
+            
+            선택사항으로 써도 되고 안써도 된다. 
+            text-decoration-thickness: 두께;
+                값: auto, px(em, rem), %
+            text-decoration-style: 스타일;
+                값: solid, dotted, dashe, double, wavy 
+            text-decoration-color: 현재색;
+
+            (속기형)
+            text-decoration: line thickness style color;
+        */
+
+        /* .tdn에 텍스트 장식을 제거해 보세요. */
+        .tdn {
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: red;
+            /*글자색과 상관없이 밑줄색깔이 변한다. */
+            text-decoration-thickness: 5px; /* ver css4 */
+
+            /* text-decoration: underline 5px dashed red;} */
 
         /* .tdu에 텍스트 밑줄을 지정해 보세요. */
-
+        .tdu {
+            text-decoration: underline;
+            text-decoration-style: dashed;
+        }
 
         /* .tdo에 텍스트 윗줄을 지정해 보세요. */
-
+        .tdo {
+            text-decoration: overline;
+            text-decoration-style: dotted;
+        }
 
         /* .tdl에 텍스트 취소선을 지정해 보세요. */
-
+        .tdl {
+            text-decoration: line-through;
+            text-decoration-style: wavy;
+        }
         
     </style>
 </head>
