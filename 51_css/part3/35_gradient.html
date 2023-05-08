@@ -30,7 +30,7 @@
                 - 방향: left, right, top, bottom
             
             2) linear-gradient([각도], 색1, 색2, [색3, ...])
-                - 각도: 0~360deg (단위:degree)
+                - 각도: 0~360(단위:deg / degree)
         */
 
         /* .lg1에 위 blue, 아래 white의 선형 그라디언트를 지정해 보세요. */
@@ -42,11 +42,16 @@
             }
         
         /* .lg2에 왼쪽 아래 #ff0000, 오른쪽 위 #ffffff의 선형 그라디언트를 지정해 보세요. */
-            .lg2 {background: linear-gradient(to right top, #ff0000, #ffffff);}
+            .lg2 {
+                /* background: linear-gradient(to right top, #ff0000, #ffffff); */
+                background: -webkit-linear-gradient(45deg, #ff0000, #ffffff);
+                background: linear-gradient(45deg, #ff0000, #ffffff);
+            }
 
         /* .lg3에 왼쪽 위 blue, 가운데 white, 오른쪽 아래는 yellow의 선형 그라디언트를 지정해 보세요. */
             .lg3 {
                 background: linear-gradient(to right bottom, blue, white, yellow);
+                background: linear-gradient(153deg, blue, white, yellow);
             }
 
         /* 
@@ -55,8 +60,21 @@
                 - 모양: circle
         */
         /* .rg에 중심은 white, 바깥쪽은 blue인 원형 모양의 그라디언트를 지정해 보세요. */
+        .rg {
+            background: -webkit-radial-gradient(circle, white, blue);
+            background: radial-gradient(white, blue);
+        }
 
+        /* 
+            원뿔형(conic) 그라디언트 
+            conic-gradient([from 각도], 색, 색2, ...)
+        */
         
+        /* .cg에 시작은 orange, 중간을 yellow, 끝은 green인 원뿔형 모양의 그라디언트를 지정해 보세요. */
+        .cg {
+            background: conic-gradient(from 90deg, orange,yellow, green);
+        }
+
     </style>
 </head>
 <body>
@@ -68,6 +86,9 @@
 
     <h2>원형</h2>
     <div class="rg">4</div>
+   
+    <h2>원뿔형</h2>
+    <div class="cg">5</div>
 
 </body>
 </html>
