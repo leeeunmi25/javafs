@@ -11,15 +11,20 @@ html {
     font-size: 10px;
 }
 body {
-    font-size: 1.5rem 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem/1.8 'Noto Sans KR', sans-serif;
     color: #333;
 }
 /* a태그 button태그 글자색은 body 글자색을 상속받지 않는다. */
 a {
     color: #333;
+    text-decoration: none;
 }
 img {
-    width: 100%
+    width: 100%;
+    vertical-align: top;
+}
+li {
+    list-style: none;
 }
 
 /* header */
@@ -30,23 +35,33 @@ header {
 }
 header ul {
     height: 54px;
-    padding: 0 32px;  
-    background: yellow;
+    padding: 0 16px;  
+    /* background: yellow; */
     display: flex;
     align-items: center;
 }
-header li {
-    margin: 0 8px;
-}
+
 header a {
     padding: 4px 16px;
 }
 header a:hover {
     background: #ccc;
 }
+header i {
+    margin-right: 8px;
+}
+
 /* section1 */
 #home {
     position: relative;
+    /* background-image: url(../images/my4.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed; */
+
+    background: url(../images/my4.jpg) no-repeat 50% 50%/cover fixed;
+    height: 930px;
 }
 /* 요소를 부모 안에 정가운데 배치 */
 .logo {
