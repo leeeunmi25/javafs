@@ -10,9 +10,9 @@
         .outer {
             border: 1px solid black;
             /* perspective는 관점 속성으로 부모 요소에 지정한다. */
-            perspective: 1000px;
+            /* perspective: 1000px; */
             /* 관점의 위치로 perspective 속성과 함께 사용해야 한다. */
-            perspective-origin: 50% 50%;
+            /* perspective-origin: 50% 50%; */
             margin: 20px;
         }
 
@@ -25,30 +25,76 @@
         }
 
         /* 
-            transform: translate(x, y);
-            transform: scale(w, h);
+            변환
+            1) 2D: x축, y축
+            2) 3D: x축, y축, z축
+
+            1) 이동(translate)
+            2) 크기(scale)
+            3) 회전(rotate)
+            4) 기울임(skew)
+
+            transform: translate(x위치, y위치);
+            transform: translateX(x위치);
+            transform: translateY(y위치);
+            transform: translateZ(z위치);
+
+            transform: scale(너비, 높이);
+            transform: scaleX(너비);
+            transform: scaleY(높이);
+
             transform: rotate(각도); (단위: deg)
+            transform: rotateX(각도); (단위: deg)
+            transform: rotateY(각도); (단위: deg)
+
             transform: skew(각도, 각도) (단위: deg);
+            transform: skewX(각도) (단위: deg);
+            transform: skewY(각도) (단위: deg);
         */
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
-
+        /* 기본값: transform: translate(0, 0); 값을 하나만 쓰면 x위치로 적용 된다. */
+        .outer:hover .trftr {
+            transform: translate(100px, 0);
+        } 
 
         /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
-
-
-        .trfro {
-            /* 변환의 기준 */
-            transform-origin: 0 0;
+        /* 기본값: transform: scale(1, 1);  1보다 작으면 축소, 1보다 크면 확대, 값을 하나만 쓰면 가로/세로 같은 크기로 확대/축소 */
+        .outer:hover .trfsc {
+            transform: scale(1.2, 1.2);
         }
-        /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
+        /* .outer:hover .trfsc {
+            transform: scale(1.2);
+        } */
 
+        
+            /* 
+                변환의 기준
+                transform-origin: x축 y축;
+                값을 하나만 쓰면 x축으로 적용되고 y축은 50%로 지정된다. 
+                transform-origin: 50% 50%; (기본값)
+                단위: px, %
+                x축: left, right, center 
+                y축: top, bottom, center 
+            */
+            /* .trfro {
+            transform-origin: 100% 100%;
+            transform-origin: right bottom;
+        } */
+        /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
+        .outer:hover .trfro {
+            transform: rotatez(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfrox {
+            transform: rotateX(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
-
+        .outer:hover .trfroy {
+            transform: rotateY(90deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
 
@@ -71,10 +117,10 @@
         <span class="trf trfro">rotate</span>transform
     </div>
     <div class="outer">
-        <span class="trf trfrox">rotate</span>transform
+        <span class="trf trfrox">rotateX</span>transform
     </div>
     <div class="outer">
-        <span class="trf trfroy">rotate</span>transform
+        <span class="trf trfroy">rotateY</span>transform
     </div>
     <h2>기울기</h2>
     <div class="outer">
