@@ -38,9 +38,20 @@
             content: '';
             display: block;
             width: 60px;
+         }
+        
+         .gnb3 a::after {
+            content: '';
+            display: block;
             height: 2px;
             background: #b34b4b;
+            transition: .3s;
+            transform: scaleX(0);
+            transform-origin: 0 0;
          }
+        .gnb3 a::after {
+            transform: scaleX(1);
+        }
     </style>
 </head>
 <body>
@@ -50,6 +61,9 @@
         <a href="#">제품소개<span></span></a>   
     </nav> 
     <nav class="gnb2">
+        <a href="#">제품소개</a>   
+    </nav> 
+    <nav class="gnb3">
         <a href="#">제품소개</a>   
     </nav> 
 </body>
