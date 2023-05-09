@@ -128,7 +128,8 @@ section {
     display: block;
     background: #ccc;
     text-align: center;
-    padding: 8px, 0;
+    padding: 16px 0px;
+    width: 100%;
 }
 
 /* section4 */
