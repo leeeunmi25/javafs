@@ -167,8 +167,8 @@ section li {
 }
 
 /* section 3 */
-#about li h3 {
-    margin: 16px 0 8px;
+ #about li h3 {
+    margin: 16px 0 8px; 
 }
 
 #about li p {
