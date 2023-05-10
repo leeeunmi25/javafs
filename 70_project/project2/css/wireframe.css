@@ -66,34 +66,34 @@ section {
     padding: 8px 16px;
 }
 /* section2 ,3 common*/
-#menu li, #event li{
+#Project li, #About li{
     float: left;
     width: 362px;
 }
 
-#menu ul::after, #event ul::after {
+#Project ul::after, #About ul::after {
     content: '';
     clear: both;
     display: block;
 }
 
-#menu li:not(:nth-of-type(4n)), #event li:not(:nth-of-type(4n)) {
+#Project li:not(:nth-of-type(4n)), #About li:not(:nth-of-type(4n)) {
     margin-right: 16px;
 }
 
 /* section2 */
-#menu h2 {
+#Project h2 {
     margin-bottom: 48px;
 }
 
 /* section3 */
-#event li h3 {
+#About li h3 {
     margin: 16px 0 8px;
 }
-#event li p {
+#About li p {
     margin: 8px 0 8px;
 }
-#event li a {
+#About li a {
     display: block;
     background: #ccc;
     text-align: center;
@@ -102,7 +102,40 @@ section {
 }
 
 /* section4 */
+#contact input {
+    display: block;
+    margin: 10px 0;
+}
 
+#contact input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}   
+
+#contact button {
+    background: #000;
+    color: #fff;
+    display: block;
+    height: 30px;
+    margin: 40px 0;
+    text-align: center;
+    padding: 10px 25px 25px;
+}
+
+.map {
+    height: 830px;
+    vertical-align: top;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* footer */
 footer {
