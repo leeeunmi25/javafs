@@ -1,113 +1,95 @@
 @charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+
 /* header */
 header {
     position: fixed;
     top: 0;
-    z-index: 9999;
     width: 100%;
+    z-index: 99999;
     height: 54px;
     padding: 0 32px;
-    background: #777;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0.12);
 }
-
 .logo {
     float: left;
 }
-
 nav {
     float: right;
 }
-
 nav li {
     display: inline-block;
 }
-
 /* section common */
 section {
     width: 1496px;
     margin: 0 auto;
 }
-
 .section {
     padding-top: 81px;
 }
-
 .section h2 {
     margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid #ccc;
 }
 
-.section h2+p {
+.section h2 + p {
     margin-bottom: 32px;
 }
-
 /* section1 */
 #main_img {
     position: relative;
 }
-
-#main_img2 {
+#main_img h2 {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: #555;
-    padding: 8px, 24px;  
+    padding: 8px 16px;
+}
+#main_img h2 b {
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #000;
 }
 
 /* section2 ,3 common*/
-#house li,
-#about li {
+#projects li, #about li{
     float: left;
     width: 362px;
 }
 
-#house ul::after,
-#about ul::after {
+#projects ul::after, #about ul::after {
     content: '';
     clear: both;
     display: block;
 }
 
-#house li:not(:nth-of-type(4n)),
-#about li:not(:nth-of-type(4n)) {
+#projects li:not(:nth-of-type(4n)), #about li:not(:nth-of-type(4n)) {
     margin-right: 16px;
-    margin-bottom: 16px;
 }
 
 /* section2 */
-#house h2 {
+#projects h2 {
     margin-bottom: 48px;
-}
-
-#house h3 {
-    position: relative;
-}
-
-#house h3 {
-    position: absolute;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 10px 10px;
 }
 
 /* section3 */
 #about li h3 {
     margin: 16px 0 8px;
 }
-
 #about li p {
-    margin: 8px 0;
+    margin: 8px 0 8px;
 }
-
-#about a {
+#about li a {
     display: block;
     background: #ccc;
     text-align: center;
-    padding: 16px 0px;
-    width: 100%;
+    padding: 8px 0;
+    margin-top: 16px;
 }
 
 /* section4 */
@@ -123,7 +105,7 @@ section {
     margin: 20px 0;
     padding: 10px;
     border: 1px solid #ccc;
-}       
+}   
 
 #contact button {
     background: #000;
@@ -133,6 +115,17 @@ section {
     margin: 40px 0;
     text-align: center;
     padding: 10px 25px 25px;
+}
+
+.map {
+    height: 830px;
+    vertical-align: top;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* footer */
