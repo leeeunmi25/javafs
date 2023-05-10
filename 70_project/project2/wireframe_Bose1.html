@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,229 @@
     <title>Bose_이은미</title>
     <link rel="stylesheet" href="wireframe_Bose1.css">
     <style>
-        /* css 내용 */
+        @charset "utf-8";
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #000;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: #000;
+        }
+
+        /* 목록의 마커 제거 */
+        li {
+            list-style: none;
+        }
+
+        /* border */
+        section,
+        footer,
+        section li,
+        #main_img h2,
+        #product h3,
+        #product img,
+        header:not(nav) {
+            border: 1px solid #000;
+        }
+
+        img {
+            border-bottom: 1px solid #000;
+        }
+
+        #contact img {
+            margin-bottom: 10px;
+            border-top: 1px solid #000;
+        }
+
+        /* 겹치는 선 지움 */
+        .section #lineL {
+            border-left: none;
+        }
+
+        #product li {
+            border: none;
+        }
+
+        section,
+        ul,
+        section li {
+            border-bottom: none;
+        }
+
+        #product,
+        #main_img {
+            border-top: none;
+        }
+
+        li:nth-of-type(4) {
+            border-right: none;
+        }
+
+        /* header */
+        header {
+            box-sizing: border-box;
+            position: fixed;
+            z-index: 9999;
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+            background: #777;
+            padding: 0 32px;
+            height: 54px;
+        }
+
+        /* 네비게이션 정렬 */
+        nav li {
+            display: inline-block;
+            margin: 16px;
+        }
+
+        /* section common */
+        section {
+            width: 1496px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding-top: 81px;
+        }
+
+        .section h2 {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .section h2+p {
+            margin-bottom: 32px;
+        }
+
+        /* section 1 */
+        #main_img {
+            position: relative;
+        }
+
+        #main_img h2 {
+            position: absolute;
+            padding: 8px 16px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #555;
+            padding: 8px, 24px;
+        }
+
+        /* section 2,3 common */
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        section li {
+            display: inline-block;
+            width: 362px;
+        }
+
+
+        /* section 2 */
+        #product h2 {
+            margin-bottom: 48px;
+        }
+
+        #product {
+            position: relative;
+        }
+
+        #product h3 {
+            position: absolute;
+            padding: 5px;
+        }
+
+        #product ul {
+            margin-right: 1px;
+        }
+
+        #product li:nth-of-type(4n) {
+            margin-bottom: 27px;
+        }
+
+        #product img {
+            margin-bottom: -5px;
+        }
+
+        /* section 3 */
+        #about li h3 {
+            margin: 16px 0 8px;
+        }
+
+        #about li p {
+            margin: 8px 0;
+        }
+
+        #about li a {
+            display: block;
+            background: #ccc;
+            text-align: center;
+            padding: 8px 0;
+        }
+
+        /* section 4 */
+        /* input style */
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+        }
+
+        /* botton style */
+        button {
+            height: 48px;
+            width: 160px;
+            background: #000;
+            border-style: none;
+            color: #fff;
+            margin-top: 16px;
+            margin-bottom: 48px;
+        }
+
+        button:hover {
+            background-color: #ccc;
+            color: #000;
+        }
+
+        /* footer */
+        footer {
+            text-align: center;
+            padding: 32px;
+            background: #000;
+            color: #fff;
+        }
     </style>
 </head>
+
 <body>
     <!-- 헤더 -->
     <header>
-        <h1 class="logo"><href href="#">Bose</a></h1>       
-        <nav>    
+        <h1 class="logo">
+            <href href="#">Bose</a>
+        </h1>
+        <nav>
             <ul>
                 <li><a href="#product">product</a></li>
                 <li><a href="#about">about</a></li>
-                <li><a href="#contact">contact</a></li> 
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,8 +241,8 @@
         <img src="https://dummyimage.com/1496x810&text=+" alt="Bose로고">
     </section>
 
-    <!-- 섹션2 -->                      
-    <section id="Product" class="section">
+    <!-- 섹션2 -->
+    <section id="product" class="section">
         <h2>product</h2>
         <ul>
             <li>
@@ -71,12 +283,15 @@
     <section id="about" class="section">
         <h2>about</h2>
         <p>세계적인 프리미엄 오디오 브랜드 '보스'.
-        보스라는 이름은 창립자 '아마르 G.보스(AMAR G.BOSE)'박사의 이름에서 유래되었습니다. 1964년, 미국의 명문대학인 매사추세츠공과대학(MIT)의 전자공학 교수이자 심리음향학 박사였던 보스 박사는 당시 스피커에서 나오는 소리가 현실의 소리와 간극이 너무 커 제대로 된 음악을 느낄 수 없음에 크게 실망을 하고 원음 그대로의 소리, 누구나 들어도 편안하면서 아름다운 소리를 만들어내기 위해 직접 오디오 연구개발을 시작하였습니다.</p>
+            보스라는 이름은 창립자 '아마르 G.보스(AMAR G.BOSE)'박사의 이름에서 유래되었습니다. 1964년, 미국의 명문대학인 매사추세츠공과대학(MIT)의 전자공학 교수이자 심리음향학 박사였던
+            보스 박사는 당시 스피커에서 나오는 소리가 현실의 소리와 간극이 너무 커 제대로 된 음악을 느낄 수 없음에 크게 실망을 하고 원음 그대로의 소리, 누구나 들어도 편안하면서 아름다운 소리를
+            만들어내기 위해 직접 오디오 연구개발을 시작하였습니다.</p>
         <ul>
             <li>
                 <img src="https://dummyimage.com/362x243&text=+" alt="우주왕복선">
                 <p>우주왕복선</p>
-                <br>보스의 음향기기는 최첨단 기술이 요구되는 나사(NASA)의 우주왕복선에도 족용되며 첨단의 과학분야에서도 기술력을 인정박고 있습니다.</br><br>신소재를 이용한 컴팩트하고도 견고한 스피커를 제작해 외부환경 요인에 민감한 우주왕복선에 최적화시켰습니다.</br></p>
+                <br>보스의 음향기기는 최첨단 기술이 요구되는 나사(NASA)의 우주왕복선에도 족용되며 첨단의 과학분야에서도 기술력을 인정박고 있습니다.</br><br>신소재를 이용한 컴팩트하고도
+                견고한 스피커를 제작해 외부환경 요인에 민감한 우주왕복선에 최적화시켰습니다.</br></p>
                 <a href="#">Contact</a>
             </li>
             <li>
@@ -89,7 +304,7 @@
             <li>
                 <img src="https://dummyimage.com/362x243&text=+" alt="소음제거 기술">
                 <p>소음제거 기술</p>
-                <br>1978년 일찍이 시작한 노이즈캔슬링 연구를 통해 보스는 획기적인 소음제거헤드셋을 개발했습니다. 
+                <br>1978년 일찍이 시작한 노이즈캔슬링 연구를 통해 보스는 획기적인 소음제거헤드셋을 개발했습니다.
                 <br>보스의 소음제거 기술은 독보적인 성능을 입증 받으며 어러 산업분야에 적용되고 있습니다.</br>
                 항공기와 관제탑의 교신, 군부대 저투상황과 같은 극한 상황에서 뿐만 아니라, 일상 소음을 차단하는 헤드셋으로 확대되었습니다.</p>
                 <a href="#">Contact</a>
@@ -97,23 +312,23 @@
             <li>
                 <img src="https://dummyimage.com/362x243&text=+" alt="카오디오">
                 <p>카오디오</p>
-                <br>보스는 첨단 포츠카, 명품 자동차용 오디오 시스템을 개발하는 전문 브랜드로도 널리 알려져 있습니다. 
+                <br>보스는 첨단 포츠카, 명품 자동차용 오디오 시스템을 개발하는 전문 브랜드로도 널리 알려져 있습니다.
                 <br>보스의 카 오디오 개발은 자동차 메이커의 개발 프로젝트 함께 설계 단계에서부터 진행되며 해당 자동차에서 최상의 음질을 보장하는 카 오디오 시스템으로 완성됩니다.</br> </p>
                 <a href="#">Contact</a>
             </li>
         </ul>
     </section>
- 
+
     <!-- 섹션4 -->
     <section id="contact" class="section">
         <h2>contact</h2>
         <p>Lets get in touch and talk about next product.</p>
         <form action="message.php" method="post">
-         <input type="text" name="user_name" placeholder="Name">
-         <input type="email" name="user_email" placeholder="Email">
-         <input type="text" name="user_subject" placeholder="Subject">
-         <input type="text"name="user_comment" placeholder="Comment">
-         <button type="submit"></i>SEND MESSAGE</button>
+            <input type="text" name="user_name" placeholder="Name">
+            <input type="email" name="user_email" placeholder="Email">
+            <input type="text" name="user_subject" placeholder="Subject">
+            <input type="text" name="user_comment" placeholder="Comment">
+            <button type="submit"></i>SEND MESSAGE</button>
         </form>
         <img src="https://dummyimage.com/1496x837&text=+" alt="지도">
     </section>
@@ -123,4 +338,5 @@
         <p>Copyright 2023 Bose. All rights reserved</p>
     </footer>
 </body>
+
 </html>
