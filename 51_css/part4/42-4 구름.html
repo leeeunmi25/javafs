@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* forwards와 infinite를 같이 사용하지 않는다.
+            infinite이면 forwards는 동작하지 않는다.
+        */
         .anim { 
-            animation: move 2s infinite;
+            animation: move 2s forwards; 
         }
         
         div {
@@ -19,11 +22,20 @@
             left:0px; 
             top:0px;
             text-indent: -9999em;
+            opacity: 0;
         }
 
         @keyframes move {
-            0% {left:0; animation-timing-function: ease-out;}
-            100% {left:400px; animation-timing-function: ease-out;}
+            0% {
+                opacity:0; 
+                left:0; 
+                animation-timing-function: ease-out;
+            }
+            100% {
+                opacity:1; 
+                left:400px; 
+                animation-timing-function: ease-out;
+            }
         }
 
     </style>
