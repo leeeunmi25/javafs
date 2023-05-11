@@ -117,21 +117,9 @@ section {
 /* section 1 */
 #main_img {
     position: relative;
-    margin-top: 20000px;
-    margin-bottom: 20000px;
-    margin-right: 800px;
-    margin-left: 800px;
+    display: flex;
+    justify-content: center;
 }
-
-/* #main_img h2 {
-    position: absolute;
-    padding: 8px 16px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: #555;
-    padding: 8px, 24px; 
-} */
 
 /* section 2,3 common */
 ul {
