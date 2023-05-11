@@ -182,7 +182,7 @@ section li {
     display: block;
     background: #ccc;
     text-align: center;
-    padding: 8px 0;
+    padding: 5px 0;
 }
 #about li a:hover {
     background-color: #000;
