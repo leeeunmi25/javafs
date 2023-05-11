@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    background: #fff;
+}
+
+a {
+    text-decoration: #000; 
+}
+
+/* 목록의 마커 제거 */
+li {
+    list-style: none;
+}
+
+/* border */
+section,
+footer,
+section li,
+#main_img h2,
+#product h3,
+#product img,
+header:not(nav) {
+    border: 1px solid #000;
+}
+
+img {
+    border-bottom: 1px solid #000;
+}
+
+#contact img {
+    margin-bottom: 10px;
+    border-top: 1px solid #000;
+}
+
+/* 겹치는 선 지움 */
+.section #lineL {
+    border-left: none;
+}
+
+#product li {
+    border: none;
+}
+
+section,
+ul,
+section li {
+    border-bottom: none;
+}
+
+#product,
+#main_img {
+    border-top: none;
+}
+
+li:nth-of-type(4) {
+    border-right: none;
+}
+
+/* header */
+header {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: inline-flex; 
+    justify-content: space-between;
+    background: #777;
+    padding: 0 32px;
+    height: 54px;   
+}
+
+/* 네비게이션 정렬 */
+nav li {
+    display: inline-block;
+    margin: 16px;
+}
+
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 81px;
+}
+
+.section h2 {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section h2+p {
+    margin-bottom: 32px;
+}
+
+/* section 1 */
+#main_img {
+    position: relative; 
+    margin: 800px; 
+}
+
+/* #main_img h2 {
+    position: absolute;
+    padding: 8px 16px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #555;
+    padding: 8px, 24px; 
+} */
+
+/* section 2,3 common */
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section li {
+    display: inline-block;
+    width: 362px;
+}
+
+
+/* section 2 */
+#product h2 {
+    margin-bottom: 48px;
+}
+
+#product {
+    position: relative;
+}
+
+#product h3 {
+    position: absolute;
+    padding: 5px;
+}
+
+#product h3 {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px;
+}
+
+#product ul { 
+    margin-right: 1px;
+}
+
+#product li:nth-of-type(4n) {
+    margin-bottom: 27px;
+}
+
+#product img {
+    margin-bottom: -5px;
+    width: 363px;
+    height: 400px;
+}
+
+/* section 3 */
+ #about li h3 {
+    margin: 16px 0 8px; 
+}
+
+#about li p {
+    margin: 8px 0;
+}
+
+#about li a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 6px 0;
+}
+
+#about img {
+    width: 100%;
+    height: 61%;
+}
+
+/* section 4 */
+/* input style */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+}
+
+/* botton style */
+button {
+    height: 48px;
+    width: 160px;
+    background: #000;
+    border-style: none;
+    color: #fff;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 32px;
+    background: #000;
+    color:#fff;
+}
