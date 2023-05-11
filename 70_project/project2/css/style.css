@@ -85,9 +85,8 @@ section {
     display: block;
 }
 
-#projects li:not(:nth-of-type(4n)), 
-#about li:not(:nth-of-type(4n)) {
-    margin-right: 32px;
+#projects li:not(:nth-of-type(4n)), #about li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
 }
 
 /* section2 */
