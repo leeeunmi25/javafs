@@ -1,155 +1,261 @@
 @charset "utf-8";
-@import url(reset.css);
-@import url(typo.css);
+@import url(reset_Bose1.css);
+@import url(typo_Bose1.css);
+
+@font-face{
+    font-family: Nanum PenScript-Regular;
+    src: url('/70_project/font/NanumPenScript-Regular.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     color: #000;
     background: #fff;
 }
+
 a {
-    color: #000;
+    text-decoration: #000; 
 }
+
 /* 목록의 마커 제거 */
 li {
     list-style: none;
 }
 
+/* border */
+section,
+footer,
+section li,
+#main_img h2,
+#product h3,
+#product img,
+header:not(nav) {
+    border: 1px solid #000;
+}
+
+img {
+    border-bottom: 1px solid #000;
+}
+
+#contact img {
+    margin-bottom: 10px;
+    border-top: 1px solid #000;
+}
+
+/* 겹치는 선 지움 */
+.section #lineL {
+    border-left: none;
+}
+
+#product li {
+    border: none;
+}
+
+section,
+ul,
+section li {
+    border-bottom: none;
+}
+
+#product,
+#main_img {
+    border-top: none;
+}
+
+li:nth-of-type(4) {
+    border-right: none;
+}
+
 /* header */
 header {
+    box-sizing: border-box;
     position: fixed;
-    top: 0;
-    width: 100%;
     z-index: 9999;
-    height: 54px;
+    width: 100%;
+    display: inline-flex; 
+    justify-content: space-between;
+    background: #777;
     padding: 0 32px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0.12);
+    height: 54px;   
 }
-.logo {
-    float: left;
-}
-nav {
-    float: right;
-}
+
+/* 네비게이션 정렬 */
 nav li {
     display: inline-block;
+    margin: 16px;
 }
+
 /* section common */
 section {
     width: 1496px;
     margin: 0 auto;
 }
+
 .section {
     padding-top: 81px;
 }
+
 .section h2 {
     margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid #ccc;
 }
 
-.section h2 + p {
+.section h2+p {
     margin-bottom: 32px;
 }
-/* section1 */
+
+/* section 1 */
 #main_img {
     position: relative;
+    margin-top: 20000px;
+    margin-bottom: 20000px;
+    margin-right: 800px;
+    margin-left: 800px;
 }
-#main_img h2 {
+
+/* #main_img h2 {
     position: absolute;
+    padding: 8px 16px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 8px 16px;
-}
-#main_img h2 b {
-    padding: 8px 16px;
-    color: #fff;
-    background-color: #000;
+    background: #555;
+    padding: 8px, 24px; 
+} */
+
+/* section 2,3 common */
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-/* section2 ,3 common*/
-#projects li, #about li{
-    float: left;
+section li {
+    display: inline-block;
     width: 362px;
 }
 
-#projects ul::after, #about ul::after {
-    content: '';
-    clear: both;
-    display: block;
-}
 
-#projects li:not(:nth-of-type(4n)), #about li:not(:nth-of-type(4n)) {
-    margin-right: 16px;
-}
-
-/* section2 */
-#projects h2 {
+/* section 2 */
+#product h2 {
     margin-bottom: 48px;
 }
 
-/* section3 */
-#about li h3 {
-    margin: 16px 0 8px;
+#product {
+    position: relative;
 }
+
+#product h3 {
+    position: absolute;
+    padding: 5px;
+}
+
+#product h3 {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 4px 4px 4px;
+}
+
+#product ul { 
+    margin-right: 1px;
+}
+
+#product li:nth-of-type(4n) {
+    margin-bottom: 27px;
+}
+
+#product img {
+    margin-bottom: -5px;
+    width: 363px;
+    height: 400px;
+}
+
+/* section 3 */
+ #about li h3 {
+    margin: 16px 0 8px; 
+}
+
 #about li p {
     margin: 8px 0 8px;
 }
+
 #about li a {
     display: block;
     background: #ccc;
     text-align: center;
-    padding: 8px 0;
-    margin-top: 16px;
+    padding: 16px 0;
+    margin-top: 60px;
 }
 
-/* section4 */
-#contact input {
-    display: block;
-    margin: 10px 0;
-}
-
-#contact input {
-    display: block;
-    width: 100%;
-    height: 50px;
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-}   
-
-#contact button {
-    background: #000;
+#about li a:hover {
+    background-color: #000;
     color: #fff;
-    display: block;
-    height: 30px;
-    margin: 40px 0;
-    text-align: center;
-    padding: 10px 25px 25px;
+}
+
+#about li img {
+    width: 100%;
+    height: 50%;
+}
+/* 
+
+/* section 4 */
+/* input style */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+}
+
+/* botton style */
+button {
+    height: 48px;
+    width: 160px;
+    background: #000;
+    border-style: none;
+    color: #fff;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 .map {
     height: 830px;
     vertical-align: top;
+    margin-top: 400px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
+.map iframe {
+    width: 1496px;
+    height: 848px;
 }
 
 /* footer */
 footer {
-    height: 81px;
-    background: #000;
-    color: #fff;
+    height: 80px;
     text-align: center;
     padding: 32px;
+    background: #000;
+    color: #fff;
 }
