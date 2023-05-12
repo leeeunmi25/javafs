@@ -119,7 +119,8 @@ section {
     position: relative;
     display: flex;
     justify-content: center;
-    
+    width: 1496px;
+    height: 500px;
 }
 
 /* section 2,3 common */
