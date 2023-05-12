@@ -186,7 +186,7 @@ section li {
     background: #ccc;
     text-align: center;
     padding: 16px 0;
-    margin-top: 127px;
+    /* margin-top: 127px; */
 }
 
 #about li a:hover {
@@ -227,13 +227,8 @@ button:hover {
 }
 
 #map {
-    /* height: 830px; */
+    height: 830px;
     vertical-align: top;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    display: flex;
-    justify-content: center;
 }
 
 iframe {
