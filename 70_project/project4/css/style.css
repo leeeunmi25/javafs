@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+img{
+    width:100%
+}
+
 /* 공통 */
 #wrap {
     /* 가운데 맞춤 */
@@ -40,7 +44,30 @@ nav {
 #slide {
     height: 300px;
     background: lightcoral;
+    /* overflow: hidden; */
 }
+#slide img {
+    height: 300px;
+}
+#slide ul {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 400%;
+    animation: slide 9s infinite;
+}
+
+@keyframes slide {
+    0% {left:0;}
+    5% {left:-100%;}
+    33% {left:-100%;}
+    38% {left:-200%;}
+    66% {left:-200%;}
+    71% {left:-300%;}
+    99.99999% {left:-300%;}
+    100%{left:0;}
+}
+
 
 /* 메인콘텐츠 */
 #contents {
