@@ -2,8 +2,7 @@
 /* @import url(reset_Bose1.css);
 @import url(typo_Bose1.css); */
 
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 /* reset */
 * {
@@ -15,7 +14,7 @@
 body {
     color: #000;
     background: #fff;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
     font-weight: normal;
     font-style: normal;
 }
