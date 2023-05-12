@@ -226,25 +226,25 @@ button:hover {
     color: #000;
 }
 
-.map {
-    height: 830px;
+#map {
+    /* height: 830px; */
     vertical-align: top;
-    margin-top: 400px;
+    margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
     display: flex;
     justify-content: center;
 }
 
-.map iframe {
+iframe {
     width: 1496px;
     height: 848px;
 }
 
 /* footer */
 footer {
-    height: 80px;
     text-align: center;
+    height: 80px;
     padding: 32px;
     background: #000;
     color: #fff;

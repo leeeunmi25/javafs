@@ -9,44 +9,58 @@
     <style>
         /* 공통 */
         /* 초기화 */
+        body {margin: 0;}
         ul {margin: 0; padding: 0;}
         li {list-style: none;}
+        img {width: 100%; vertical-align: top;}
+
+        section{
+            padding: 0 30px;
+        }
 
         ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            width: 1496px;
+            width: 100%;
+            max-width: 1496px;
             margin: 0 auto;
         }
+
         /* 상자 크기 */
         li {
-            width: 362px;
-            height: 240px;
+            width: 100%;
+            /* height: 240px; */
+            margin-bottom: 16px;
             background: lightblue;
         }
 
 
         /* tablet: 600이상*/
         @media (min-width: 600px) {
-            
+            li {
+                width: calc(50% - 8px);
+            }
         }
-
 
         /* desktop: 992이상 */
         @media (min-width: 992px) {
-            
+            li {
+                width: calc(25% - 8px);
+                max-width: 362px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>반응형 웹</h1>
     <section>
+        <h1>반응형 웹</h1>
         <ul>
-            <li>박스1</li>
-            <li>박스2</li>
-            <li>박스3</li>
-            <li>박스4</li>
+            <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
+            <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
+            <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
+            <li><img src="../assets/20220511_1124.jpg" alt="테스트"></li>
         </ul>
     </section>
 </body>
