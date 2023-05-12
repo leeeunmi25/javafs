@@ -2,13 +2,8 @@
 /* @import url(reset_Bose1.css);
 @import url(typo_Bose1.css); */
 
-@font-face{
-    font-family: 'Noto Sans KR', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap') format('ttf');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap');
 
-    font-weight: normal;
-    font-style: normal;
-}
 
 /* reset */
 * {
@@ -20,6 +15,9 @@
 body {
     color: #000;
     background: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 a {
