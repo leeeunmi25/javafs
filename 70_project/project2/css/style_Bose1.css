@@ -3,8 +3,8 @@
 @import url(typo_Bose1.css); */
 
 @font-face{
-    font-family: Nanum PenScript-Regular;
-    src: url('/70_project/font/NanumPenScript-Regular.ttf') format('ttf');
+    font-family: 'Noto Sans KR', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap') format('ttf');
 
     font-weight: normal;
     font-style: normal;
