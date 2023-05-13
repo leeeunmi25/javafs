@@ -129,10 +129,11 @@ ul {
 }
 
 section li {
-    display: inline-block;
     width: 362px;
+    min-height: 552px;
+    position: relative;
+    padding-bottom: 50px;
 }
-
 
 /* section 2 */
 #product h2 {
@@ -177,6 +178,7 @@ section li {
 
 #about li p {
     margin: 8px 0 8px;
+    /* min-height: 150px; */
 }
 
 #about li a {
@@ -185,7 +187,10 @@ section li {
     text-align: center;
     padding: 16px 0;
     align-items: stretch;
-    /* margin-top: 125px; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100% 
 }
 
 #about li a:hover {
