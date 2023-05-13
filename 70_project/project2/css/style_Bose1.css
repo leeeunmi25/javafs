@@ -17,6 +17,7 @@ body {
     font-family: 'Nanum Pen Script', cursive;
     font-weight: normal;
     font-style: normal;
+    font-size: 22px;
 }
 
 a {
@@ -170,7 +171,7 @@ section li {
 }
 
 /* section 3 */
- #about li h3 {
+#about li h3 {
     margin: 16px 0 8px; 
 }
 
@@ -183,7 +184,8 @@ section li {
     background: #ccc;
     text-align: center;
     padding: 16px 0;
-    /* margin-top: 127px; */
+    align-items: stretch;
+    /* margin-top: 125px; */
 }
 
 #about li a:hover {
