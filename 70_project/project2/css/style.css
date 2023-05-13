@@ -94,6 +94,35 @@ section {
     margin-bottom: 48px;
 }
 
+#projects {
+    position: relative;
+}
+
+#projects h3 {
+    position: absolute;
+    padding: 5px;
+}
+
+#projects h3 {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px;
+}
+
+/* #projects ul { 
+    margin-right: 1px;
+}
+
+#projects li:nth-of-type(4n) {
+    margin-bottom: 17px;
+}
+
+#projects img {
+    margin-bottom: -5px;
+} */
+
 /* section3 */
 #about li h3 {
     margin: 16px 0 8px;
