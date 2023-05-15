@@ -1,45 +1,33 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
 /* 초기화 */
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
-li {
-    list-style: none;
-}
-img{
-    width:100%
-}
-body {
-    font-family: 'Noto Sans KR', sans-serif;
+img {
+    width: 100%;
 }
 
 /* 공통 */
 #wrap {
-    /* 가운데 맞춤 */
+    /* 가로 가운데 맞춤 */
     width: 1200px;
     margin: 0 auto;
-    /* background: yellow;  */
 }
 header, #contents, footer {
     display:flex;
 }
 
 /* 헤더 */
-header {
-    height: 100px;
-    /* background: lightblue; */
-}
 /* 로고 */
 .logo {
     width: 200px;
     height: 100px;
     background: lightpink;
 }
-/* 네비게이션 */
+/* 내비게이션 */
 nav {
     width: 1000px;
     height: 100px;
@@ -50,14 +38,11 @@ nav {
 #slide {
     height: 300px;
     background: lightcoral;
-    /* overflow: hidden; */
-}
-#slide img {
-    height: 300px;
+    overflow:hidden;
 }
 #slide ul {
     position: relative;
-    left: 0;
+    left:0;
     display: flex;
     width: 400%;
     animation: slide 9s infinite;
@@ -70,16 +55,15 @@ nav {
     38% {left:-200%;}
     66% {left:-200%;}
     71% {left:-300%;}
-    99.99999% {left:-300%;}
-    100%{left:0;}
+    99.99% {left:-300%;}
+    100% {left:0;}
 }
 
-
-/* 메인콘텐츠 */
-#contents {
-    /* height: 200px; */
-    background: lightcyan;
+#slide img {
+    height: 300px;
 }
+
+/* 메인 콘텐츠 */
 #contents div {
     width: 400px;
     height: 200px;
@@ -90,15 +74,11 @@ nav {
 .banner {
     background: lavender;
 }
-.shoutcut {
+.shortcut {
     background: greenyellow;
 }
 
 /* 푸터 */
-footer {
-    /* height: 100px; */
-    background: lightgoldenrodyellow;
-}
 .b_logo {
     width: 200px;
     height: 100px;
