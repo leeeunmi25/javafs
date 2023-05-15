@@ -17,6 +17,7 @@ img{
     width:100%
 }
 body {
+    font-size: 1.5rem;
     font-family: 'Noto Sans KR', sans-serif;
     color: #333;
 }
@@ -62,6 +63,7 @@ nav li {
     background: #672F3E;
 }
 nav .main > li > a {
+    font-size: 1.8rem;
     color:#fff;
 }
 nav .sub {
