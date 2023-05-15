@@ -22,7 +22,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: #333;
+    color: #777;
 }
 
 /* 공통 */
@@ -40,8 +40,8 @@ header, #contents, footer {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 100px;
+    align-items: center;
      /* background: lightblue; */
 }
 
@@ -54,16 +54,15 @@ header {
 nav .main {
     display: flex;
 }
-
+nav .main li > a {
+    font-size: 1.8rem;
+    color: #fff;
+} 
 nav li {
     width: 150px;
     margin-left: 8px;
     text-align: center;
     background: #672F3E;
-}
-nav .main > li > a {
-    font-size: 1.8rem;
-    color:#fff;
 }
 nav .sub {
     display: none;
@@ -75,9 +74,7 @@ nav .sub {
     background: lightcoral;
     overflow: hidden;
 }
-#slide img {
-    height: 300px;
-}
+
 #slide ul {
     position: relative;
     left: 0;
@@ -97,22 +94,26 @@ nav .sub {
     100%{left:0;}
 }
 
+#slide img {
+    height: 300px;
+}
 
 /* 메인콘텐츠 */
-#contents {
-    /* height: 200px; */
+/* #contents {
+    height: 200px;
     background: lightcyan;
-}
-#contents div {
+} */
+#contents > div {
     width: 400px;
     height: 200px;
 }
 /* 탭 메뉴 */
 .tabs {
     /* background: gold; */
-    padding: 24px 0;
+    padding: 24px 24px 24px 0;
+    background-clip: content-box;
 }
-.tabs input, .tabs div {
+.tabs input, .tabs > div {
     display: none;
 }
 
@@ -136,9 +137,34 @@ nav .sub {
 }
 
 /* 탭 메뉴 - 공지사항 */
+#tab1 li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ccc;
+    white-space: nowrap;
+}
+#tab1 a {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* 말 줄임 ...효과 */
+    text-overflow: ellipsis;
+}
+
+#tab1 a:hover {
+    color: #000;
+}
+
 /* 탭 메뉴 - 갤러리 */
-#tab2 img {
+#tab2 ul { 
+    display: flex;
+    justify-content: space-around;
+}
+
+#tab2 a {
+    display: inline-block;
     width: 110px;
+    margin-right: 8px;
 }
 
 /* 배너 */
