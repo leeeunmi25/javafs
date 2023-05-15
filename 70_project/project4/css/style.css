@@ -17,8 +17,7 @@ img{
     width:100%
 }
 body {
-    font-size: 1.5rem;
-    font-family: 'Noto Sans KR', sans-serif;
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
     color: #333;
 }
 a {
@@ -108,12 +107,42 @@ nav .sub {
     width: 400px;
     height: 200px;
 }
+/* 탭 메뉴 */
 .tabs {
-    background: gold;
+    /* background: gold; */
+    padding: 24px 0;
 }
+.tabs input, .tabs div {
+    display: none;
+}
+
+#btn1:checked ~ #tab1, #btn2:checked ~ #tab2 {
+    display: block;
+}
+/* 탭 메뉴 - 제목/버튼 */
+.tabs label {
+    display: inline-block;
+    background: #672F2E;
+    color: #fff;
+    padding: 4px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+#btn1:checked + label {
+    background: #EBDACA;
+}
+
+/* 탭 메뉴 - 공지사항 */
+/* 탭 메뉴 - 갤러리 */
+#tab2 img {
+    width: 110px;
+}
+
+/* 배너 */
 .banner {
     background: lavender;
 }
+/* 바로가기 */
 .shoutcut {
     background: greenyellow;
 }
