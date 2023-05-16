@@ -51,13 +51,14 @@ header {
 
 /* 내비게이션 */
 nav .main {
-    display: flex }
+    display: flex 
+}
 nav .main li > a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #fff;
 }    
 nav li {
-    width :150px;
+    width :170px;
     margin-right: 8px;
     text-align: center;
     background: #672F2E;
@@ -94,7 +95,6 @@ nav .sub {
 }
 
 /* 메인콘텐츠 */
-
 #contents > div {
     width: 400px;
     height: 200px;
