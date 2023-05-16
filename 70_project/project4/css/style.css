@@ -60,7 +60,7 @@ nav li {
     width :150px;
     margin-right: 8px;
     text-align: center;
-    background: #672f2e;
+    background: #672F2E;
 }
 nav .sub {
     display: none;
@@ -69,7 +69,7 @@ nav .sub {
 
 #slide {
     height: 300px;
-    background: lightcoral;
+    background: rgb(250, 127, 127);
     overflow: hidden;
 }
 #slide ul {
