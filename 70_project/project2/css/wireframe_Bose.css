@@ -143,11 +143,6 @@ section li {
 
 #product h3 {
     position: absolute;
-    padding: 5px;
-}
-
-#product h3 {
-    position: absolute;
     background: #000;
     color: #fff;
     text-align: center;
