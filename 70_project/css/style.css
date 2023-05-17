@@ -37,7 +37,7 @@ header i {
     position: absolute;
     left: 50%;
     /* top: 50%; */
-    top: 80%;
+    top: 95%;
     padding: 8px 24px;
     background: #000;
     transform: translate(-50%, -50%);
@@ -85,13 +85,13 @@ header i {
     background: #555;
 }
 .progress .lst:nth-of-type(1) div span {
-    width: 90%;
+    width: 85%;
 }
 .progress .lst:nth-of-type(2) div span {
     width: 85%;
 }
 .progress .lst:nth-of-type(3) div span {
-    width: 75%;
+    width: 80%;
 }
 .counter {
     display: flex;
