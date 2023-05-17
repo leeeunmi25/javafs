@@ -47,11 +47,11 @@ header i {
     margin: 0 auto;
     padding-bottom:  81px;
 }
-.container h2 {
+.section h2 {
     margin-top: 81px;
     text-align: center;
 }
-.container h2 + p {
+.section h2 + p {
     margin: 27px 0;
     text-align: center;
 }
@@ -67,11 +67,31 @@ header i {
     transform: translate(-50%, -50%);
 }
 
-/* section2 - 스킬 */
+/* section2 */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.profile p {
+    text-align: justify;
+    word-break: break-all;
+}
+.profile p:first-of-type{
+    flex: 100%;
+} 
+.profiles div {
+    flex: 0 0 48%;
+}
+.profile p:last-of-type{
+    flex: 0 0 48%;
+} 
 .photo {
     width: 425px;
     /* height: 290px; */
 }
+
+/* section2 스킬*/
 #about h3 {
     margin: 54px 0;
     text-align: center;
