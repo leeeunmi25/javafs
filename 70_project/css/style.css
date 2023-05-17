@@ -16,7 +16,6 @@ header ul {
     height: 54px;
     padding: 0 16px;  
 }
-
 header a {
     padding: 4px 16px;
 }
@@ -30,14 +29,8 @@ header i {
 /* section1 */
 #home {
     position: relative;
-    /* background-image: url(../images/my4.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 25%;
-    background-attachment: fixed; */
     height: 930px;
     background: url(../images/my4.jpg) no-repeat 50% 10%/contain fixed;
-    
 }
 /* 요소를 부모 안에 정가운데 배치 */
 .logo {
@@ -53,16 +46,63 @@ header i {
 .container {
     width: 960px;
     margin: 0 auto;
+    padding-bottom:  81px;
+}
+.container h2 {
+    margin-top: 81px;
+    text-align: center;
+}
+.container h2 + p {
+    margin: 27px 0;
+    text-align: center;
 }
 .parallax {
     height: 410px;
     background: no-repeat 50% 50%/cover fixed;
 }
 
-/* section2 */
+/* section2 - 스킬 */
 .photo {
     width: 425px;
-    height: 290px;
+    /* height: 290px; */
+}
+#about h3 {
+    margin: 54px 0;
+    text-align: center;
+}
+.progress.lst > span {
+    display: inline-block;
+    margin: 16px;
+}
+.progress .lst div {
+    /* height: 34px; */
+    background: #eee;
+}
+.progress .lst div span {
+    display: block;
+    height: 34px;
+    text-align: center;
+    background: #555;
+}
+.progress .lst:nth-of-type(1) div span {
+    width: 90%;
+}
+.progress .lst:nth-of-type(2) div span {
+    width: 85%;
+}
+.progress .lst:nth-of-type(3) div span {
+    width: 75%;
+}
+.counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 132px;
+    background: #616161;
+}
+.counter span {
+    display: block;
+    text-align: center;
 }
 /* section3 */
 #portfolio .parallax {
@@ -86,3 +126,24 @@ header i {
     background-image: url(../images/fima1.png);
 }
 /* footer */
+footer {
+    padding: 64px 0 81px;
+    text-align: center;
+    background: #555;
+}
+footer:hover {
+    background: #000;
+}
+footer .topBtn a{
+    background: #ccc;
+    padding: 8px 16px;
+}
+footer .topBtn a:hover {
+    background: #555;
+}
+footer .topBtn i{
+    margin-right: 16px;
+}
+footer .sns {
+    margin: 12px 0 16px;
+}
