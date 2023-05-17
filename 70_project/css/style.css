@@ -79,18 +79,26 @@ header i {
 }
 .profile p:first-of-type{
     flex: 100%;
+    margin-bottom: 54px;
 } 
 .profiles div {
     flex: 0 0 48%;
+    text-align: center;
 }
 .profile p:last-of-type{
     flex: 0 0 48%;
 } 
 .photo {
     width: 425px;
-    /* height: 290px; */
+    /* height: 290px; 
+    overflow: hidden; */
 }
-
+.photo img {
+    margin-top: 54px;
+}
+.photo b {
+    margin-left: 8px;
+}
 /* section2 스킬*/
 #about h3 {
     margin: 54px 0;

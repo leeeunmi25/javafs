@@ -8,6 +8,11 @@ body {
     font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
     color: #333;
 }
+h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+
+}
 /* a태그 button태그 글자색은 body 글자색을 상속받지 않는다. */
 a {
     color: #333;
