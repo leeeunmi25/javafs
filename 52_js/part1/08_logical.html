@@ -15,18 +15,24 @@
             논리 연산자: ||(또는), &&(그리고), !(아니다)
             
             // 논리 연산의 결과는 true 또는 false이다. 
+            !(true) -> false
+            !(false) -> true
 
             true || true -> true
             true || false -> true
             false || true -> true
             false || false -> false
 
-            false || false || false || false || true 
+            false || false || false || false || true -> true
+            true || false || false || false || false -> true
 
             true && true -> true
             true && false -> false
             false && true -> false
             false && false -> false
+
+            false && false && false && false && true -> false
+            true && false && false && false && false -> false
 
             연산자의 우선순위
             1. ()
@@ -74,6 +80,16 @@
 
         result = !(a > b); 
         document.write(result, '<br>');
+        result = !a < b; 
+        document.write(!10, '<br>');
+        document.write(!0, '<br>');
+        document.write(!null, '<br>');
+        document.write(!undefined, '<br>');
+        document.write(!'', '<br>');
+        document.write(!false, '<br>');
+        // 산술연산에서 false는 0, true는 1이다. 
+        document.write(false + false + false, '<br>');
+        document.write(false + true + true, '<br>');
         
     </script>
 </body>
