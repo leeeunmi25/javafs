@@ -22,7 +22,7 @@
 
             7. 함수
             8. 객체
-            
+
             9. 이벤트, 제이쿼리 라이브러리
             10. 응용
 
@@ -39,18 +39,47 @@
             5**3 -> 5 * 5 * 5 = 125
         */
 
-        var num1 = 15;
-        var num2 = 2;
-        
-        var result;
+        const num1 = 15;
+        const num2 = 2;
+        let result;
 
-        // 변수란? 저장공간
-        // 변수 = 값
-        // 변수 = 변수;
-        // 변수 = 변수1 + 변수2;
-        // 값 = 변수; (x)
-        // 왼쪽은 항상 변수, 오른쪽은 변수 또는 값
-        num1 = num1 + num2
+        /*
+            //변수의 선언
+            var 변수;
+            let 변수;
+
+            //값 할당
+            변수 = 값;
+
+            변수의 선언 및 할당
+            var 변수 = 값;
+            let 변수 = 값;
+            const 변수 = 값;
+
+            =대입(할당)연산자의 연산 방식은 오른쪽의 내용을 왼쪽에 넣는다.
+            변수 = 값;
+            변수 = 변수;
+            값 = 변수; (x)
+
+            변수란? 저장공간
+            변수 = 값
+            변수 = 변수;
+            변수 = 변수1 + 변수2;
+            값 = 변수; (x)
+            왼쪽은 항상 변수, 오른쪽은 변수 또는 값
+        */
+
+        result = num1 + num2
+        document.write(result, '<br>');
+        result = num1 - num2
+        document.write(result, '<br>');
+        result = num1 * num2
+        document.write(result, '<br>');
+        result = num1 / num2
+        document.write(result, '<br>');
+        result = num1 % num2
+        document.write(result, '<br>');
+        result = num1 ** num2
         document.write(result, '<br>');
         
     </script>
