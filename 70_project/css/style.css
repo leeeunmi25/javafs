@@ -47,11 +47,11 @@ header i {
     margin: 0 auto;
     padding-bottom:  81px;
 }
-.section h2 {
+section h2 {
     margin-top: 81px;
     text-align: center;
 }
-.section h2 + p {
+section h2 + p {
     margin: 27px 0;
     text-align: center;
 }
