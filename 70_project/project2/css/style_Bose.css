@@ -18,12 +18,12 @@ nav {
 #main_img{
     position: relative;
 }
-#main_img h2 {
+/* #main_img h2 {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-}
+} */
 #main_img b {
     padding: 6px 16px 10px;
     background: rgba(0, 0, 0, 0.75);
@@ -34,15 +34,113 @@ nav {
 
 /* 섹션2~4 공통 */
 .section {
-    padding: 0 30px;
+    padding: 81px 30px 0;
 }
-/* 섹션2 */
-/* 섹션3 */
-/* 섹션4 */
-/* 푸터 */
+.section h2 {
+    line-height: 1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.section li {
+    margin-bottom: 15px;
+}
 
+/* 섹션2 */
+#product h2 {
+    margin-bottom: 40px;
+}
+#product li {
+    position: relative;
+}
+#product h3 {
+    position: absolute;
+    left: 0; top: 0;
+    padding: 4px 12px;
+    background: #000;
+}
+
+/* 섹션3 */
+#about > p {
+    margin-bottom: 40px;
+}
+#about h3 {
+    margin-top: 16px;
+}
+#about li p:first-of-type {
+    margin: 8px 0;
+}
+#about a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 6px 0;
+    margin-top: 16px;
+}
+
+/* 섹션4 */
+#contact input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+}
+#contact input::placeholder
+
+#contact button {
+    padding: 12px 16px;
+    margin: 20px 0 45px;
+    background: #000;
+}
+/* 푸터 */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 30px 0;
+}
+footer span:nth-of-type(1), footer span:nth-of-type(3) {
+    display: none;
+}
 
 /* 992px 이상 */
 @media (min-width: 992px) {
-    
+    /* 헤더 */
+    header  {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* 내비게이션 */
+    nav{
+        display: block;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav ul li:not(:first-of-type) {
+        margin-left: 36px;
+    }
+    /* 섹션1 */
+    #main_img {
+        max-width: 1496px;
+    }
+    /* 섹션 2~4 공통 */
+    .section {
+        width: 1496px;
+        margin: 0 auto;
+        padding: 81px 0 0;
+    }
+    .section ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section li {
+        width: 362px;
+        border: 1px solid red;
+    }
+    /* 섹션2 */
+    /* 섹션3 */
+    /* 섹션4 */
+    /* 푸터 */
+   
 }

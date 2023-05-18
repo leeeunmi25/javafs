@@ -22,7 +22,10 @@ img{
 li {
     list-style: none;
 }
-
+button {
+    background: transparent;
+    border: none;
+}
 iframe {
     width: 100%;
     height: 100%;
