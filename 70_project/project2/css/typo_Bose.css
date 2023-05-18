@@ -44,6 +44,14 @@ button {
     color: #fff
 }
 
+/* 섹션3 */
+#about h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+/* #about li p:first-of-type {
+    color #999;
+} */
 /* 푸터 */
 footer {
     color: #777;
