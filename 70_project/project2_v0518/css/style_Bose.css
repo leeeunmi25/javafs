@@ -1,7 +1,6 @@
 @charset "utf-8";
-/* @import url(reset_Bose1.css);
-@import url(typo_Bose1.css); */
-
+@import url(reset_Bos1.css);
+@import url(typo_Bose.css);
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 /* reset */
@@ -30,7 +29,7 @@ li {
 }
 
 /* border */
-section,
+/* section,
 footer,
 section li,
 #main_img h2,
@@ -38,7 +37,7 @@ section li,
 #product img,
 header:not(nav) {
     border: 1px solid #000;
-}
+} */
 
 img {
     border-bottom: 1px solid #000;
@@ -173,7 +172,7 @@ section li {
 
 #about li p {
     margin: 8px 0 8px;
-    min-height: 150px;
+    /* min-height: 150px; */
 }
 
 #about li a {
@@ -196,8 +195,7 @@ section li {
 #about li img {
     width: 100%;
     height: 50%;
-}
-/* 
+} 
 
 /* section 4 */
 /* input style */
