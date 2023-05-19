@@ -56,13 +56,17 @@ nav {
     animation: slide 9s infinite;
 }
 @keyframes slide {
-    /* 0% {left: 0;} */
+    0% {left: 0;}
     5% {left: -100%;}
     33% {left: -100%;}
     38% {left: -200%;}
     43% {left: -200%;}
     48% {left: -300%;}
-    99.99% {left: -300%;}
+    53% {left: -300%;}
+    58% {left: -400%;}
+    63% {left: -400%;}
+    68% {left: -400%;}
+    99.99% {left: -500%;}
     100%{left: 0%;}
 }
 #main_img {
@@ -149,14 +153,6 @@ footer span:nth-of-type(1), footer span:nth-of-type(3) {
     box-sizing: border-box;
 }
 
-body, section h2, section h3 {
-    color: #000;
-    background: #fff;
-    font-family: 'Nanum Pen Script', cursive;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-}
 a {
     text-decoration: #000; 
 }
@@ -234,14 +230,6 @@ a {
     box-sizing: border-box;
 }
 
-body, section h2, section h3 {
-    color: #000;
-    background: #fff;
-    font-family: 'Nanum Pen Script', cursive;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-}
 a {
     text-decoration: #000; 
 }
