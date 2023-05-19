@@ -33,6 +33,36 @@ nav {
     display: none;
 }
 
+/* 섹션1 슬라이드*/
+#main_img {
+    max-width: 1496px;
+}
+
+#slide {
+    height: 300px;
+    overflow: hidden;
+}
+#slide ul {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 400%; 
+    animation: slide 9s infinite;
+}
+@keyframes slide {
+    0% {left: 0;}
+    5% {left: -100%;}
+    33% {left: -100%;}
+    38% {left: -200%;}
+    66% {left: -200%;}
+    71% {left: -300%;}
+    99.99% {left: -300%;}
+    100%{left: 0%;}
+}
+#slide img {
+    height: 300px;
+}
+
 /* 섹션2~4 공통 */
 .section {
     padding: 81px 30px 0;
@@ -141,10 +171,7 @@ a {
     nav ul li:not(:first-of-type) {
         margin-left: 36px;
     }
-    /* 섹션1 */
-    #main_img {
-        max-width: 1496px;
-    }
+    
     /* 섹션 2~4 공통 */
     .section {
         width: 1496px;
@@ -276,8 +303,8 @@ a {
     /* 푸터 */
     footer {
         text-align: center;
-        /* height: 80px;
-        padding: 32px; */
+        height: 80px;
+        padding: 32px;
         background: #000;
         color: #fff;
     }
