@@ -29,15 +29,16 @@ li {
 }
 
 /* border */
-/* section,
-footer,
-section li,
-#main_img h2,
+/* section, */
+/* footer, */
+/* section li, */
+/* #main_img h2, */
 #product h3,
 #product img,
-header:not(nav) {
+header:not(nav) 
+{
     border: 1px solid #000;
-} */
+}
 
 img {
     border-bottom: 1px solid #000;
@@ -129,7 +130,7 @@ ul {
 
 section li {
     width: 362px;
-    /* min-height: 552px; */
+    min-height: 552px;
     position: relative;
     padding-bottom: 50px;
 }
@@ -166,13 +167,18 @@ section li {
 }
 
 /* section 3 */
+#about li img {
+    width: 100%;
+    height: 50%;
+} 
+
 #about li h3 {
     margin: 16px 0 8px; 
 }
 
 #about li p {
     margin: 8px 0 8px;
-    /* min-height: 150px; */
+    min-height: 150px;
 }
 
 #about li a {
@@ -191,11 +197,6 @@ section li {
     background-color: #000;
     color: #fff;
 }
-
-#about li img {
-    width: 100%;
-    height: 50%;
-} 
 
 /* section 4 */
 /* input style */
