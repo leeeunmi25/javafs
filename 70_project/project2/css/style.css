@@ -110,7 +110,7 @@ footer span:nth-of-type(1), footer span:nth-of-type(3) {
     display: none;
 }
 
-/* 390px 이상 */
+/* 600px 이상 */
 /* reset */
 * {
     margin: 0;
@@ -130,7 +130,7 @@ a {
     text-decoration: #000; 
 }
 
-@media (min-width: 992px) {
+@media (min-width: 600px) {
     /* 헤더 */
     header  {
         display: flex;
