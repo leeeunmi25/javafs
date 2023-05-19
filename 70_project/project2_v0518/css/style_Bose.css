@@ -128,12 +128,12 @@ ul {
     flex-wrap: wrap;
 }
 
-section li {
+/* section li {
     position: relative;
     width: 362px;
-    min-height: 552px;
+    height: 552px;
     padding-bottom: 50px;
-}
+} */
 
 /* section 2 */
 #product h2 {
@@ -191,6 +191,13 @@ section li {
     bottom: 0;
     left: 0;
     width: 100% 
+}
+
+section li {
+    position: relative;
+    width: 362px;
+    height: 552px;
+    padding-bottom: 50px;
 }
 
 #about li a:hover {
