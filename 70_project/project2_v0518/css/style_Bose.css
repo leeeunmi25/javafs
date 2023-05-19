@@ -129,9 +129,9 @@ ul {
 }
 
 section li {
+    position: relative;
     width: 362px;
     min-height: 552px;
-    position: relative;
     padding-bottom: 50px;
 }
 
