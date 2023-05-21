@@ -167,8 +167,9 @@ section li {
 }
 
 #about li p {
+    position: relative;
     margin: 8px 0;
-    /* min-height: 150px; */
+    min-height: 170px;
 }
 
 #about li a {
@@ -177,13 +178,13 @@ section li {
     background: #ccc;
     text-align: center;
     padding: 16px 0;
-    /* align-items: stretch;
-    bottom: 0;
+    align-items: stretch;
+    bottom: 30%;
     left: 0;
-    width: 100%  */
+    width: 100% 
 }
 
-/* #about li a:hover {
+#about li a:hover {
     background-color: #000;
     color: #fff;
 }
@@ -191,7 +192,7 @@ section li {
 #about li img {
     width: 100%;
     height: 50%;
-} */
+}
 
 /* section 4 */
 /* input style */
