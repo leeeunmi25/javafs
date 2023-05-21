@@ -4,14 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 /* 헤더 */
-/* header {
+header {
     z-index: 9999;
     position: fixed;
     width: 100%;
     padding: 12px 30px;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0,0.12);
-} */
+}
 
 body {
     font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
@@ -50,6 +50,7 @@ nav {
 
 /* 섹션1 슬라이드*/
 #slide {
+    width: 1496px;
     height: 300px;
     overflow: hidden;
 }
@@ -58,7 +59,7 @@ nav {
     left: 0;
     display: flex;
     width: 400%; 
-    animation: slide 9s infinite;
+    animation: slide 15s infinite;
 }
 @keyframes slide {
     0% {left: 0;}
