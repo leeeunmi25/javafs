@@ -35,7 +35,7 @@
         document.write("<table>");
         for (let i = 0; i < rowNum; i++) {
             document.write("<tr>");
-            for (let j = 0; j <= colNum; j++) {
+            for (let j = 1; j <= colNum; j++) {
                 seatNo = i * colNum + j;
                 if (seatNo > stuNum) break;
                 document.write("<td> 좌석 " + seatNo + " </td>");
