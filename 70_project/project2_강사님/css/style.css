@@ -13,6 +13,9 @@ body {
 a {
     color: #000;
 }
+img {
+    width: 100%;
+}
 /* 목록의 마커 제거 */
 li {
     list-style: none;
@@ -91,6 +94,7 @@ section {
 }
 
 /* section2 */
+
 #projects h2 {
     margin-bottom: 48px;
 }
@@ -112,9 +116,9 @@ section {
     padding: 10px 10px 10px;
 }
 
-#projects ul { 
+/* #projects ul { 
     margin-right: 1px;
-}
+} */
 
 #projects li:nth-of-type(4n) {
     margin-bottom: 17px;
