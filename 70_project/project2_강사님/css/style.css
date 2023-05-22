@@ -116,10 +116,6 @@ section {
     padding: 10px 10px 10px;
 }
 
-/* #projects ul { 
-    margin-right: 1px;
-} */
-
 #projects li:nth-of-type(4n) {
     margin-bottom: 17px;
 }
