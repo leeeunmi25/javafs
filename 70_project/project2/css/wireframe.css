@@ -22,7 +22,7 @@ li {
 }
 
 /* border */
-section,
+/* section,
 footer,
 section li,
 #main_img h2,
@@ -30,7 +30,7 @@ section li,
 #product img,
 header:not(nav) {
     border: 1px solid #000;
-}
+} */
 
 img {
     border-bottom: 1px solid #000;
