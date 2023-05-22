@@ -46,6 +46,7 @@ section {
 .section {
     padding-top: 81px;
 }
+
 .section h2 {
     margin-bottom: 16px;
     padding-bottom: 16px;
@@ -111,7 +112,7 @@ section {
     padding: 10px 10px 10px;
 }
 
-/* #projects ul { 
+#projects ul { 
     margin-right: 1px;
 }
 
@@ -121,7 +122,7 @@ section {
 
 #projects img {
     margin-bottom: -5px;
-} */
+}
 
 /* section3 */
 #about li h3 {
