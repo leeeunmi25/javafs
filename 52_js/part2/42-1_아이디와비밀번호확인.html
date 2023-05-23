@@ -20,12 +20,12 @@
             함수 호출
                 함수명(데이터1, 데이터2, ...);
         */
-         const rightId = 'korea';
-         const rightPw = '1234';
-         
-         function login(id, pw){
-            if (userId == id) {
-                if (userPw == pw) {
+        const userId = 'korea';
+        const userPw = '1234';
+
+        function login(id, pw){
+            if (userId === id) {
+                if (userPw === pw) {
                     document.write(id + '님 방문을 환영합니다.');
                 } else {
                     alert('비밀번호를 잘못 입력하셨습니다.');
@@ -35,12 +35,12 @@
                 alert('아이디를 잘못 입력하셨습니다.');
                 location.reload();
             }
-         }
+        }
+        
+        let loginId = prompt('아이디를 입력하세요.');
+        let loginPw = prompt('비밀번호를 입력하세요.');
 
-         let loginId = prompt('아이디를 입력하세요');
-         let loginpw = prompt('비밀번호를 입력하세요');
-
-         login(loginId, loginPw);
+        login(loginId, loginPw);
          
         // var rightId = 'korea';
         // var rightPw = '1234';
