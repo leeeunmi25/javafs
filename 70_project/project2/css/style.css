@@ -65,13 +65,13 @@ nav li {
     position: relative;
     left: 0;
     display: flex;
-    width: 500%;
+    width: 600%;
     animation: slide 9s infinite;
 }
 
 @keyframes slide {
     0% {left: 0;}
-    5% {left: -100%;}
+    3% {left: -100%;}
     20% {left: -100%;}
     25% {left: -200%;}
     30% {left: -200%;}
