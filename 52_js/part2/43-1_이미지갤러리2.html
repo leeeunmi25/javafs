@@ -62,18 +62,19 @@
         function gallery(direct){
             if (direct) {
                 // 다음버튼
-                if (num === 10) return;
+                if (num === 10) num = 0;
                 num++;
                 console.log(num);
             } else {
                 // 이전버튼
-                if (num === 1) return;
+                if (num === 1) num = 11;
                 num--;
                 console.log(num);
             }
+            imgTag.setAttribute('src','../assets/pic_'+num+'.jpg')
         }    
 
-        imgTag.setAttribute('src','../assets/pic_'+num+'.jpg')
+        
         // document.write(num);
 
         // num은 전역변수
