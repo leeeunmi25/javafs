@@ -65,7 +65,7 @@ nav li {
     position: relative;
     left: 0;
     display: flex;
-    width: 400%;
+    width: 500%;
     animation: slide 9s infinite;
 }
 
@@ -85,7 +85,7 @@ nav li {
 }
 
 #main_img {
-    height: 551px;
+    height: 351px;
 }
 
 /* 섹션2~4 공통 */
