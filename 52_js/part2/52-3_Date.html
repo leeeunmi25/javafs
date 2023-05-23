@@ -51,15 +51,53 @@
         document.write(d.getDate(),'<br>');
         //요일(week):0(일)~6(토)
         //if를 사용하여 요일을 일요일~토요일까지 문자열로 표시하기
-        
+        let week = d.getDate();
 
-        document.write(d.getDay(),'<br>');
+        if(d.getDay()===0) {
+            week('일요일');
+        } else if (d.getDay()===1) {
+            week('월요일')
+        } else if (d.getDay()===2) {
+            week('화요일')
+        }else if (d.getDay()===3) {
+            week('수요일')
+        }else if (d.getDay()===4) {
+            week('목요일')
+        }else if (d.getDay()===5) {
+            week('금요일')
+        }else {
+            week('토요일')
+        }
+    
+        document.write(week, '<br>')
+
+        // document.write(d.getDay(),'<br>');
+
         // 시(hh)
+        // if 사용하여 오전과 오후를 구분하여 12시간제 두 자리 수로 표시하기
+        // 예) 오후 5시
+        let hh = d.getHours();
+        if (hh >= 13) {
+            hh = hh - 12
+            document.write('오후' + (hh - 12) + '시', '<br>');
+        } else {
+            document.write('오전' + hh + '시', '<br>');
+        }
+
+        document.write(hh,'<br>');
         document.write(d.getHours(),'<br>');
         // 분(mm)
-        document.write(d.getMinutes(),'<br>');
-        // 초(ss)
-        document.write(d.getSeconds(),'<br>'); 
+        // 00 ~09, 10 ~ 60
+        let mm = d.getMinutes();
+        let ss = d.getSeconds();
+          
+        if (mm < 10 || ss < 10) {
+            mm = '0' + mm; 
+            ss = '0' + ss;
+        }
+        document.write(mm,'<br>');
+        document.write(ss,'<br>'); 
+        
     
     </script>
 </body>
