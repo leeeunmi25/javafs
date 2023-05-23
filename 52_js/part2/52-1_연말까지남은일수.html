@@ -24,10 +24,12 @@
         // 현재 날짜부터 연말까지 남은 일 수
         // 남은 일 수(밀리초) = 특정 날짜 밀리초 - 현재 날짜 밀리초
 
+        // 종강일(9월14일)까지 몇 일 남았나요?
+        
         var today = new Date();
         var nowYear = today.getFullYear();
 
-        var theDate = new Date(nowYear, 11, 31);
+        var theDate = new Date(nowYear, 8, 14);
         var diffDate = theDate.getTime() - today.getTime();
 
         var result = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
