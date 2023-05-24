@@ -56,8 +56,8 @@ nav li {
 
 /* 섹션1 슬라이드*/
 #slide {
-    width: 710px;
-    height: 400px;
+    width: 1496px;
+    height: 800px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -86,7 +86,7 @@ nav li {
 }
 
 #main_img {
-    height: 551px;
+    height: 651px;
     margin: 0 auto;
 }
 
@@ -238,6 +238,22 @@ a {
         height: 50%;
     }
 
+ /* botton style */
+ button {
+    height: 48px;
+    width: 160px;
+    background: #000;
+    border-style: none;
+    color: #fff;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
     /* 섹션4 */
     #map {
         height: 830px;
@@ -249,21 +265,7 @@ a {
         height: 848px;
     }
 
-    /* botton style */
-    button {
-        height: 48px;
-        width: 160px;
-        background: #000;
-        border-style: none;
-        color: #fff;
-        margin-top: 16px;
-        margin-bottom: 48px;
-    }
-
-    button:hover {
-        background-color: #ccc;
-        color: #000;
-    }
+   
 
     /* 푸터 */
     footer {
