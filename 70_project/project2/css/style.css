@@ -56,8 +56,9 @@ nav li {
 
 /* 섹션1 슬라이드*/
 #slide {
-    width: 1496px;
-    height: 300px;
+    width: 710px;
+    height: 400px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -86,6 +87,7 @@ nav li {
 
 #main_img {
     height: 551px;
+    margin: 0 auto;
 }
 
 /* 섹션2~4 공통 */
