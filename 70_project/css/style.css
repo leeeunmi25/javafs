@@ -36,9 +36,9 @@ header i {
     position: absolute;
     left: 50%;
     /* top: 50%; */
-    top: 95%;
+    top: 103%;
     padding: 8px 24px;
-    background: #000;
+    background: #9d25aa;
     transform: translate(-50%, -50%);
 }
 /* section2~4 공통 */
