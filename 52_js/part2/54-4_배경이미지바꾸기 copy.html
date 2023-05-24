@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>버튼 클릭 시 배경색 바꾸기</h1>
+    <h1>버튼 클릭 시 배경이미지 바꾸기</h1>
     <button onclick="changeColor();">배경색 바꾸기</button>
     <script>
         /* 
@@ -25,16 +25,16 @@
             문서객체.style.CSS스타일 = 값; 문서 객체에 CSS 스타일 적용
         */
 
-        var color = ['white', 'yellow', 'aqua', 'purple'];
-        // color[0] = 'white'
-        // color[1] = 'yellow'
-        // color[2] = 'aqua'
-        // color[3] = 'purple'
+        var image = ['white', 'yellow', 'aqua', 'purple'];
+        // image[0] = 'white'
+        // image[1] = 'yellow'
+        // image[2] = 'aqua'
+        // image[3] = 'purple'
         var i = 0;
 
-        function changeColor() {
+        function changeImgae() {
             i++;
-            if (i >= color.length) {
+            if (i >= image.length) {
                 i = 0;
             }
 
