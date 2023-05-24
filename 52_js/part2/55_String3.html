@@ -16,10 +16,11 @@
             split('문자'): 지정한 문자를 기준으로 문자열 데이터를 나누어 배열에 저장하여 반환
             
             concat('새문자열'): 문자열에 새 문자열 결합
-            trim(): 문자열 앞 또는 뒤에 공백 문자열 삭제
+            trim(): 문자열 앞 또는 뒤에 두 칸 이상의 공백 문자열을 1칸으로 삭제
         */
 
         var str = 'Hello Thank you good luck to you';
+        var str3 = 'T   h   a   n   k     y   o   u';
 
         document.write(str.slice(12, 17), '<br>');
         document.write(str.slice(12, -1), '<br>');
@@ -31,7 +32,9 @@
         document.write(str2[0], '<br>');
         document.write(str2[1], '<br>');
 
+        document.write(str.concat(' so much'), '<br>')
         
+        document.write(str3.trim(), '<br>')
 
     </script>
 </body>
