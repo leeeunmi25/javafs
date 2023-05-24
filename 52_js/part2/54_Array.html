@@ -22,6 +22,7 @@
                 참조변수[n-1] = 값n;
 
             var 참조변수 = new Array(값1, 값2, 값3, ... 값n);
+
             var 참조변수 = [값1, 값2, 값3, ... 값n];
 
             배열 객체에 저장된 데이터 가져오기
@@ -29,7 +30,24 @@
                 인덱스 번호는 0부터 시작
        */
 
-        
+        let arr1 = new Array();
+        arr1[0] = 10;
+        arr1[1] = 20;
+        arr1[2] = 30;
+
+        document.write(arr1, '<br>');
+
+        let arr2 = new Array('문', '자', '열');
+        document.wirte(arr2, '<br>');
+
+        let arr3 = [true, false];
+        document.wirte(arr3, '<br>');
+
+        // 배열 값을 가져오기
+        document.write(arr[0], '<br>')
+        document.write(arr[1], '<br>')
+        document.write(arr[2], '<br>')
+
     </script>
 </body>
 
