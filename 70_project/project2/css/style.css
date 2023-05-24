@@ -67,7 +67,7 @@ nav li {
     left: 0;
     display: flex;
     width: 600%;
-    animation: slide 13s infinite;
+    animation: slide 9s infinite;
 }
 
 @keyframes slide {
