@@ -37,6 +37,7 @@ header {
 }
 nav {
     float: right;
+    margin: 16px 16px;
 }
 nav li {
     display: inline-block;
