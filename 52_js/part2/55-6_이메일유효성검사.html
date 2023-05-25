@@ -31,46 +31,35 @@
             변수: userEmail, arrUrl, chk1, chk2
             제어문: if, if ~ else, for 
             메서드: prompt(), indexOf(), alert(), write()
+            속성: length 
         */ 
 
         // 변수선언
-        let chk1 = false, chk2 = fasle;
-        const arrUrl = ['.com', '.co.kr', '.net' , '.or.kr', '.go.kr'];
+        let chk1 = false, chk2 = false;
+        const arrUrl = ['.com', '.co.kr', '.net', '.or.kr', '.go.kr'];
         // 입력
         const userEmail = prompt('이메일 주소를 입력하세요.');
         
         // 처리
         // @있으면 0이상 정수, 없으면 -1
-        userEmail.indexOf('@')
+        // chk1 변수에 @가 있으면 true, 없으면 false
+       if (userEmail.indexOf('@') >0) {
+            chk1 = true;
+       } 
 
+        // chk2 변수에 .com, .co.kr, ...이 있으면 true, 없으면 false
+        for(let i = 0; i <= arrUrl.length; i++) {
+        if (userEmail.indexOf(arrUrl[i]) > 0) {
+            chk2 = true;
+       } 
+    }
         // 출력
         if (chk1 && chk2) {
             document.write(userEmail);
         } else {
-            alert('잘못 입력하셨습니다.')
+            alert('잘못 입력하셨습니다.');
+            location.reload();
         }    
-
-
-
-        // let userEmail = prompt('당신의 이메일 주소를 쓰세요.', '');
-        // let arrUrl = ['.co.kr', '.com', '.net' , '.or.kr', '.go.kr'];
-
-        // let check1 = false;
-        // let check2 = fales;
-
-        // if (userEmail.indexOf('@') > 0 ) {check1 = true;}
-
-        // for (var i = 0; i < arrUrl.length; i++) {
-        //     if (userEmail.indexOf(arrUrl[i]) > 0) {
-        //         check2 = true; 
-        //     }
-        // }
-        // if (check1 && check2) {
-        //     document.write(userEmail);
-        // } else {
-        //     alert('이메일을 잘못 쓰셨습니다.');
-        // }
-
 
         // var userEmail = prompt('당신의 이메일 주소는?', '');
         // var arrUrl = ['.co.kr', '.com', '.net', '.or.kr', '.go.kr'];
