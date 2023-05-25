@@ -28,6 +28,7 @@
             font-weight: bold;
             line-height: 40px;
             color: #fff;
+            transition: 3s;
         }
         .main > li > a:hover {
             background: #5A8C1B;
@@ -119,11 +120,15 @@
         // 
         $(document).ready(function(){
             // 자바스크립트 코드;
-            // 제이쿼리 코듸;
+            // 제이쿼리 코드;
         });
 
         $(function(){
-            //객체.메서드()
+            // 객체.메서드() ~ 메서드 체이닝
+            // 슬라이드 효과 : slideDown(), slideUp()
+            // 페이드 효과: fadeOut(), fadeIn()
+            // 숨기기/ 보이기: hide(), show()
+            // 애니메이션: animate()
             $('.main > li').mouseenter(function(){
                 $('.sub').slideDown();
             });
