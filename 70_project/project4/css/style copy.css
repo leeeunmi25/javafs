@@ -69,7 +69,9 @@ nav .sub {
 /* 슬라이드 */
 
 #slide {
-    height: 300px;
+    width: 1200px;
+    /* height: 300px; */
+    height: 660px;
     background: rgb(250, 127, 127);
     overflow: hidden;
 }
@@ -77,21 +79,25 @@ nav .sub {
     position: relative;
     left: 0;
     display: flex;
-    width: 400%; /* 부모크기의4배 */
+    width: 600%; 
     animation: slide 9s infinite;
 }
 @keyframes slide {
     0% {left: 0;}
     5% {left: -100%;}
-    33% {left: -100%;}
-    38% {left: -200%;}
-    66% {left: -200%;}
-    71% {left: -300%;}
-    99.99% {left: -300%;}
+    20% {left: -100%;}
+    25% {left: -200%;}
+    40% {left: -200%;}
+    45% {left: -300%;}
+    60% {left: -300%;}
+    65% {left: -400%;}
+    80% {left: -400%;}
+    85% {left: -500%;}
+    99.99% {left: -500%;}
     100%{left: 0%;}
 }
 #slide img {
-    height: 300px;
+    height: 660px;
 }
 
 /* 메인콘텐츠 */
