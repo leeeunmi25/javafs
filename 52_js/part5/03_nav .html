@@ -97,10 +97,10 @@
     <script>
             $('.main > li').mouseenter(function(){
                 // this란? 이벤트를 발생시킨 주체
-                $(this).find('.sub').slideDown();
+                $(this).find('.sub').stop().slideDown();
             });
             $('.main > li').mouseleave(function(){
-                $(this).find('.sub').slideUp();
+                $(this).find('.sub').stop().slideUp();
             });
     </script>
 </body>
