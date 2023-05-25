@@ -54,26 +54,27 @@
                 var 변수 = 함수명();
         */
 
-        // 변수 
-        const imgTag = document.getElementById('photo');
+        //변수 
+        const imgTag = document.getElementById('photo')
         let num = 1;
-
-        // 함수 
-        function gallery(direct){
+        
+        // 함수 정의
+        function gallery(direct) {
             if (direct) {
-                // 다음버튼
-                if (num === 10) return;
+                // 다음 버튼
+                if(num === 10) num = 0;
                 num++;
                 console.log(num);
-            } else {
-                // 이전버튼
-                if (num === 1) return;
+            }else {
+                //이전 버튼;
+                if(num === 1) num = 11;
                 num--;
                 console.log(num);
             }
-        }    
-
-        imgTag.setAttribute('src','../assets/pic_'+ num +'.jpg')
+            imgTag.setAttribute('src' , '../assets/pic_' + num + '.jpg');
+        }
+        
+        document.write(num);
         // document.write(num);
 
         // num은 전역변수
