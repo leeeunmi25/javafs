@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Valley Festival</title>
+    <link rel="stylesheet" href="css/test.css">
     <style>
         /* 초기화 */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box;   
         }
 
         html {
             font-size: 10px;
+            background: #ffffff;
+
         }
 
         li {
@@ -29,9 +31,13 @@
 
         body {
             font: 1.5rem/1.8 sans-serif;
+            background: #ffffff;
+            color: #333333;
         }
 
         /* 레이아웃 */
+        /* 레이아웃 */
+
         #wrap {
             width: 1200px;
         }
@@ -54,6 +60,7 @@
             text-align: center;
             padding: 40px 0;
         }
+        
 
         /* GNB */
         nav {
@@ -125,53 +132,29 @@
             left: 0;
             top: 0;
             height: 400%;
-            animation: slide 9s infinite;
+            animation: slide 3s infinite;
         }
 
         .slide li {
-            width: 1200px;
-            height: 300px;
+            width: 500px;
+            height: 100%;
         }
 
         /* 애니메이션 키프레임 */
         @keyframes slide {
-            0% {
-                top: 0;
-            }
-
-            5% {
-                top: -100%;
-            }
-
-            33% {
-                top: -100%;
-            }
-
-            38% {
-                top: -200%;
-            }
-
-            66% {
-                top: -200%;
-            }
-
-            71% {
-                top: -300%;
-            }
-
-            99.99% {
-                top: -300%;
-            }
-
-            100% {
-                top: 0;
-            }
-        }
+            0% {left: 0;}
+            5% {left: -100%;}
+            33% {left: -100%;}
+            38% {left: -200%;}
+            66% {left: -200%;}
+            71% {left: -300%;}
+            99.99% {left: -300%;}
+            100% {left: 0;}
 
         /* 푸터 */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 64px 0 81px;
         }
     </style>
 </head>
@@ -179,44 +162,44 @@
 <body>
     <div id="wrap">
         <header>
-            <h1 class="logo"><a href="#">이탈리아</a></h1>
+            <h1 class="logo"><a href="#">Valley Festival</a></h1>
         </header>
         <nav id="gnb">
             <ul class="main">
                 <li>
-                    <a href="#">메인메뉴1</a>
+                    <a href="#">축제소개</a>
                     <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
+                        <li><a href="#"></a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">메인메뉴2</a>
+                    <a href="#">예약안내</a>
                     <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
+                        <li><a href="#"></a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">메인메뉴3</a>
+                    <a href="#">아티스트</a>
                     <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">메인메뉴4</a>
+                    <a href="#">커뮤니티</a>
                     <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">사진갤러리</a></li>
+                        <li><a href="#">영상갤러리</a></li>
+                        <li><a href="#"></a></li>
                     </ul>
                 </li>
             </ul>
@@ -224,14 +207,14 @@
         <div class="slide">
             <h2>메인 타이틀</h2>
             <ul>
-                <li><img src="../assets/slide1.jpg" alt="테스트"></li>
-                <li><img src="../assets/slide2.jpg" alt="테스트"></li>
-                <li><img src="../assets/slide3.jpg" alt="테스트"></li>
-                <li><img src="../assets/slide1.jpg" alt="테스트"></li>
+                <li><img src="images/Festival1.jpg" alt="Festival1"></li>
+                <li><img src="images/Festival2.jpg" alt="Festival2"></li>
+                <li><img src="images/Festival3.jpg" alt="Festival3"></li>
+                <li><img src="images/Festival1.jpg" alt="Festival1"></li>
             </ul>
         </div>
         <footer>
-            <p>Copyright 2023 이탈리아. All rights reserved.</p>
+            <p>Copyright 2023 Valley Festival. All rights reserved.</p>
         </footer>
     </div>
 
