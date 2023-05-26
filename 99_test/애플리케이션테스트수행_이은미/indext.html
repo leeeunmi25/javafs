@@ -65,12 +65,27 @@
         header {
             text-align: center;
             padding: 40px 0;
-            height: 200px;
+            height: 35  0px;
         }
         header .logo a {
             font-size: 100px;
         }
-       
+
+        header h1 {
+            text-align: center;
+            padding-top: 40px;
+            animation-name: logo;
+            animation-iteration-count: initial;
+            animation-direction: alternate;
+            animation-duration: 1s;
+        }
+
+        @keyframes logo {
+            0% {transform: scale(1);}
+            50% {transform: scale(2);}
+            100% {transform: scale(1);}
+        }
+
         /* GNB */
         nav {
             z-index: 1000;
@@ -87,12 +102,10 @@
             height: 40px;
             background: #1dad6a;
             text-align: center;
-
         }
 
         .main>li>a {
             display: block;
-            /* font-size: 1.6rem; */
             font-size: 22px;
             font-weight: normal;
             line-height: 40px;
