@@ -2,6 +2,23 @@
 @import url('reset.css');
 @import url('typo.css');
 
+/* reset */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    background: #fff;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: #000; 
+} */
+
 /* 헤더 */
 header {
     z-index: 9999;
