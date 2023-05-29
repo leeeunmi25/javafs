@@ -14,6 +14,12 @@ header {
 nav {
     display: none;
 }
+
+/* nav li {
+    display: inline-block;
+    margin: 16px;
+} */
+
 /* 섹션1 */
 #main_img {
     position: relative;
@@ -62,6 +68,15 @@ nav {
 }
 
 /* 섹션3 */
+#about li img {
+    width: 100%;
+    height: 50%; 
+} 
+
+#about li h3 {
+    margin: 16px 0 8px; 
+}
+
 #about > p {
     margin-bottom: 40px;
 }
@@ -79,6 +94,11 @@ nav {
     margin-top: 16px;
 }
 
+#about li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 /* 섹션4 */
 #contact input {
     display: block;
@@ -87,11 +107,23 @@ nav {
     margin: 15px 0;
     border: 1px solid #ccc;
 }
-#contact button {
-    padding: 12px 16px;
-    margin: 20px 0 45px;
+
+
+button {
+    height: 48px;
+    width: 160px;
     background: #000;
+    border-style: none;
+    color: #fff;
+    margin-top: 16px;
+    margin-bottom: 48px;
 }
+
+button:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
 #contact .map {
     height: 185px;
 }
@@ -103,7 +135,8 @@ footer {
     margin-top: 8px;
     padding: 30px 0;
 }
-footer span:nth-of-type(1), footer span:nth-of-type(3) {
+footer span:nth-of-type(1), 
+footer span:nth-of-type(3) {
     display: none;
 }
 
