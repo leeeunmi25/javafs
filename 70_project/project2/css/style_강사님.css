@@ -59,6 +59,7 @@ nav {
 /* 섹션2~4 공통 */
 .section {
     padding: 81px 30px 0;
+    /* font-size: 18px; */
 }
 .section h2 {
     line-height: 1;
