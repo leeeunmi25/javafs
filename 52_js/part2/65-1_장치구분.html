@@ -22,7 +22,14 @@
             m.naver.com ~ 모바일
         */
 
-            
+     const ua = navigator.userAgent.toLowerCase();
+     
+     if (ua.indesOF('android') > 0 || ua.indexOF('iphone') > 0) {
+        location.href = 'https://m.naver.com';
+     } else {
+        location.href = 'https://naver.com';
+     }
+
 
     </script>
 </body>
