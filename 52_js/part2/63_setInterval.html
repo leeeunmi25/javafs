@@ -18,7 +18,7 @@
    
     <script>
         /* 
-            setInterval(): 일정한 시간 간격으로 코드를 반복 실행
+            const 변수 = setInterval(): 일정한 시간 간격으로 코드를 반복 실행
             clearInterval(): setInterval() 메서드 제거
 
             let 변수 = setInterval(function(매개변수){
@@ -59,6 +59,7 @@
 
         let auto1, auto2;
 
+         // add함수의 괄호()는 쓰지 않는다.
         btn1.onclick = function(){
             auto1 = setInterval(add, 1000);
         };    
