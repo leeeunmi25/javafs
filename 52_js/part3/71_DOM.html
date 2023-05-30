@@ -17,12 +17,22 @@
 
 <body>
     <ul>
-        <li>목록1</li>
+        <li id="blue">목록1</li>
         <li>목록2</li>
         <li class="red">목록3</li>
-        <li>목록4</li>
+        <li class="red">목록4</li>
     </ul>
 
+    <!-- 제이쿼리 라이브러리 파일: CDN -->
+    <script scr="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- 구글 CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 마이크로소프트 CDN -->
+    <script scr="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <!-- CDNJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 현재 컴퓨터에 저장 -->
+    <script scr="jquery-3.7.0.min.js"></script>
     <script>
         /* 
             DOM(Document Object Model, 문서 객체 모델)
@@ -38,12 +48,63 @@
             - document.getElementById('아이디명')
             - document.getElementsByClassName('클래스명')
             - document.getElementsByTagName('태그명')
-            - document.querySeletor('선택자')
-            - document.querySeletorAll('선택자들')
+            - document.querySelector('선택자')
+            - document.querySelectorAll('선택자들')
+
+            제이쿼리
+            $('선택자')
 
             객체.style.속성 = 값;
+
+            #blue {
+
+            }
         */
 
+        // 요소를 선택하여 글자색을 파랑,빨강으로 지정하시오.
+        // 객체.메서드()
+        /* document.getElementById('blue');
+        document.querySelector('#blue');
+        document.getElementsByClassName('red');
+        document.getElementsByClassName('red')[0];
+        document.querySelectorAll('.red');
+        document.querySelectorAll('.red')[0];
+        document.getElementsByTagName('li');
+        document.getElementsByTagName('li')[0];
+        document.querySelectorAll('.li');
+        document.querySelectorAll('.li')[0]; */
+
+        // 객체.메서드();
+        /*
+            $('#blue') css({속성:값, 속성:값, ...});
+            $('#red') css({속성:값, 속성:값, ...});
+            $('#bli') css({속성:값, 속성:값, ...});
+
+            객체.style.CSS속성 = 값;
+            객체.css(속성, 값);
+            객체.css({속성:값, 속성:값, ...});
+        */ 
+       
+        const blue = document.getElementById('blue');
+        blue.style.color = 'blue';
+
+        const red1 = document.querySelectorAll('.red')[0];
+        const red2 = document.querySelectorAll('.red')[1];
+        red1.style.color = '#ff0000';
+        red2.style.color = '#ff0000';
+        
+
+        $('#blue').css({color: '#0000ff'});
+        $('.red').css({color: '#ff0000'});
+
+        /* const blue = document.getElementById('blue');
+        blue.style.border = '1px solid red';        
+        blue.style.color = 'white';        
+        blue.style.backgroundColor = 'blue';       
+        
+        const red = document.querySelectorAll('.red')[0];
+        red.style.color = 'red'; */
+        
     </script>
 </body>
 
