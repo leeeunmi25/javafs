@@ -28,7 +28,8 @@ header i {
 /* section1 */
 #home {
     position: relative;
-    height: 930px;
+    /* height: 930px; */
+    height: 1050px;
     background: url(../images/my4.jpg) no-repeat 50% 10%/contain fixed;
 }
 /* 요소를 부모 안에 정가운데 배치 */
@@ -36,7 +37,7 @@ header i {
     position: absolute;
     left: 50%;
     /* top: 50%; */
-    top: 95%;
+    top: 105%;
     padding: 8px 24px;
     background: #9d25aa;
     transform: translate(-50%, -50%);
@@ -207,8 +208,8 @@ section h2 + p {
     height: 44px;
     background: #000;
     color: #fff
-
 }
+
 /* footer */
 footer {
     padding: 64px 0 81px;
