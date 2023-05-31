@@ -43,11 +43,18 @@
         /* 버튼을 클릭하면 '변경전 입니다.' 글자를 '변경후 입니다.'로 바꾼다. (단, <h1> 태그 삽입) 또한 변경된 텍스트인 '변경후 입니다.'를 클릭하면 '<h1>변경후 입니다.</h1>'를 경고창으로 띄운다.  */
 
         const btn = document.querySelector('button');
-        const box = document.querySelector('span');
+        const box = document.querySelector('div');
 
         btn.onclick = function(){
-            box.innerText = '변경후 입니다.';
+            // box.innerText = '<h1>변경후 입니다.</h1>';
+            box.innerHTML = '<h1>변경후 입니다.</h1>';
         };
+
+        box.onclick = function(){
+            let txt = box.innerHTML
+            alert(txt);
+            // alert('<h1>변경후 입니다.</h1>');
+        }
     </script>
 </body>
 
