@@ -61,7 +61,7 @@
             요소.addEventListener('이벤트명', function(){});
 
             //제이쿼리
-            $('선택자').이벤트명 = function(){};
+            $('선택자').이벤트명(function(){});
             $('선택자').on('이벤트명', function(){});
 
         */
@@ -71,18 +71,16 @@
         const box2 = document.querySelector('.box2');
         const pTag = document.querySelector('p');
 
-        box1.onclick = function () {
-            pTag.innerText = 'box1을 클릭했습니다.';
-        };
+        box1.click(function () {
+            pTag.Text = 'box1을 클릭했습니다.';
+        });
 
         box2.onmouseenter = ev1;
-                
         function ev1() {
             pTag.innerText = 'box2위에 마우스를 올렸습니다.';
         };
 
-        box2.addEventListener('mouseleave', ev2);
-                
+        box2.addEventListener('mouseleave', ev2);    
         function ev2() {
             pTag.innerText = 'box2위에서 마우스가 벗어났다.';
         };
