@@ -26,24 +26,28 @@
     </div>
 
     <script>
-      /*   
-      div 영역위에서 마우스퓔을 올렸다 내렸다 했을 때 div의 배경색을 빨강과 파랑으로 변화되게 지정하고, p 요소에는 텍스트로 '마우스휠을 올렸다.' '마우스휠을 내렸다.'라고 표시되도록 지정하시오. 
+        /* 
+            div 영역 위에서 마우스휠를 조정했을 때 div의 배경색을 빨강과 파랑으로 변화되게 지정하고, p 요소에는 텍스트로 '마우스휠을 올렸다.' '마우스휠을 내렸다.' 라고 표시되도록 지정하시오. 
 
-      이벤트명 : wheel 
-      */
-        const box = documnet.querySelector('div');
+            이벤트명: wheel
+            키워드: this
+        */
+        const box = document.querySelector('div');
         const txt = box.children[0];
 
         box.onwheel = function(e){
             // 마우스휠을 내리면 e.deltaY가 양수, 아니면 음수
-            if(e.deltaY > 0){
+            if (e.deltaY > 0) {
                 this.style.background = 'red';
-                txt.innerHTML = '마우스휠을 내렸다.'
+                txt.innerHTML = '마우스휠을 내렸다.';
             } else {
                 this.style.background = 'blue';
-                txt.innerHTML = '마우스휠을 올렸다.'
+                txt.innerHTML = '마우스휠을 올렸다.';
             }
-        }
+        };
+        
+
+
 
     </script>
 </body>
