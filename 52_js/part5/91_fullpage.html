@@ -25,7 +25,7 @@
         // const box = documnet.querySelector('div');
         // const txt = box.children[0];
 
-        documnent.onwheel = function(e){
+        /* documnent.onwheel = function(e){
             // 마우스휠을 내리면 e.deltaY가 양수, 아니면 음수
             if(e.deltaY > 0){
                 this.style.background = 'red';
@@ -33,6 +33,26 @@
             } else {
                 this.style.background = 'blue';
                 txt.innerHTML = '마우스휠 올림.'
+            }
+        }; */
+        
+        num = 1;
+
+        document.documentElement.onwheel = function (event) {
+            // 마우스휠 올리기
+            if (event.deltaY < 0) {
+                location.href = "#section" + num;
+                num--;
+                if (num == 0) {
+                    num = 1;
+                }
+            // 마우스휠 내리기
+            } else {
+                location.href = "#section" + num;
+                num++;
+                if (num > 4) {
+                    num = 4;
+                }
             }
         };
     </script>
