@@ -62,7 +62,7 @@
     <div id="lightbox">
         <img src="../assets/pic_1.jpg" alt="" id="lightboxImage">
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /*
             썸네일 이미지를 클릭하면 해당 이미지의 큰 이미지가 모달 팝업 형식으로 나타나도록 하시오. 모달 팝업 창 임의 영역을 클릭하면 합업 창(큰 이미지)이 닫히게 한다. 
@@ -72,46 +72,27 @@
                 - lightboxImg(큰 이미지)
                 - imgs(썸네일 이미지)
             이벤트: click
-            메서드: getAttribute(), setAttribute()
+            메서드: attr(), find(), css()
             사용자 정의 함수: showLightbox()
         */
 
-       const lightbox = document.querySelector('#lightbox');    
-       const lightboxImg = document.querySelector('#lightboxImage');    
-       const imgs = document.querySelectorAll('.pic');
+       const lightbox = $('#lightbox');    
+       const lightboxImg = lightbox.find('#lightboxImage');    
+       const imgs = $('.pic');
 
-        for (let i = 0; i < imgs.length; i++){
-            imgs[i].onclick = showLightbox;
-        }
+       
+        imgs.click(showLightbox);
+        
         
         function showLightbox(){
-            let dataSrc = this.getAttribute('data-src')
+            let dataSrc = $(this).attr('data-src')
             lightboxImg.setAttribute('src', dataSrc);
-            lightbox.sytle.display = 'block';
+            lightbox.css({display: 'block'});
         }
 
-        lightbox.onclick = function() {
-            lightbox.sytle.display = 'none';
-        };
-        
-
-        /* var pics = document.getElementsByClassName("pic");
-        var lightbox = document.getElementById("lightbox");
-        var lightboxImage = document.getElementById("lightboxImage");
-
-        for (i = 0; i < pics.length; i++) {
-            pics[i].addEventListener("click", showLightbox);
-        }
-
-        function showLightbox() {
-            var bigLocation = this.getAttribute("data-src");
-            lightboxImage.setAttribute("src", bigLocation);
-            lightbox.style.display = "block";
-        }
-
-        lightbox.onclick = function () {
-            lightbox.style.display = "none";
-        } */
+        lightbox.click(function() {
+            $(this).css({display: 'none'});
+        });
 
     </script>
 </body>
