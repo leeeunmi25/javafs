@@ -67,11 +67,17 @@
 
 
 
-        const bigImg = document.querySelector("#pic");
-        const thumbImg = document.querySelectorAll(".small");
+        // const bigImg = document.querySelector("#pic");
+        // const thumbImg = document.querySelectorAll(".small");
 
-        let gallery = function() {
-                let imgSrc = this.getAttribute('src');
+        // let gallery = function() {
+        //         let imgSrc = this.getAttribute('src');
+        //         bigImg.setAttribute('src', imgSrc);
+        //     }
+
+        // 화살표 함수
+        let gallery = e => {
+                let imgSrc = e.target.getAttribute('src');
                 bigImg.setAttribute('src', imgSrc);
             }
        
