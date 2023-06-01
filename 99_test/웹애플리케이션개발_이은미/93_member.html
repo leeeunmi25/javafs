@@ -49,7 +49,7 @@
 
 <body>
     <div id="wrap">
-        <h1>카드게임</h1>
+        <h1>윷놀이</h1>
         <input type="text" placeholder="아이디를 입력하세요." id="memberId">
         <input type="text" placeholder="비밀번호를 입력하세요." id="memberPw">
         <button>가입하기</button>
@@ -65,24 +65,11 @@
        
         memberBtn.onclick = member;
 
-        function member(){
+        function member() {
             const userId = memberId.value;
             const userPw = memberPw.value;
-            location.href= '93_login.html?' + userId + '/' + userPw;
+            location.href = '93_login.html?' + userId + '/' + userPw;
         } 
-
-            // console.log(memberId.value);
-            // if (userId === newId) {
-            //     if (userPw === newPw) {
-            //     } else {
-            //         alert('비밀번호를 잘못 입력하셨습니다.');
-            //         location.reload();
-            //     }
-            // } else {
-            //     alert('아이디를 잘못 입력하셨습니다.');
-            //     location.reload();
-            // }
-        
     </script>
 </body>
 

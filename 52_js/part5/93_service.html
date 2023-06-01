@@ -38,7 +38,6 @@
             padding: 8px;
             font-size: 20px;
         }
-
         #member {
             position: absolute;
             left: 0;
@@ -47,20 +46,12 @@
             font-size: 1.5rem;
             color: #777;
         }
-
-        img {
-            position: absolute;
-            left: 42%;
-            top: 35%;
-            padding: 50px 50px;
-            transform: translate(-50% -50%);
-        }
     </style>
 </head>
 
 <body>
     <div id="wrap">
-        <h1>윷놀이</h1>
+        <h1>카드게임</h1>
         <div id="result">결과가 궁금하시죠?</div>
         <button id="againBtn">다시하기</button>
         <button id="logoutBtn">게임종료</button>
@@ -71,37 +62,28 @@
     <script>
         const againbtn = document.querySelector('#againBtn')
         const logoutBtn = document.querySelector('#logoutBtn')
-        let game = prompt('도, 개, 걸, 윷, 모, 뒷도 여섯개 중 하나만 입력하세요.', '')
+        let game = prompt('가위, 바위, 보 셋 중 하나만 입력하세요.', '')
         
         switch(game) {
-            case '도':
+            case '가위':
                 gameNum = 1;
                 break;
-            case '개':
+            case '바위':
                 gameNum = 2;
                 break;
-            case '걸':
+            case '보':
                 gameNum = 3;
                 break;                     
-            case '윷':
-                gameNum = 4;
-                break;                     
-            case '모':
-                gameNum = 5;
-                break;                     
-            case '뒷도':
-                gameNum = 6;
-                break;                     
             default:com
-                alert('도, 개, 걸, 윷, 모, 뒷도 여섯개 중 하나만 입력하세요.')
+                alert('가위, 바위, 보 셋 중 하나만 입력하세요.')
                 location.reload();
             }
 
-            // 1 ~ 6 사이 정수 
+            // 1 ~ 3 사이 정수 
             // Math.floor(Math.random()*(최대값 - 최소값 + 1) + 최소값)
-            // Math.floor(Math.random()*(6 - 1 + 1) + 1)
-            let com = Math.floor(Math.random() * 6) + 1;
-            document.write('<img src="images/game_img' + com + '.png" alt="도"><br>');
+            // Math.floor(Math.random()*(3 - 1 + 1) + 1)
+            let com = Math.floor(Math.random() * 3) + 1;
+            document.write('<img src="../assets/math_img_' + com + '.jpg" alt="가위"><br>');
 
             if(gameNum === com) {
                 result.innerHTML = ('<p>축하합니다. 맞추었습니다.</p>');
