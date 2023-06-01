@@ -46,6 +46,13 @@
             font-size: 1.5rem;
             color: #777;
         }
+        img {
+            position: absolute;
+            /* left: 30%; */
+            top: 35%;
+            /* padding: 24px 24px; */
+            transform: translate(-50% -50%);
+        }
     </style>
 </head>
 
@@ -62,7 +69,7 @@
     <script>
         const againbtn = document.querySelector('#againBtn')
         const logoutBtn = document.querySelector('#logoutBtn')
-        let game = prompt('가위, 바위, 보 셋 중 하나만 입력하세요.', '')
+        let game = prompt('도, 개, 걸, 윷, 모, 뒷도 여섯개 중 하나만 입력하세요.', '')
         
         switch(game) {
             case '도':
@@ -92,7 +99,7 @@
             // Math.floor(Math.random()*(최대값 - 최소값 + 1) + 최소값)
             // Math.floor(Math.random()*(6 - 1 + 1) + 1)
             let com = Math.floor(Math.random() * 6) + 1;
-            document.write('<img src="../assets/math_img_' + com + '.jpg" alt="가위"><br>');
+            document.write('<img src="images/game_img' + com + '.png" alt="도"><br>');
 
             if(gameNum === com) {
                 result.innerHTML = ('<p>축하합니다. 맞추었습니다.</p>');
