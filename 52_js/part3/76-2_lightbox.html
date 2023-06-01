@@ -60,16 +60,39 @@
     </div>
 
     <div id="lightbox">
-        <img src="images/pic_1.jpg" alt="" id="lightboxImage">
+        <img src="../assets/pic_1.jpg" alt="" id="lightboxImage">
     </div>
 
     <script>
         /*
-            요소.getAttribute('속성명') ~ HTML 속성 반환
-            요소.setAttribute('속성명', '값') ~ HTML 속성 설정
+            썸네일 이미지를 클릭하면 해당 이미지의 큰 이미지가 모달 팝업 형식으로 나타나도록 하시오. 모달 팝업 창 임의 영역을 클릭하면 합업 창(큰 이미지)이 닫히게 한다. 
+
+            객체변수:
+                - lightbox(모달 창)
+                - lightboxImg(큰 이미지)
+                - imgs(썸네일 이미지)
+            이벤트: click
+            메서드: getAttribute(), setAttribute()
+            사용자 정의 함수: showLightbox()
         */
 
-        var pics = document.getElementsByClassName("pic");
+       const lightbox = document.querySelector('#lightbox');    
+       const lightboxImg = document.querySelector('#lightboxImage');    
+       const imgs = document.querySelectorAll('.pic');
+
+        for (let i = 0; i < imgs.length; i++){
+            imgs[i].onclick = showLightbox;
+        }
+        
+        function showLightbox(){
+            let dataSrc = this.getAttribute('data-src')
+            lightboxImg.setAttribute('src', dataSrc);
+            lightbox.sytle.display = 'block';
+        }
+
+        
+
+        /* var pics = document.getElementsByClassName("pic");
         var lightbox = document.getElementById("lightbox");
         var lightboxImage = document.getElementById("lightboxImage");
 
@@ -85,7 +108,7 @@
 
         lightbox.onclick = function () {
             lightbox.style.display = "none";
-        }
+        } */
 
     </script>
 </body>
