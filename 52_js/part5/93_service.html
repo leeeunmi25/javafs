@@ -65,24 +65,33 @@
         let game = prompt('가위, 바위, 보 셋 중 하나만 입력하세요.', '')
         
         switch(game) {
-            case '가위':
+            case '도':
                 gameNum = 1;
                 break;
-            case '바위':
+            case '개':
                 gameNum = 2;
                 break;
-            case '보':
+            case '걸':
                 gameNum = 3;
                 break;                     
+            case '윷':
+                gameNum = 4;
+                break;                     
+            case '모':
+                gameNum = 5;
+                break;                     
+            case '뒷도':
+                gameNum = 6;
+                break;                     
             default:com
-                alert('가위, 바위, 보 셋 중 하나만 입력하세요.')
+                alert('도, 개, 걸, 윷, 모, 뒷도 여섯개 중 하나만 입력하세요.')
                 location.reload();
             }
 
-            // 1 ~ 3 사이 정수 
+            // 1 ~ 6 사이 정수 
             // Math.floor(Math.random()*(최대값 - 최소값 + 1) + 최소값)
-            // Math.floor(Math.random()*(3 - 1 + 1) + 1)
-            let com = Math.floor(Math.random() * 3) + 1;
+            // Math.floor(Math.random()*(6 - 1 + 1) + 1)
+            let com = Math.floor(Math.random() * 6) + 1;
             document.write('<img src="../assets/math_img_' + com + '.jpg" alt="가위"><br>');
 
             if(gameNum === com) {
