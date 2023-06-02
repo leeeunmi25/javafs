@@ -170,7 +170,7 @@ section h2 + p {
 }
 /* section4 */
 #contact .parallax {
-    background-image: url(../images/fima1.png);
+    background-image: url(../images/parallax3.jpg);
 }
 #contact .container{
     display: flex;
