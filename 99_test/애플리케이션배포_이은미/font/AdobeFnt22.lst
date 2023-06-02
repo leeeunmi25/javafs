@@ -1,0 +1,35 @@
+%!Adobe-FontList 1.22
+%Locale:0x412
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Dokdo-Regular
+FamilyName:Dokdo
+StyleName:Regular
+FullName:Dokdo Regular
+MenuName:Dokdo
+StyleBits:0
+FamilyNameNative:Dokdo
+StyleNameNative:Regular
+FullNameNative:Dokdo Regular
+WritingScript:Korean
+OutlineFileName:D:\학생방\이은미\javafs\99_test\애플리케이션배포_이은미\Font\Dokdo\Dokdo-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:2149820
+FileModTime:1664320284
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Dokdo
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\학생방\이은미\javafs\99_test\애플리케이션배포_이은미\Font\Dokdo\OFL.txt
+FileModTime:1685667612
+%EndFont
+
