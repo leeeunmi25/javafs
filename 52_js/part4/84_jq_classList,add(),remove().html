@@ -29,8 +29,8 @@
 </head>
 
 <body>
-    <button class='btn1'>클래스 추가</button>
-    <button class='btn2'>클래스 제거</button>
+    <button class="btn1">클래스 추가</button>
+    <button class="btn2">클래스 제거</button>
     <div></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
@@ -48,12 +48,12 @@
         const removeBtn =$('.btn2');
         const box = $('div');
 
-        addBtn.onclick = function(){
-            box.addclass('on active');   
-        }
-        removeBtn.onclick = function(){
-            box.removeclass('on active');
-        }
+        addBtn.click(function(){
+            box.addClass('on active');   
+        });   
+        removeBtn.click(function(){
+            box.removeClass('on active');
+        });
 </script>
 </body>
 
