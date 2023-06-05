@@ -10,7 +10,9 @@
 
 <body>
     <h1>속성 값이 있는 새로운 요소 추가하기</h1>
-    <div id="info"></div>
+    <div id="info">
+
+    </div>
 
     <script>
         /* 
@@ -18,7 +20,31 @@
             요소.createAttribute(속성명) ~ 요소에 속성 추가
             요소.setAttributeNode(노드명) ~ 요소에 속성 연결
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
+
+            속성:value
         */
+
+        /* 
+            div 박스 안에 assets 폴더에 있는 pic_1.jpg 파일을 이미지로 삽입하시오.
+            
+            메서드: 
+            A.createElement(b) ~ A에 요소 b를 생성
+            A.createAttribute(b) ~ A에 속성 b를 추가
+
+            A.setAttributeNode(b) ~ A에 속성노드 b를 설정 
+            A.appendChild(b) ~ A에 b를 추가
+
+            속성: value
+        */
+            const info = document.querySelector('#info');
+            const imgTag = document.createElement('img');
+            const srcAttr = document.createAttribute('src');
+            const altAttr = document.createAttribute('alt');
+            imgTag.setAttributeNode(srcAttr);
+            imgTag.setAttributeNode(altAttr);
+            srcAttr.value = '../assets/pic_1.jpg';
+            altAttr.value = '이미지';
+            info.appendChild(imgTag);    
 
     </script>
 </body>
