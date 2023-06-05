@@ -11,7 +11,9 @@
 
 <body>
     <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
-    <div id="info"></div>
+    <div id="info">내용</div>
+
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
@@ -20,8 +22,11 @@
             before<div id="info">prepend내용append</div>after
             A.append(b) ~ A에 b 추가
             A.prepend(b) ~ A에 b 추가
-            A.after(b) ~ A에 b 추가
+            b.appendTo(b) ~ A에 b 추가
+            b.prependTo(b) ~ A에 b 추가
+
             A.before(b) ~ A에 b 추가
+            A.after(b) ~ A에 b 추가
         */
 
         /* 
@@ -33,19 +38,18 @@
             메서드: createElement()  append() 
         */
             const info = $('#info');
-            const para = document.createElement('p');
-            const txt = 'DOM이란? Document Object Model의 줄임말이다.';
+            const part1 = '<p>append</p>';
+            const part2 = '<p>prepend</p>';
+            const part3 = '<p>before</p>';
+            const part4 = '<p>after</p>';
+            const imgTag = '<img src="../assest/htmltree.gif">'; 
 
-            info.append(para).append(txt);
-            info.prepend(para).append(txt);
-            info.after(para).append(txt);
-            info.before(para).before(txt);
-    
-
-            // const imgP = document.createElement('img');
-            // info.appendChild(imgP);
-            // imgP.setAttribute('src','../assets/htmltree.gif');
-            // imgP.setAttribute('alt','DOM Tree');
+            info.append(part1);
+            info.prepend(part2);
+            info.before(part3);
+            info.after(part4);
+             
+             info.append(imgTag);
             
     </script>
 </body>
