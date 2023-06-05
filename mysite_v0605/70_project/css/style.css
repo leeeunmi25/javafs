@@ -33,7 +33,7 @@ header i {
     background: url(../images/my4.jpg) no-repeat 50% 10%/contain fixed;
 }
 /* 요소를 부모 안에 정가운데 배치 */
-.logo {
+.clock {
     position: absolute;
     left: 50%;
     /* top: 50%; */
