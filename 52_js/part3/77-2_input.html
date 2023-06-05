@@ -30,7 +30,7 @@
         const inputBox = document.querySelector('#subject');
         const btn = document.querySelector('button');
 
-        btn.onclick = txtlist;
+        btn.onclick = txtList;
 
         function txtList() {
             const item = document.createElement('li');
@@ -38,7 +38,6 @@
             const itemTxt = document.createTextNode(txt);
             itemList.appendChild(item);
             item.appendChild(itemTxt);
-
         }
     </script>
 </body>
