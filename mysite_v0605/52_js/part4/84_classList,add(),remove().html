@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 20px;
+            margin-left: 50px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background: #888;
+            margin: 50px;
+        }
+        div.on {
+            width: 400px;
+            height: 400px;
+            background: red;
+        }
+        div.active {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <button class='btn1'>클래스 추가</button>
+    <button class='btn2'>클래스 제거</button>
+    <div></div>
+
+    <script>
+        /* 
+            요소.classList.add('클래스1', '클래스2', ...) ~ 요소의 클래스 추가
+            요소.classList.remove('클래스1', '클래스2', ...) ~ 요소의 클래스 제거
+        */
+        /* 
+            클래스 추가 버튼을 클릭하면 아래 회색 박스에 .on 클래스를 추가하고, 클래스 제거 버튼을 클릭하면 아래 회식 박스에 .on 클래스를 제거하시오.
+
+            메서드: classList.add(), calssList.remove()
+        */
+        const addBtn = document.querySelector('.btn1');
+        const removeBtn =document.querySelector('.btn2');
+        const box = document.querySelector('div');
+
+        addBtn.onclick = function(){
+            box.classList.add('on', 'active')   
+        }
+        removeBtn.onclick = function(){
+            box.classList.remove('on', 'active')
+        }
+</script>
+</body>
+
+</html>

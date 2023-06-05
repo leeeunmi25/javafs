@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    
+</head>
+
+<body>
+    <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
+    <div id="info"></div>
+
+    <script>
+        /* 
+            요소a.createElement(노드명b) ~ 요소a에 요소 노드b 추가
+            요소a.createTextNode(텍스트b) ~ 요소a에 텍스트 노드b 추가
+            부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
+        */
+
+        /* 
+            #info 박스에 p요소를 삽입하고,
+            p요소의 내용으로 'DOM이란? Document Object Mode의 줄임말이다.'을 생성하여 #info 박스에 추가하시오.
+
+            img요소를 생성(src는 'pic_htmltree')하여 #info 박스의 p요소 아래에 추가하시오. 
+
+            메서드: createElement() createTextNode() appendChild() Attribute()
+        */
+            const info = document.querySelector('#info');
+            const para = document.createElement('p');
+            info.appendChild(para);
+            const txt = document.createTextNode('DOM이란? Document Object Model의 줄임말이다.');
+            para.appendChild(txt);
+
+            const imgP = document.createElement('img');
+            info.appendChild(imgP);
+            imgP.setAttribute('src','../assets/htmltree.gif');
+            imgP.setAttribute('alt','DOM Tree');
+            
+    </script>
+</body>
+
+</html>

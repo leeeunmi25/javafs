@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <style>
+        body {margin: 0;}
+        #fullpage div {height: 100vh;}
+        #section1 {background: rgb(72, 72, 180);}
+        #section2 {background: rgb(139, 78, 102);}
+        #section3 {background: rgb(87, 109, 44);}
+        #section4 {background: rgb(201, 156, 72);}
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+    <script>
+        // const box = documnet.querySelector('div');
+        // const txt = box.children[0];
+
+        /* documnent.onwheel = function(e){
+            // 마우스휠을 내리면 e.deltaY가 양수, 아니면 음수
+            if(e.deltaY > 0){
+                this.style.background = 'red';
+                txt.innerHTML = '마우스휠 내림.'
+            } else {
+                this.style.background = 'blue';
+                txt.innerHTML = '마우스휠 올림.'
+            }
+        }; */
+        
+        num = 1;
+
+        document.documentElement.onwheel = function (event) {
+            // 마우스휠 올리기
+            if (event.deltaY < 0) {
+                location.href = "#section" + num;
+                num--;
+                if (num == 0) {
+                    num = 1;
+                }
+            // 마우스휠 내리기
+            } else {
+                location.href = "#section" + num;
+                num++;
+                if (num > 4) {
+                    num = 4;
+                }
+            }
+        };
+    </script>
+</body>
+</html>

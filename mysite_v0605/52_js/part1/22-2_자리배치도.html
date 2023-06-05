@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        /* 
+            if (조건식) {
+                코드1;
+            } else {
+                코드2;
+            }
+        */
+
+        //학생수(stu_num)와 한줄에 앉는 인원수(count)를 입력받아 총 몇 줄(total_line)이 필요한지 구하시오. 
+        // 입력
+            var stu_num = prompt('학생수를 입력하세요');
+            var count = prompt('한 줄에 앉는 인원수를 입력하세요.');
+            var total_line
+    
+            // let stuNum = Number(prompt("학생은 몇 명인가요?"))
+            // let colNum = Number(prompt("한줄에 몇명씩 앉습니까?"))
+            // let rowNum    
+
+        // 처리
+        // 학생수 / 한줄인원수 -> 몫, 나머지
+        // 몫: parseInt(학생수 / 한줄인원수)
+        // 나머지: 학생수 % 한줄인원수 
+        if (학생수 % count === 0) {
+            total_line = parseInt(stuNum / count)
+        } else {
+            total_line = parseInt(stuNum / count) + 1
+        }
+
+            // if(stuNum % colNum === 0) {
+            //     rowNum = parseInt(stuNum / colNum);
+            // } else {
+            //     rowNum = parseInt(stuNum / colNum) + 1;
+            // }
+                
+        // 출력
+        // 학생수는 xx명, 한줄에 앉는 인원은 xx명이므로 좌석은 총 xx줄이 필요합니다.  
+            document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }   
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            outline: 1px solid lime;
+        }
+
+        /* (1) .fldr에 방향을 row(행, 가로, 왼쪽->오른쪽)로 지정하시오. (기본값) */
+        .fldr {flex-direction: row;}
+
+        /* (2) .fldc에 방향을 column(열, 세로 위->아래)로 지정하시오. */
+        .fldc {flex-direction: column;}
+
+        /* (3) .fldrr에 방향을 row-reverse(거꾸로, 역방향, 오른쪽->왼쪽)로 지정하시오. */
+        .fldrr {flex-direction: row-reverse;}
+
+        /* (4) .fldcr에 방향을 column-reverse(아래->위)로 지정하시오. */
+        .fldcr {flex-direction: column-reverse;}
+
+    </style>
+</head>
+
+<body>
+    <h1>flexible(플렉서블)</h1>
+    <div class="container fldr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container fldc">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container fldrr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container fldcr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

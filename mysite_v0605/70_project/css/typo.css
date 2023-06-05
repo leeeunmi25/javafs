@@ -1,0 +1,70 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+html {
+    font-size: 10px;
+}
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+
+}
+/* a태그 button태그 글자색은 body 글자색을 상속받지 않는다. */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 로고 */
+.logo a {
+    color: #fff;
+}
+/* 섹션2 - 진행바 */
+.progress .lst div{
+    color: #fff;
+}
+.progress .lst > span {
+    letter-spacing: 8px;
+    color: #777;
+    display: inline-block;
+    margin: 16px;
+}
+/* 섹션2 - 카운터 */
+.counter {
+    color: #fff
+}
+
+.counter span {
+    font-size: 2.4rem;
+}
+
+/* 패럴렉스 */
+.parallax {
+    font-size: 3.6rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+}
+.parallax b {
+    font-weight: 400;
+}
+
+/* 푸터 */
+footer {
+    color: #fff
+}
+footer .topBtn a {
+    color: #333;
+}
+footer .topBtn a:hover {
+    color: #fff;
+}
+footer .sns {
+     color: #fff;
+    font-size: 2.4rem;
+}

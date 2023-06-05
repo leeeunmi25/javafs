@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            width: 600px;
+            height: 400px;
+            background: #888;
+            margin: 50px auto;
+        }
+        div p {
+            font-size: 40px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+
+    <script>
+        /* 
+            div 영역 위에서 마우스휠를 조정했을 때 div의 배경색을 빨강과 파랑으로 변화되게 지정하고, p 요소에는 텍스트로 '마우스휠을 올렸다.' '마우스휠을 내렸다.' 라고 표시되도록 지정하시오. 
+
+            이벤트명: wheel
+            키워드: this
+        */
+        const box = document.querySelector('div');
+        const txt = box.children[0];
+
+        box.onwheel = function(e){
+            // 마우스휠을 내리면 e.deltaY가 양수, 아니면 음수
+            if (e.deltaY > 0) {
+                this.style.background = 'red';
+                txt.innerHTML = '마우스휠을 내렸다.';
+            } else {
+                this.style.background = 'blue';
+                txt.innerHTML = '마우스휠을 올렸다.';
+            }
+        };
+        
+
+
+
+    </script>
+</body>
+
+</html>

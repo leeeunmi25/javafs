@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <h1>이미지</h1>
+
+    <!-- 
+       1. 이미지에 캡션 달기
+        <img src="경로설정" alt"" width="너비" height="높이">
+
+        <figure>
+            <img src="" alt="">
+            <figcaption>캡션</figcaption>
+        </figure>    
+
+        2. 이미지 맵
+           - 하나의 이미지에 하나 이상의 링크 적용 
+           - img 태그의 usemap 속성 값은 map 태그의 name 속성과 같아야 한다.
+           - area 태그에 alt 속성을 반드시 기록한다.
+           - 좌표 찾기: https://www.image-map.net/ 
+
+        <img src="경로설정" alt"" usemap="#map1">
+        <map name="map1">
+            <area shape="rect" coords="x1,y1,x2,y2" alt"">
+            <area shape="circle" coords="x1,y1,R" alt""> R은 반지름
+            <area shape="poly" coords="x1,y1,x2,y2,..." alt""> 시작점을 시작으로 시계방향으로 작성
+        </map>  
+
+        <img src="경로설정" alt"" usemap="#map2">
+        <map name="map2">
+            <area shape="rect" coords="x1,y1,x2,y2" href="">
+            <area shape="circle" coords="x1,y1,R"  href=""> R은 반지름
+            <area shape="poly" coords="x1,y1,x2,y2,..."  href=""> 시작점을 시작으로 시계방향으로 작성
+        </map>        
+     -->
+    <!-- 
+        사용 이미지
+        1. 이탈리아 풀리아주의 건축물인 트룰리: assets/pic_trulli.jpg
+          - 캡션: Fig.1 - Trulli, Puglia, Italy.
+        2. Workplace: /workplace.jpg
+          - 크기: 가로 400px, 세로 379px
+    -->
+    <h2>캡션 달기</h2>
+    <!-- figure와 figcaption을 사용하여 이미지에 캡션을 달아 보세요. -->
+    <figure>
+        <img src="/50_html/assets/pic_trulli.jpg" alt="trulli">
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
+
+    <!-- width와 height는 사용하는 것이 좋으나 css언어를 사용하는 것이 좋다. -->
+    <img src="/workplace.jpg" alt="workplace" width="400" height="379">
+    <a href="http://www.khan.co.kr"><img src="/50_html/assets/경향신문.png" alt="경향신문로고"></a>
+
+    <hr>
+    <h2>이미지 맵</h2>
+
+
+    <!-- img 태그의 usemap 속성 값은 map 태그의 name 속성과 같아야 한다. -->
+    <!-- area 태그에 alt 속성을 반드시 기록한다. -->
+    <!-- 예) usemap="#map", name="map" -->
+    <!-- 좌표 찾기: https://www.image-map.net/ -->
+
+    <!-- img 태그의 usemap 속성을 사용하여 하나의 이미지에 3개의 링크를 적용해 보세요. -->
+    <!-- 
+        맵의 모양에 따른 좌표:
+        1. shape="poly"의 경우 coords="x1,y1,x2,y2,x3,y3,..."
+        2. shape="rect"의 경우 coords="x1,y1,x2,y2"
+        3. shape="circle"의 경우 coords="x1,y1,R" (R은 반지름)
+     -->
+    <p>컴퓨터, 핸드폰, 커피 잔을 클릭하여 새 페이지로 이동하고 주제에 대해 자세히 읽어보십시오.</p>
+     <!-- target 은 선택 -->
+    <img src="/workplace.jpg" alt="workplace" usemap="#map1">
+    <map name="map1">
+        <area shape="rect" coords="293,174,335,246" alt="핸드폰" href="http://google.com" target="_blank">
+        <area shape="circle" coords="339,302,45" alt="커피 잔" href="https://naver.com" target="_blank">
+        <area shape="poly" coords="36,42,272,44,263,188,273,348,31,345,45,186" alt="컴퓨터" href="http://frontendw.rf.gd" target="_blank">
+    </map>
+
+</body>
+
+</html>

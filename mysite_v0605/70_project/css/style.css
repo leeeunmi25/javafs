@@ -1,0 +1,234 @@
+@charset "utf-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url('reset.css');
+@import url('typo.css');
+
+/* header */
+header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    padding: 0 16px;  
+}
+header a {
+    padding: 4px 16px;
+}
+header a:hover {
+    background: #ccc;
+}
+header i {
+    margin-right: 8px;
+}
+
+/* section1 */
+#home {
+    position: relative;
+    /* height: 930px; */
+    height: 1050px;
+    background: url(../images/my4.jpg) no-repeat 50% 10%/contain fixed;
+}
+/* 요소를 부모 안에 정가운데 배치 */
+.logo {
+    position: absolute;
+    left: 50%;
+    /* top: 50%; */
+    top: 105%;
+    padding: 8px 24px;
+    background: #9d25aa;
+    transform: translate(-50%, -50%);
+}
+/* section2~4 공통 */
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom:  81px;
+}
+section h2 {
+    margin-top: 81px;
+    text-align: center;
+}
+section h2 + p {
+    margin: 27px 0;
+    text-align: center;
+}
+.parallax {
+    position: relative;
+    height: 410px;
+    background: no-repeat 50% 50%/cover fixed;
+}
+.parallax b {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* section2 */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.profile p {
+    text-align: justify;
+    word-break: break-all;
+}
+.profile p:first-of-type{
+    flex: 100%;
+    margin-bottom: 54px;
+} 
+.profiles div {
+    flex: 0 0 48%;
+    text-align: center;
+}
+.profile p:last-of-type{
+    flex: 0 0 48%;
+} 
+.photo {
+    width: 425px;
+    /* height: 290px; 
+    overflow: hidden; */
+}
+.photo img {
+    margin-top: 54px;
+}
+.photo b {
+    margin-left: 8px;
+}
+/* section2 스킬*/
+#about h3 {
+    margin: 54px 0;
+    text-align: center;
+}
+.progress.lst > span {
+    display: inline-block;
+    margin: 16px;
+}
+.progress .lst div {
+    /* height: 34px; */
+    background: #eee;
+}
+.progress .lst div span {
+    display: block;
+    height: 34px;
+    text-align: center;
+    background: #555;
+}
+.progress .lst:nth-of-type(1) div span {
+    width: 80%;
+}
+.progress .lst:nth-of-type(2) div span {
+    width: 75%;
+}
+.progress .lst:nth-of-type(3) div span {
+    width: 85%;
+}
+.counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 132px;
+    background: #616161;
+}
+.counter span {
+    display: block;
+    text-align: center;
+}
+/* section3 */
+#portfolio .parallax {
+    background-image: url(../images/fima2.png);
+}
+/* 
+    max-width : 960px
+    column count: 12 
+    1 column width: 69px
+    gutter: 12px
+*/
+#portfolio ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#portfolio li {
+    width: 231px;
+    height: 162px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+#portfolio .moreBtn {
+    margin-top: 64px;
+    text-align: center;
+}
+#portfolio .moreBtn a {
+    padding: 12px 24px;
+    background: #f1f1f1;
+}
+/* section4 */
+#contact .parallax {
+    background-image: url(../images/parallax3.jpg);
+}
+#contact .container{
+    display: flex;
+}
+#map {
+    flex: 0 0 330px;
+    height: 160px;
+    margin-right: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#contact address i {
+    margin-right: 20px;
+}
+#contact address + p {
+    margin: 16px 0;
+}
+#contact form {
+    text-align: right;
+}
+#contact [name] {
+    width: 292px;
+    height: 44px;
+    padding-left: 8px;
+}
+#contact [name="user_name"] {
+    margin-right: 11px;
+}
+#contact [name*="message"] {
+    width: 600px;
+    margin: 16px 0;
+}
+#contact button {
+    width: 160px;
+    height: 44px;
+    background: #000;
+    color: #fff
+}
+
+/* footer */
+footer {
+    padding: 64px 0 81px;
+    text-align: center;
+    background: #555;
+}
+footer:hover {
+    background: #000;
+}
+footer .topBtn a{
+    background: #ccc;
+    padding: 8px 16px;
+}
+footer .topBtn a:hover {
+    background: #555;
+}
+footer .topBtn i{
+    margin-right: 16px;
+}
+footer .sns {
+    margin: 12px 0 16px;
+}

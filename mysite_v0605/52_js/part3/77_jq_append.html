@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    
+</head>
+
+<body>
+    <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
+    <div id="info">내용</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            $('선택자a').createElement('선택자b') ~ 요소a에 요소 노드b 추가
+
+            before<div id="info">prepend내용append</div>after
+            A.append(b) ~ A에 b 추가
+            A.prepend(b) ~ A에 b 추가
+            b.appendTo(b) ~ A에 b 추가
+            b.prependTo(b) ~ A에 b 추가
+
+            A.before(b) ~ A에 b 추가
+            A.after(b) ~ A에 b 추가
+        */
+
+        /* 
+            #info 박스에 p요소를 삽입하고,
+            p요소의 내용으로 'DOM이란? Document Object Mode의 줄임말이다.'을 생성하여 #info 박스에 추가하시오.
+
+            img요소를 생성(src는 'pic_htmltree')하여 #info 박스의 p요소 아래에 추가하시오. 
+
+            메서드: createElement()  append() 
+        */
+            const info = $('#info');
+            const part1 = '<p>append</p>';
+            const part2 = '<p>prepend</p>';
+            const part3 = '<p>before</p>';
+            const part4 = '<p>after</p>';
+            const imgTag = '<img src="../assest/htmltree.gif">'; 
+
+            info.append(part1);
+            info.prepend(part2);
+            info.before(part3);
+            info.after(part4);
+             
+            info.append(imgTag);
+            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>변수</h1>
+    <script>
+        /* 
+            //변수 선언 키워드: var -> let, const    
+            //변수 선언
+            var 변수명;
+
+           //값을 할당 
+            변수명 = 값;
+
+            // 선언과 할당을 따로 할 수 있는것은? var, let
+            // 재선언: var
+            // 재할당: var, let
+
+            //let은 재선언을 할 수 없다. 
+            //const는 재선언과 재할당을 할 수 없다.
+        */
+
+        var a;
+        a = 5;
+        var a = 10;
+        var a = 30;
+
+        let b;
+        b = 10;
+        //let은 재할당 할 수 있다.-> 값이 바뀌는 변수는 let을 쓴다.
+        b = 20;
+        b = 40;
+        //let은 재선언 할 수 없다. 
+        // let b = 30; (x)
+
+        // const는 선언 동시에 할당도 해야한다.
+        const c = 10;
+        // const는 재선언 및 재할당 할 수 없다. -> 값이 바뀌지 않는 변수는  const를 쓴다. 
+        // const c = 20; (x)
+        
+
+        document.write(box, '<br>');
+        document.write('box', '<br>');
+    </script>
+</body>
+
+</html>

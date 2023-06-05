@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #000;
+    background: #fff;
+}
+a {
+    color: #000;
+}
+img {
+    width: 100%;
+}
+/* 목록의 마커 제거 */
+li {
+    list-style: none;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 54px;
+    padding: 0 32px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0.12);
+}
+.logo {
+    float: left;
+}
+nav {
+    float: right;
+    margin: 16px 16px;
+}
+nav li {
+    display: inline-block;
+}
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
+.section {
+    padding-top: 81px;
+}
+
+.section h2 {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section h2 + p {
+    margin-bottom: 32px;
+}
+/* section1 */
+#main_img {
+    position: relative;
+}
+#main_img h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 8px 16px;
+}
+#main_img h2 b {
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #000;
+}
+
+/* section2 ,3 common*/
+#projects li, #about li{
+    float: left;
+    width: 362px;
+}
+
+#projects ul::after, #about ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#projects li:not(:nth-of-type(4n)), #about li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
+}
+
+/* section2 */
+
+#projects h2 {
+    margin-bottom: 48px;
+}
+
+#projects {
+    position: relative;
+}
+
+#projects h3 {
+    position: absolute;
+    padding: 5px;
+}
+
+#projects h3 {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px;
+}
+
+#projects li:nth-of-type(4n) {
+    margin-bottom: 17px;
+}
+
+#projects img {
+    margin-bottom: -5px;
+}
+
+/* section3 */
+#about li h3 {
+    margin: 16px 0 8px;
+}
+#about li p {
+    margin: 8px 0 8px;
+}
+#about li a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 8px 0;
+    margin-top: 16px;
+}
+
+/* section4 */
+#contact input {
+    display: block;
+    margin: 10px 0;
+}
+
+#contact input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}   
+
+#contact button {
+    background: #000;
+    color: #fff;
+    display: block;
+    height: 30px;
+    margin: 40px 0;
+    text-align: center;
+    padding: 10px 25px 25px;
+}
+
+.map {
+    height: 830px;
+    vertical-align: top;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* footer */
+footer {
+    height: 81px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 32px;
+}
