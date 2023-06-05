@@ -16,6 +16,7 @@
             height: 200px;
             background: #888;
             margin: 50px;
+            transition: 3s;
         }
         div.on {
             width: 400px;
@@ -42,10 +43,10 @@
         const li1 = document.querySelectorAll('li')[1];
         const box = document.querySelector('div');
 
-        li0.onclick = function(){
+        li0.onmouseenter = function(){
             box.classList.add('on');
         };
-        li1.onclick = function(){
+        li1.onmouseleave = function(){
             box.classList.remove('on');
         };
     </script>
