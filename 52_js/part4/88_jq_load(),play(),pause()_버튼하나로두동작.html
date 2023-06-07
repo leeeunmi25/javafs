@@ -17,15 +17,28 @@
         }
         .btn {
             position: absolute;
-            left: 50px;
-            top: 50px;
-            transform: translate(-50% -50%);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             width: 70px;
             height: 70px;
             border-radius: 50%;
             border: 3px solid #fff;
             cursor: pointer;
             text-indent: -9999em;
+        }
+        .btn::after {
+            content:'';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display:block;
+            width: 0;
+            height: 0;
+            border-left: 25px solid #fff;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
         }
        
     </style>
@@ -62,26 +75,26 @@
             제어문: if
        */
 
-        const loadBtn = $('.load');
-        const playBtn = $('.play');
-        const pauseBtn = $('.pause');
+        const btn = $('.btn');
         const vid = $('video').get(0);
+        btn.click(vidPlay); 
 
-        loadBtn.click(videoStop); 
-        playBtn.click(videoPlay); 
-        pauseBtn.click(videoPause);
-        // 비디오가 처음 상태로
-        function videoStop(){
-            vid.load();
-        }
-        // 비디오 실행
-        function videoPlay(){
+        // 토글 방법
+        // num이 0이면 실행, num이 1이면 정지
+        let num = 0;
+
+        function vidPlay() {
+        if (num === 0) {
+            // 비디오 실행
             vid.play();
-        }
-        // 비디오 일시정지
-        function videoPause(){
+            num = 1;
+        } else {
+            //  비디오 정지
             vid.pause();
+            num = 0;
         }
+    }
+
     </script>
 </body>
 
