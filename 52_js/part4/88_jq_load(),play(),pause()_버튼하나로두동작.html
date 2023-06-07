@@ -36,10 +36,18 @@
             display:block;
             width: 0;
             height: 0;
-            border-left: 25px solid #fff;
             border-top: 25px solid transparent;
+            border-left: 25px solid #fff;
             border-bottom: 25px solid transparent;
         }
+        .btn.on::after{
+            width: 40px;
+            height: 40px;
+            left: 50%;
+            border: none;
+            background: #fff;
+        }            
+        
        
     </style>
 </head>
@@ -49,7 +57,7 @@
         <video>
             <source src="../../50_html/assets/video/mov_bbb.mp4" type="video/mp4">
         </video>
-        <span class="btn">버튼</span>
+        <span class="btn on">버튼</span>
     </div>
 
     <!-- <ul class="btnSet">
@@ -87,10 +95,12 @@
         if (num === 0) {
             // 비디오 실행
             vid.play();
+            btn.addClass('on');
             num = 1;
         } else {
             //  비디오 정지
             vid.pause();
+            btn.removeClass('on');
             num = 0;
         }
     }
