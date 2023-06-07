@@ -13,7 +13,8 @@
             height:100vh;
         }
         #section1 {background: lightcoral;}
-        #section2 {background: lightblue url(../assets/2023_summer1_pic_bg_1.jpg) no-repeat 50% 50%/cover;}
+        #section2 {background: lightblue;}
+        #section3 {background: lightyellow url(../assets/2023_summer1_pic_bg_1.jpg) no-repeat 50% 50%/cover fixed;}
 
         html {
             font-size: 10px;
@@ -26,8 +27,8 @@
         /* 고스트(ghost) 버튼 */
         .btn {
             position: absolute;
-            left: 640px;
-            top: 570px;
+            left: 600px;
+            top: 670px;
             /* 투명배경 */
             background: transparent;
             opacity: 0;
@@ -47,9 +48,36 @@
             transition: 2s;
             /* text-align: right; */
         }
+        
        /*  .txt img:first-of-type(1) {
             margin-bottom: 24px;
         } */
+
+        #product {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 800px;
+            width: 882px;
+            height: 554px;
+            background: #000;
+        }
+        #product .prod1 {
+            width: 255px;
+            height: 350px;
+            background: red;
+        }
+        #product .prod2 {
+            width: 250px;
+            height: 350px;
+            background: green;
+        }
+        #product .prod3 {
+            width: 325px;
+            height: 445px;
+            background: blue;
+        }
+        
     </style>    
 </head>
 
@@ -62,7 +90,15 @@
         <div class="txt"></div>
         <a href="#" class="btn">자세히보기</a>
     </section>
+    <div id="product">
+        <div class="prod1"></div>
+        <div class="prod2"></div>
+        <div class="prod3"></div>
+    </div>
     <div class="result"></div>
+    <section id="section3">
+        <h2>섹션3</h2>
+    </section>
 
     <script>
 
