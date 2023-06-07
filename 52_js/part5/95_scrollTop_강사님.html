@@ -7,51 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        body, h2 {margin: 0;}
+        body, h2 {margin:0;}
         section {
             position: relative;
             height:100vh;
         }
         #section1 {background: lightcoral;}
-        #section2 {background: lightblue;}
-        #section3 {background: lightyellow url(../assets/2023_summer1_pic_bg_1.jpg) no-repeat 50% 50%/cover fixed;}
-
+        #section2 {background: lightblue url(../assets/2023_summer1_pick_bg_1.jpg) no-repeat 50% 50%/cover fixed;}
+        #section3 {background: lightgoldenrodyellow;}
+        
         html {
             font-size: 10px;
         }
 
         a {
             text-decoration: none;
-            color: #fff
+            color: #fff;
         }
+
         /* 고스트(ghost) 버튼 */
         .btn {
             position: absolute;
             left: 600px;
             top: 670px;
-            /* 투명배경 */
+            /* 투명 배경 */
             background: transparent;
-            opacity: 0;
+            opacity:0;
             transition: 3s;
             border: 2px solid #fff;
             border-radius: 5px;
             font-size: 1.5rem;
-            padding: 11px 18px;
+            padding: 10px 18px;
         }
         .txt {
             position: absolute;
-            left: -400px;
-            top: 120px;
             width: 360px;
-            height: 400px;
-            background: red;
             transition: 2s;
-            /* text-align: right; */
+            text-align: right;
         }
-        
-       /*  .txt img:first-of-type(1) {
-            margin-bottom: 24px;
-        } */
+        .txt1 {
+            left:-800px;
+            top: 220px;
+            height: 210px;
+        }
+        .txt2 {
+            left:-400px;
+            top: 448px;
+            height: 160px;
+        }
 
         #product {
             position: absolute;
@@ -60,10 +63,10 @@
             left: 800px;
             width: 882px;
             height: 554px;
-            background: #000;
         }
         #product > div {
             position: absolute;
+            transition: .3s;
         }
         #product .prod1 {
             left: 50px;
@@ -73,12 +76,13 @@
             background: red;
             transform: rotate(-18deg);
         }
-        #product div:hover {
-            transform: scale;
+        #product > div:hover {
+            z-index: 1;
+            transform: scale(1.2);
         }
         #product .prod2 {
             left: 278px;
-            top: 0;
+            top:0;
             width: 250px;
             height: 350px;
             background: green;
@@ -91,8 +95,7 @@
             background: blue;
             transform: rotate(18deg);
         }
-        
-    </style>    
+    </style>
 </head>
 
 <body>
@@ -101,47 +104,53 @@
     </section>
     <section id="section2">
         <h2>섹션2</h2>
-        <div class="txt"></div>
-        <a href="#" class="btn">자세히보기</a>
+        <div class="txt1 txt">
+            <img src="../assets/fav_prod_txt01.png" alt="타이틀">
+        </div>
+        <div class="txt2 txt">
+            <img src="../assets/fav_prod_txt02.png" alt="타이틀">
+        </div>
+        <a href="#" class="btn">자세히 보기</a>
+        <div id="product">
+            <div class="prod1"></div>
+            <div class="prod2"></div>
+            <div class="prod3"></div>
+        </div>
     </section>
-    <div id="product">
-        <div class="prod1"></div>
-        <div class="prod2"></div>
-        <div class="prod3"></div>
-    </div>
-    <div class="result"></div>
     <section id="section3">
         <h2>섹션3</h2>
     </section>
 
     <script>
-
         /* 
             scrollTop 값이 600이상이면
-            .red 박스의 불투명도를 1로 지정하시오. 
-            .txt 박스의 left를 400으로 지정하시오.
+            .red 박스의 불투명도를 1로 지정하시오.
+            .txt 박스의 left를 400로 지정하시오.
             scrollTop 값이 600미만이면
-            .red 박스의 불투명도를 0으로로 지정하시오. 
-            .txt 박스의 left를 -400으로 지정하시오.
+            .red 박스의 불투명도를 0로 지정하시오.
+            .txt 박스의 left를 -400로 지정하시오.
 
             이벤트: scroll
-            속성: scrollTop, innerText, style.opactiy
-            제어문:if~else
+            속성: scrollTop, innerText, style.opacity
+            제어문: if ~ else      
         */
-        const btn = document.querySelector('.btn'); 
-        const txt = document.querySelector('.txt'); 
+        const btn = document.querySelector('.btn');
+        const txt1 = document.querySelector('.txt1');
+        const txt2 = document.querySelector('.txt2');
 
         window.onscroll = function () {
             let st = document.documentElement.scrollTop;
             let stVal = 600;
             console.log(st);
 
-            if (st >= stVal){
+            if (st >= stVal) {
                 btn.style.opacity = 1;
-                txt.style.left = 400 + 'px';
+                txt1.style.left = 360 + 'px';
+                txt2.style.left = 360 + 'px';
             } else {
-                btn.style.opacity = 0; 
-                txt.style.left = -400 + 'px'; 
+                btn.style.opacity = 0;
+                txt1.style.left = -800 + 'px';
+                txt2.style.left = -400 + 'px';
             }
         };
     </script>
