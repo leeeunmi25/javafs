@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .vid {
+            position: relative;
+            width: 400px;
+            margin-top: 30px;
+        }
+        .vid video {
+            width: 100%;
+        }
+        .btn {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            transform: translate(-50% -50%);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            cursor: pointer;
+            text-indent: -9999em;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="vid">
+        <video>
+            <source src="../../50_html/assets/video/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <span class="btn">버튼</span>
+    </div>
+
+    <!-- <ul class="btnSet">
+        <li class="load">load</li>
+        <li class="play">play</li>
+        <li class="pause">pause</li>
+    </ul> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            비디오요소.load() ~ 비디오 불러오기
+            비디오요소.play() ~ 비디오 재생하기
+            비디오요소.pause() ~ 비디오 일시정지
+        */
+       /* 
+            버튼을 처음 클릭하면 비디오가 실행되고
+            부전쨰 클릭하면 비디오가 일시정지되도록 하시오.
+            ->토글버튼을 만드시오.
+            토글(toggle): 두가지 상태를 번갈아 반복
+            
+            이벤트: click
+            메서드: load() play() pause()
+            제어문: if
+       */
+
+        const loadBtn = $('.load');
+        const playBtn = $('.play');
+        const pauseBtn = $('.pause');
+        const vid = $('video').get(0);
+
+        loadBtn.click(videoStop); 
+        playBtn.click(videoPlay); 
+        pauseBtn.click(videoPause);
+        // 비디오가 처음 상태로
+        function videoStop(){
+            vid.load();
+        }
+        // 비디오 실행
+        function videoPlay(){
+            vid.play();
+        }
+        // 비디오 일시정지
+        function videoPause(){
+            vid.pause();
+        }
+    </script>
+</body>
+
+</html>
