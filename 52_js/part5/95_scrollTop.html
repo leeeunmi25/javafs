@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        body, h2 {margin: 0;}
+        section {
+            position: relative;
+            height:100vh;
+        }
+        #section1 {background: lightcoral;}
+        #section2 {background: lightblue; url(../assets/2023_summer1_pic_bg_1.jpg) no-repeat 50% 50%/cover;}
+
+        html {
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff
+        }
+        /* 고스트(ghost) 버튼 */
+        .red {
+            position: absolute;
+            left: 640px;
+            top: 570px;
+            /* 투명배경 */
+            background: transparent;
+            opacity: 0;
+            transition: 3s;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            padding: 11px 18px;
+        }
+        .txt {
+            position: absolute;
+            left: -400px;
+            top: 120px;
+            width: 360px;
+            height: 400px;
+            background: yellow;
+            transition: 3s;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section1">
+        <h2>섹션1</h2>
+    </section>
+    <section id="section2">
+        <h2>섹션2</h2>
+        <div class="txt"></div>
+        <a href="#" class="red">자세히보기</a>
+    </section>
+    <div class="result"></div>
+
+    <script>
+
+        /* 
+            scrollTop 값이 600이상이면
+            .red 박스의 불투명도를 1로 지정하시오. 
+            .txt 박스의 left를 400으로 지정하시오.
+            scrollTop 값이 600미만이면
+            .red 박스의 불투명도를 0으로로 지정하시오. 
+            .txt 박스의 left를 -400으로 지정하시오.
+
+            이벤트: scroll
+            속성: scrollTop, innerText, style.opactiy
+            제어문:if~else
+        */
+        const redBox = document.querySelector('.red'); 
+
+        window.onscroll = function () {
+            let st = document.documentElement.scrollTop;
+            let stVal = 600;
+            console.log(st);
+
+            if (st >= stVal){
+                redBox.style.opacity = 1;
+            } else {
+                redBox.style.opacity = 0; 
+            }
+        };
+    </script>
+</body>
+
+</html>
