@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* html{
+            overflow: hidden;
+        } */
+        #fullpage div {
+            height: 100vh;
+        }
+
+        #section1 {
+            background: lightcoral;
+        }
+
+        #section2 {
+            background: lightblue;
+        }
+
+        #section3 {
+            background: lightslategray;
+        }
+
+        #section4 {
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script>
+
+        /*
+            마우스휠 조정시 위아래로 한 칸씩 섹션이동시킨다.
+
+            이벤트: mousewheel
+            메서드: prev(), next(), offset().top, animate(), stop()
+            속성: scrollTop
+            제어문: if
+
+            // mousewheel 이벤트 형식
+            $('선택자').mousewheel(function(e, delta){
+                if(delta>0){
+                    // 마우스 휠을 위로 올림
+                } else if(delta < 0){
+                    // 마우스 휠을 아래로 내림
+                }
+            })
+
+            // error ~ 에러, bug
+            // debugging(디버깅) ~ 에러 수정
+            // error 처리: try ~ catch ~ finally
+            
+            try{
+                실행코드
+            } cahch (err){
+                에러시 처리할 내용
+            }
+        */
+
+        $('.section').mousewheel(function (e, delta) {
+            if (delta > 0) {
+                try {
+                    // 마우스 휠을 위로 올림
+                    let prev = $(this).prev().offset().top;
+                    $('html').stop().animate({ scrollTop: prev });
+                } catch (err) {
+                    return false;
+                }
+            } else if (delta < 0) {
+                try {
+                    // 마우스 휠을 아래로 내림
+                    let next = $(this).next().offset().top;
+                    $('html').stop().animate({ scrollTop: next });
+                } catch (err) {
+                    return false;
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

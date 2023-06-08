@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #fullpage div {
+            height: 100vh;
+        }
+
+        #section1 {
+            background: lightcoral;
+        }
+
+        #section2 {
+            background: lightblue;
+        }
+
+        #section3 {
+            background: lightslategray;
+        }
+
+        #section4 {
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+
+    <script>
+
+        /*
+            마우스휠 조정시 위아래로 한 칸씩 섹션이동시킨다.
+
+            이벤트: wheel
+            속성: prevElementSibling, nextElementSibling, offsetTop scrollTop
+            키워드: this
+            제어문: if
+
+            // wheel 이벤트 형식
+            $('선택자').onwheel = function(e){
+                if(e.delta<0){
+                    // 마우스 휠을 위로 올림
+                } else {
+                    // 마우스 휠을 아래로 내림
+                }
+            }
+        */
+
+        /* 
+            error ~ 에러, bug
+            debugging(디버깅) ~ 에러 수정
+            error 처리: try ~ catch ~ finally
+            
+            try{
+                실행코드
+            } cahch (err){
+                에러시 처리할 내용
+            }
+        */
+
+        const secs = document.querySelectorAll('.section');
+
+        for (let i = 0; i < secs.length; i++) {
+            secs[i].onwheel = function (e) {
+                if (e.deltaY < 0) {
+                    // 마우스 휠을 위로 올림
+                    let prev = e.target.previousElementSibling.offsetTop;
+                    document.documentElement.scrollTop = prev;
+                } else {
+                    // 마우스 휠을 아래로 내림
+                    let next = e.target.nextElementSibling.offsetTop;
+                    document.documentElement.scrollTop = next;
+                } // if
+            }; // onwheel
+        } // for문
+    </script>
+</body>
+
+</html>
