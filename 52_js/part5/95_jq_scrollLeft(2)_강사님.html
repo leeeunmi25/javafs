@@ -10,7 +10,24 @@
         * {
             margin:0;
         }
+        body {
+            overflow-y: hidden;
+            height: 100%;
+        }
+        html{
+            height: 100%;
+        }
+
+        #fullpage {
+            display: -webkit-box;
+            display: flex;
+            height: 100%;
+        }
+        
         #fullpage div {
+            width: 100%;
+            height: 100%;
+            flex: 0 0 100%;
             height: 100vh;
         }
 
@@ -61,6 +78,25 @@
                 }
             });
         */
+
+        $('.section').mousewheel(function(e, delta){
+           
+                if (delta > 0) {
+                    // 마우스휠을 위로 올림
+                    let prev = $(this).prev().offset().left;
+                    console.log(prev);
+                    // css({속성: 값})
+                    // animate({속성: 값})
+                    $('html').stop().animate({scrollleft: prev})
+                } else if (delta < 0) {
+                    // 마우스휠을 아래로 내림
+                    // idx = 0, 1, 2, 3
+                 
+                    let next = $(this).next().offset().left;
+                    console.log(next);
+                    $('html').stop().animate({height: next})
+                }
+            });
 
     </script>
 </body>
