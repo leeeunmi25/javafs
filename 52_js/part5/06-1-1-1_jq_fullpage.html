@@ -97,24 +97,49 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
     <script>
         $('html').stop().animate({scrollTop: 0});
 
-        $('#indicator a').click(function(e){
-            // a 태그의 기본이벤트 제거
+        $('#indicator a').click(indicator);
+
+        function indicator() {
             let idx = $(this).parent().index();
             console.log(idx);
             let posY = $('.section').eq(idx).offset().top;
-            $('html, body').stop().animate({scrollTop: posY});
+            $('html,body').stop().animate({scrollTop: posY});
+            tooltip(idx);
+        }
 
+        function tooltip(index) {
             $('#indicator a').removeClass('on');
-            $(this).addClass('on');
+            $('#indicator a').eq(index).addClass('on');
+        }
+
+        $('.section').mousewheel(function (e, delta) {
+            if (delta > 0) {
+                // 마우스휠을 위로 올림
+                try {
+                    tooltip($(this).index() - 1);
+                    let prev = $(this).prev().offset().top;
+                    console.log(prev);
+                    $('html').stop().animate({ scrollTop: prev });
+                } catch (err) {
+                    return false;
+                }
+            } else if (delta < 0) {
+                // 마우스휠을 아래로 내림
+                try {
+                    tooltip($(this).index() + 1);
+                    let next = $(this).next().offset().top;
+                    console.log(next);
+                    $('html').stop().animate({ scrollTop: next });
+                } catch (err) {
+                    return false;
+                }
+            }
         });
- 
-    
-
-
     </script>
 </body>
 
