@@ -44,8 +44,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
     <script>
-        
-        $('#fullpage').fullpage()
+        $(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#FF5F45', '#0798EC', '#FC6C7C', '#FEC401']
+                /* navigation: true,
+                navigationTooltips: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                showActiveTooltip: true, */
+            });
+        });
     </script>
 </head>
 
