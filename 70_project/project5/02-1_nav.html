@@ -9,35 +9,50 @@
     <style>
         /* reset */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html {
             font-size: 10px;
         }
+
         li {
             list-style: none;
         }
+
         a {
             text-decoration: none;
         }
+
         body {
             font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.5rem;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            background: #fdd000;
+
         }
 
         /* GNB(Global Navigation Bar) */
-        nav {
+        #gnb {
             z-index: 99999;
             position: relative;
-            height: 31px;
-            background: red;
+            height: 94px;
         }
 
         .nav_bg {
             position: absolute;
             left: 0;
+            /* 메인메뉴 높이만큼 내려준다. */
             top: 31px;
             width: 100%;
             background: rgba(0, 0, 0, 0.7);
@@ -49,6 +64,7 @@
             display: flex;
             justify-content: center;
         }
+
         .main>li {
             /* 삼각형 모양 기준 */
             position: relative;
@@ -56,30 +72,35 @@
             /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
             text-align: center;
         }
+
         .main>li>a {
-            display: block;
+            display: inline-block;
             padding: 5px 0;
-            font-size: 1.5rem;
+            line-height: 94px;
+            font-size: 1.8rem;
             font-weight: 500;
-            color: #fff;
+            color: #101010;
         }
 
         .main>li>a:hover {
-            background: #ccc;
             color: #333;
         }
 
-        .main>li>a:hover:after {
+        .main>li>a::after {
+            display: inline-block;
             position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 20px;
+            left: 0;
+            transform: translateX(0);
+            transition: 3s;
             content: '';
-            height: 0;
-            border-top: 10px solid;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
+            width: 100%;
+            border-bottom: 2px solid #876f05;
             color: #ccc;
+        }
+
+        .main>li>a:hover:after {
+            transform: translateX(1);
         }
 
         /* 2depth: sub */
@@ -90,54 +111,63 @@
 
         .sub a {
             color: #ccc;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             line-height: 2;
             font-weight: 300;
             padding: 3px 12px;
         }
 
         .sub a:hover {
-            background: rgba(255, 0, 0, 0.5);
+            color: rgba(253, 207, 0, 0.5);
         }
     </style>
 </head>
 
 <body>
-    <!-- nav#gnb>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
-    <nav id="gnb">
-        <div class="nav_bg"></div>
-        <ul class="main">
-            <li><a href="#">메가스토리</a>
-                <ul class="sub">
-                    <li><a href="#">브랜드</a></li>
-                    <li><a href="#">BI</a></li>
-                    <li><a href="#">오시는길</a></li>
-                </ul>
-            </li>
-            <li><a href="#">메뉴소개</a>
-                <ul class="sub">
-                    <li><a href="#">음료</a></li>
-                    <li><a href="#">푸드</a></li>
-                    <li><a href="#">상품</a></li>
-                </ul>
-            </li>
-            <li><a href="#">창업안내</a>
-                <ul class="sub">
-                    <li><a href="#">개설비용</a></li>
-                    <li><a href="#">인테리어</a></li>
-                    <li><a href="#">창업문의</a></li>
-                </ul>
-            </li>
-            <li><a href="#">메가소식</a>
-                <ul class="sub">
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">이벤트</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">고객의소리</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <header id="header">
+        <h1 class="logo"><a href="#">Mega MGC Coffee</a></h1>
+        <!-- nav#gnb>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
+        <nav id="gnb">
+            <!-- 서브메뉴의 배경 -->
+            <div class="nav_bg"></div>
+            <ul class="main">
+                <li><a href="#">메가스토리</a>
+                    <ul class="sub">
+                        <li><a href="#">브랜드</a></li>
+                        <li><a href="#">BI</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴소개</a>
+                    <ul class="sub">
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
+                        <li><a href="#">상품</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">창업안내</a>
+                    <ul class="sub">
+                        <li><a href="#">개설비용</a></li>
+                        <li><a href="#">인테리어</a></li>
+                        <li><a href="#">창업문의</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메가소식</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">고객의소리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- 로그인/회원가입 -->
+        <div class="member">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </header>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
@@ -146,7 +176,7 @@
             // a태그 기본 이벤트 제거
             e.preventDefault();
             $('.sub').stop().slideDown(400);
-            $('.nav_bg').stop().animate({ height: 150 }, 400);
+            $('.nav_bg').stop().animate({ height: 160 }, 400);
         });
         $('nav').mouseleave(function () {
             $('.sub').stop().slideUp(400);
