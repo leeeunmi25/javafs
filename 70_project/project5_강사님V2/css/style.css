@@ -56,6 +56,11 @@
     border: none;
     background: transparent;
 }
+
+.bx-viewport {
+    height: 100vh !important;
+}
+
 /* 페이저 */
 .bx-wrapper .bx-pager {
     bottom: 250px;
@@ -88,11 +93,11 @@
 }
 .bx-wrapper .bx-prev {
     left: 140px;
-    background: url(../images/btn_slide_prev.png) 0px 0px no-repeat;
+    background: url(../images/prev.png) 0px 0px no-repeat;
 }
 .bx-wrapper .bx-next {
     right: 140px;
-    background: url(../images/btn_slide_next.png) 0px 0px no-repeat;
+    background: url(../images/next.png) 0px 0px no-repeat;
 }
 .bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
     background-position: 0px 0;

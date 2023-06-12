@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        /* 가로 해상도 390px */
+        /* 가로 해상도: 390px */
         * {
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -38,6 +38,7 @@
             padding: 8px;
             font-size: 20px;
         }
+
         #member {
             position: absolute;
             left: 0;
@@ -51,20 +52,21 @@
 
 <body>
     <div id="wrap">
-        <h1>카드게임</h1>
+        <h1>묵찌빠</h1>
         <div id="result">결과가 궁금하시죠?</div>
         <button id="againBtn">다시하기</button>
         <button id="logoutBtn">게임종료</button>
-        <p>아이디와 패스워드를 입력 후 로그인하세요.</p>
+        <p>아이디와 패스워드를 입력후 로그인하세요.</p>
         <p id="member">계정이 없으신가요? <a href="93_member.html">가입하기</a></p>
     </div>
 
     <script>
-        const againbtn = document.querySelector('#againBtn')
-        const logoutBtn = document.querySelector('#logoutBtn')
-        let game = prompt('가위, 바위, 보 셋 중 하나만 입력하세요.', '')
-        
-        switch(game) {
+        const againBtn = document.querySelector('#againBtn');
+        const logoutBtn = document.querySelector('#logoutBtn');
+        const result = document.querySelector('#result');
+        let game = prompt('가위, 바위, 보 셋 중 하나만 입력하세요.', '');
+
+        switch (game) {
             case '가위':
                 gameNum = 1;
                 break;
@@ -73,30 +75,30 @@
                 break;
             case '보':
                 gameNum = 3;
-                break;                     
+                break;
             default:
-                alert('가위, 바위, 보 셋 중 하나만 입력하세요.')
+                alert('가위, 바위, 보 셋 중 하나만 입력하세요.');
                 location.reload();
-            }
+        }
 
-            // 1 ~ 3 사이 정수 
-            // Math.floor(Math.random()*(최대값 - 최소값 + 1) + 최소값)
-            // Math.floor(Math.random()*(3 - 1 + 1) + 1)
-            let com = Math.floor(Math.random() * 3) + 1;
-            document.write('<img src="../assets/math_img_' + com + '.jpg" alt="가위"><br>');
+        // 1~3 사이 정수
+        // Math.floor(Math.random() * 3) + 1)
+        let com = Math.floor(Math.random() * 3) + 1;
+        document.write('<img src="../assets/math_img_' + com + '.jpg" alt="가위"><br>');
 
-            if(gameNum === com) {
-                result.innerHTML = ('<p>축하합니다. 맞추었습니다.</p>');
-            } else {
-                result.innerHTML = ('<p>틀렸습니다. 다음 기회에...</p>'); 
-            }
+        if (gameNum === com) {
+            result.innerHTML = '<p>축하합니다. 맞추었습니다.</p>';
+        } else {
+            result.innerHTML = '<p>틀렸습니다. 다음 기회에...</p>';
+        }
 
-            againBtn.onclick = function(){
-                location.reload();
-            };
-            logoutBtn.onclick = function(){
-                location.href = '93_login.html'
-            };
+        againBtn.onclick = function(){
+            location.reload();
+        };
+        logoutBtn.onclick = function(){
+            location.href = '93_login.html';
+        };
     </script>
 </body>
+
 </html>
