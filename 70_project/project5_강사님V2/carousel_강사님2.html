@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        li {
+            list-style: none;
+        }
+        /* 캐로셀 */
+        /* layout */
+        #slideWrap {
+            position: relative;
+            /* padding: 0 3%; */
+            height: 100vh;
+            background: red;
+        }
+
+        #slideWrap .slider li {
+            height: 100vh;
+            padding: 150px 0;
+            text-align: center;
+            background: no-repeat 50% 50%;
+        }
+
+        #slideWrap .slider li span {
+            position: relative;
+            top: 100px;
+            opacity: 0;
+        }
+
+        #slideWrap .slider li img {
+            display: inline-block;
+        }
+
+        /* background */
+        #slideWrap .slider .bg1 {
+            background-color: #FDD000;
+            background-image: url(images/pic_2.png);
+        }
+
+        #slideWrap .slider .bg2 {
+            background: #e1c47b;
+            background-image: url(images/pic_4.png);
+        }
+
+        #slideWrap .slider .bg3 {
+            background: #FFEFCA;
+            background-image: url(images/pic_5.png);
+        }
+
+        #slideWrap .slider .bg4 {
+            background: #09ebd0;
+            background-image: url(images/pic_6.png);
+        }
+
+        /* prev/next */
+        #slideWrap .btn {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            background: #000;
+        }
+        
+        #slideWrap .btn a {
+            position: absolute;
+            top: 50%;
+            /* left: 50%; */
+            transform: translateY(-50%);
+            font-size: 5rem;
+            color: #fff;
+            transition: color .3s;
+        }
+
+        #slideWrap .btn a:hover {
+            color: #000;
+        }
+
+        #slideWrap #prev {
+            left: 10%;
+        }
+
+        #slideWrap #next {
+            right: 10%;
+        }
+
+        /* pager */
+        #slideWrap .pager {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #slideWrap .pager a {
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #999;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #slideWrap .pager a img {
+            opacity: 0;
+            transform: translate(-40%, -40%);
+            transition: 0.5s;
+        }
+
+        #slideWrap .pager a.active img {
+            opacity: 1;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            $('.slider').bxSlider({
+                // 자동 슬라이드
+                auto: true,
+                stopAutoOnClick: true,
+                // 실행/일시정지 버튼
+                // autoControls: true,
+                // 내비게이션(인디케이터, 페이저)
+                pager: false,
+                // 이전/이후 버튼
+                controls: false,
+                // 전환 시간
+                speed: 400,
+                pause: 3000
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+
+        <!-- 슬라이드 이미지 -->
+        <ul class="slider">
+            <li class="bg1"></li>
+            <li class="bg2"></li>
+            <li class="bg3"></li>
+            <li class="bg4"></li>
+        </ul>
+
+        <!-- 페이저 -->
+        <div class="pager">
+            <a class="active"><img src="images/num1.png" alt="페이저1"></a>
+            <a><img src="images/num2.png" alt="페이저2"></a>
+            <a><img src="images/num3.png" alt="페이저3"></a>
+            <a><img src="images/num4.png" alt="페이저4"></a>
+        </div>
+
+        <!-- 이전/이후 버튼 -->
+        <!-- 폰트어썸 -->
+        <div class="btn">
+            <a href="#" id="prev"><i class="fa-regular fa-circle-left"></i></a>
+            <a href="#" id="next"><i class="fa-regular fa-circle-right"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
