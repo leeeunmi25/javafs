@@ -10,6 +10,7 @@
         body {
             height: 2000px;
         }
+
         div {
             width: 300px;
             height: 300px;
@@ -17,12 +18,15 @@
             font-size: 50px;
             color: #fff;
         }
+
         .box1 {
             background: red;
         }
+
         .box2 {
             background: blue;
         }
+
         p {
             font-size: 30px;
         }
@@ -37,62 +41,53 @@
     <script>
         /* 
             Event(이벤트): 웹 문서 영역 안에서 웹 브라우저 또는 사용자가 행하는 동작
-
             이벤트 종류
-            1. 마우스 이벤트: click, mouseenter, mouseleave, mousemove
-            2. 키보드 이벤트: keydown, keyup,
+            1. 마우스 이벤트: click, mouseenter, mouseleave, mousemove, mouseover, mouseout
+            2. 키보드 이벤트: keydown, keypress, keyup
             3. 윈도우 이벤트: scroll, resize
-
             이벤트 처리기(이벤트 핸들러): 이벤트가 발생할 때 그 이벤트에 반응하여 실행하는 함수
-
             //방법1
             <태그 on이벤트명="함수명()">
-
-            //방법2: 객체.속성 = 값;
+            //방법2
             요소.on이벤트명 = 함수;
             function 함수(){}
-
+            //방법3 : 객체.속성 = 값;
             요소.on이벤트명 = function(){};
-
-            //방법3: 객체.메서드();
-            요소.addEventListener('이벤트명', 함수);
-            function 함수(){}
-
+            //방법4 : 객체.메서드()
             요소.addEventListener('이벤트명', function(){});
-
             //제이쿼리
             $('선택자').이벤트명(function(){});
             $('선택자').on('이벤트명', function(){});
-
         */
 
-        // .box1을 클릭하면 함수를 호출한다.
+        // .box1을 클릭하면 함수를 호출한다
         const box1 = document.querySelector('.box1');
         const box2 = document.querySelector('.box2');
-        const pTag = document.querySelector('p');
+        const txt = document.querySelector('p');
 
-        box1.click(function () {
-            pTag.Text = 'box1을 클릭했습니다.';
-        });
+        box1.onclick = function () {
+            txt.innerText = 'Box1을 클릭했습니다.';
+        };
 
         box2.onmouseenter = ev1;
         function ev1() {
-            pTag.innerText = 'box2위에 마우스를 올렸습니다.';
+            txt.innerText = 'Box2 위에 마우스를 올렸습니다.';
         };
 
-        box2.addEventListener('mouseleave', ev2);    
+
+        box2.addEventListener('mouseleave',ev2);
+
         function ev2() {
-            pTag.innerText = 'box2위에서 마우스가 벗어났다.';
-        };
+            txt.innerText = 'Box2 위에서 마우스가 벗어났다.';
+        }
 
-        // scroll, resize는 윈도우 이벤트이다.
+        // scroll,resize는 윈도우 이벤트이다
         window.onscroll = function(){
-            pTag.innerText = '스크롤 되었습니다.';
+            txt.innerText = 'window가 스크롤 되었습니다.';
         };
         window.onresize = function(){
-            pTag.innerText = '창의 크기 조정되었습니다.';
+            txt.innerText = '창의 크가가 조정 되었습니다.';
         };
-
     </script>
 </body>
 
