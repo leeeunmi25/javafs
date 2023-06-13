@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craousel - auto</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 슬라이드 */
+        #slideWrap {
+            height: 100vh;
+            overflow: hidden;
+            background: red;
+        }
+
+        .slider{
+            display: flex;
+            /* 슬라이더의 left 값 지정  */
+            position: relative;
+        }
+
+        .slider.on {
+            /* 슬라이더가 오른쪽에서 왼쪽으로 부드럽게 움직임 */
+            transition: .3s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="slideWrap">
+            <ul class="slider">
+                <li><img src="images/slide1.png" alt="이미지1"></li>
+                <li><img src="images/slide2.png" alt="이미지2"></li>
+                <li><img src="images/slide3.png" alt="이미지3"></li>
+                <li><img src="images/slide4.png" alt="이미지4"></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const slider = $('.slider'),
+            sliderItem = $('.slider').find('li'),
+            // 이미지 하나의 가로 크기
+             sliderItemWidth = 100,
+            // 현재 이미지 총 수: 현재 이미지 4개 + 복제본 2개
+            sliderItemCount = sliderItem.length + 2;
+        let num = 1;
+
+        // 요소의 가로 크기
+        // 탬플릿 리터럴(Template Literal): 백틱(`${변수}문자열`)
+        $('.frame').width(`${sliderItemWidth}총 `);
+        slider.width(`${sliderItemWidth * sliderItemCount}%`);
+        sliderItem.width(`${sliderItemWidth}%`);
+        // 슬라이드의 처음 위치
+        slider.css({ left: `${-1 * sliderItemWidth}%`});
+
+        // 처음과 마지막 이미지 복제
+        const firstslider = slider.find('li:first-of-type');
+        const lastslider = slider.find('li:last-of-type');
+        lastslider.clone().prependTo(slider);
+        firstslider.clone().appendTo(slider);
+
+        function slide(btn) {
+                num++;
+                slider.addClass('on');
+                if (num > sliderItem.length) {
+                    num = 1;
+                    slider.removeClass('on');
+                    moveSlide(num - 1);
+                }
+            
+            setTimeout(function () {
+                slider.addClass('on');
+                moveSlide(num);
+            }, 100);
+        }
+
+        function moveSlide(cnt) {
+            let posX = cnt * sliderItemWidth * -1;
+            slider.css({ left: posX + '%' });
+            return false;
+        }
+
+        // 자동 슬라이드
+        let timer = setInterval(autoSlide, 2000);
+
+        function autoSlide() {
+            slide('nextBtn');
+        }
+
+    </script>
+</body>
+
+</html>
