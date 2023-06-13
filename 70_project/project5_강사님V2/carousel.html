@@ -3,270 +3,207 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel</title>
+    <title>HTML+CSS+JS</title>
     <style>
-        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
-
+        /* 초기화 */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        html {
-            font-size: 10px;
+        img {
+            vertical-align: top;
+            width: 100%;
         }
 
-        li {
+        ul {
             list-style: none;
         }
 
-        /* 캐로셀 */
-        /* layout */
+        /* 슬라이드 */
         #slideWrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+        }
+
+        .frame {
+            height: 90vh;
+            overflow: hidden;
+        }
+
+        #slideList {
+            display: flex;
             position: relative;
-            /* padding: 0 3%; */
-            height: 100vh;
+        }
+
+        #slideList.on {
+            transition: .3s;
+        }
+
+        /* 좌우 버튼 */
+        .controls {
+            position: absolute;
+            width: 100%;
+            top: 50%;
             background: red;
         }
 
-        #slideWrap .slider li {
-            height: 100vh;
-            padding: 150px 0;
-            text-align: center;
-            background: no-repeat 50% 50%;
-        }
-
-        #slideWrap .slider li div {
-            position: relative;
-            top: 70px;
-            font-size: 2rem;
-            line-height: 1.8;
-            opacity: 0;
-        }
-
-        #slideWrap .slider li div span {
-            display: block;
-            font-size: 3.5rem;
-        }
-
-        #slideWrap .slider li img {
-            display: inline-block;
-        }
-
-        /* background */
-        #slideWrap .slider .bg1 {
-            background-color: #FDD000;
-            background-image: url(images/pic_2.png);
-        }
-
-        #slideWrap .slider .bg2 {
-            background-color: #e1c47b;
-            background-image: url(images/pic_4.png);
-        }
-
-        #slideWrap .slider .bg3 {
-            background-color: #FFEFCA;
-            background-image: url(images/pic_5.png);
-        }
-
-        #slideWrap .slider .bg4 {
-            background-color: #09ebd0;
-            background-image: url(images/pic_6.png);
-        }
-
-        /* 이전/이후 버튼 */
-        #slideWrap .btn {
-            z-index: 999;
+        .controls a {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 50px;
         }
 
-        #slideWrap .btn a {
-            display: block;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 5rem;
-            color: #fff;
-            transition: color .3s;
+        #prevBtn {
+            left: calc(50% - 700px);
         }
 
-        #slideWrap .btn a:hover {
-            color: #333;
-        }
-
-        #slideWrap #prev {
-            left: 10%;
-        }
-
-        #slideWrap #next {
-            right: 10%;
+        #nextBtn {
+            right: calc(50% - 700px);
         }
 
         /* 페이저 */
-        #slideWrap .pager {
+        .pager {
             display: flex;
-            z-index: 999;
             position: absolute;
-            bottom: 5%;
             left: 50%;
             transform: translateX(-50%);
+            bottom: 60px;
         }
 
-        #slideWrap .pager a {
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            border: 1px solid #999;
-            margin: 0 15px;
-            transition: .3s;
-            cursor: pointer;
+        .pager li {
+            margin: 0 12px;
         }
 
-        #slideWrap .pager a img {
-            opacity: 0;
-            transform: translate(-40%, -40%);
-            transition: .5s;
+        .pager li.active a {
+            color: red;
         }
 
-        #slideWrap .pager a.active img {
-            opacity: 1;
+        .pager li a {
+            color: #fff;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
-    <script>
-        $(function () {
-            const slider = $('.slider').bxSlider({
-                // mode: 'horizontal',
-                // mode: 'vertical',
-                mode: 'fade',
-                // 자동 슬라이드
-                auto: true,
-                // 컨트롤 버튼(좌우, 페이저)를 클릭하면 auto 일시 정지
-                stopAutoOnClick: true,
-                // 슬라이드 위에 hover하면 auto 일시 정지
-                autoHover: true,
-                // 실행/일시정지 버튼
-                // autoControls: true,
-                // 내비게이션(인디케이터, 페이저)
-                pager: false,
-                // 이전/이후 버튼
-                controls: false,
-                // 전환 시간
-                speed: 400,
-                // 지연 시간(슬라이드가 정지되어 있는 시간)
-                pause: 3000,
-
-                // 슬라이드 전환 직전에 autoPager() 함수를 호출하여 동작 시킴
-                onSlideBefore: function () {
-                    autoPager();
-                },
-                // 슬라이드 전환 직후 titMotion() 함수를 호출하여 동작 시킴
-                onSlideAfter: function () {
-                    titMotion();
-                }
-            });
-
-            function titMotion() {
-                // 슬라이드 전환 직후의 텍스트 모션
-                $('#slideWrap .slider li div').animate({ top: 0, opacity: 1 });
-            }
-
-            function autoPager() {
-                // 페이저의 이미지 변경
-                // 페이저 a태그의 active 클래스 모두 제거
-                $('#slideWrap .pager a').removeClass('active');
-                // 현재 슬라이드 번호를 가져와서 currentIdx에 저장
-                let currentIdx = slider.getCurrentSlide();
-                $('#slideWrap .pager a').eq(currentIdx).addClass('active');
-
-                // 슬라이드 전환 직전의 텍스트 모션
-                $('#slideWrap .slider li div').css({ top: 100, opacity: 0 });
-            }
-
-            // 페이저 버튼
-            $('#slideWrap .pager a').click(function (e) {
-                // a태그의 기본이벤트 제거
-                e.preventDefault();
-                let idx = $(this).index();
-                // idx 번호에 해당하는 위로 슬라이드가 이동
-                slider.goToSlide(idx);
-                return false;
-            });
-
-            // 이전 버튼
-            $('#slideWrap #prev').click(function (e) {
-                e.preventDefault();
-                // 이전 슬라이드로 이동
-                slider.goToPrevSlide();
-                autoPager();
-                return false;
-            });
-            // 이후 버튼
-            $('#slideWrap #next').click(function (e) {
-                e.preventDefault();
-                // 다음 슬라이드로 이동
-                slider.goToNextSlide();
-                autoPager();
-                return false;
-            });
-        });
-    </script>
 </head>
 
 <body>
     <div id="slideWrap">
-
-        <!-- 슬라이드 배경 이미지 -->
-        <ul class="slider">
-            <li class="bg1">
-                <div class="tit">
-                    <span>고요한 아이콘. 편안함. 그리고 사운드.</span>
-                    향과 풍미 그대로 카페인만을 낮춘 엠지씨 디카페인 메뉴 출시
-                </div>
-            </li>
-            <li class="bg2">
-                <div class="tit">
-                    <span>나에게 딱 맞는 사운드</span>
-                    여름의 시작을 알리는 시원한 웰컴-드링크
-                </div>
-            </li>
-            <li class="bg3">
-                <div class="tit">
-                    <span>어떤 활동에서도 선명한 사운드</span>
-                    건강한 통곡물이 꼭꼭 박힌 그래놀라 스모어 쿠키
-                </div>
-            </li>
-            <li class="bg4">
-                <div class="tit">
-                    <span>때와 장소를 가리지 않는 놀라운 사운드</span>
-                    MEGA MGC Teapleasure 카페인 걱정 없는 릴렉싱 블렌드 티
-                </div>
-            </li>
+        <div class="frame">
+            <ul id="slideList">
+                <li><img src="images/slide1.png" alt="이미지1"></li>
+                <li><img src="images/slide2.png" alt="이미지2"></li>
+                <li><img src="images/slide3.png" alt="이미지3"></li>
+                <li><img src="images/slide4.png" alt="이미지4"></li>
+            </ul>
+        </div>
+        <div class="controls">
+            <a href="#" id="prevBtn">prev</a>
+            <a href="#" id="nextBtn">next</a>
+        </div>
+        <ul class="pager">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
         </ul>
-
-        <!-- 페이저 -->
-        <div class="pager">
-            <a class="active"><img src="images/num1.png" alt="페이저1"></a>
-            <a><img src="images/num2.png" alt="페이저2"></a>
-            <a><img src="images/num3.png" alt="페이저3"></a>
-            <a><img src="images/num4.png" alt="페이저4"></a>
-        </div>
-
-        <!-- 이전/이후 버튼 -->
-        <!-- 폰트어썸 -->
-        <div class="btn">
-            <a href="#" id="prev"><i class="fa-regular fa-circle-left"></i></a>
-            <a href="#" id="next"><i class="fa-regular fa-circle-right"></i></a>
-        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        const slideList = $('#slideList');
+        const slideListItem = $('#slideList').find('li');
+        const prevBtn = $('#prevBtn');
+        const nextBtn = $('#nextBtn');
+        const pager = $('.pager');
+        const pagerList = $('.pager').find('li');
+        let num = 1;
+        const slideListItemWidth = 100;
+        const slideCount = slideListItem.length + 2;
+
+        // 요소의 가로 크기
+        // 탬플릿 리터럴(Template Literal): 백틱(`${변수}문자열`)
+        $('.frame').width(`${slideListItemWidth}%`);
+        slideList.width(`${slideListItemWidth * slideCount}%`);
+        slideListItem.width(`${slideListItemWidth}%`);
+        // 슬라이드의 처음 위치
+        slideList.css({ left: `${-1 * slideListItemWidth}%`});
+
+        // 처음과 마지막 이미지 복제
+        const firstSlideList = slideList.find('li:first-of-type');
+        const lastSlideList = slideList.find('li:last-of-type');
+        lastSlideList.clone().prependTo(slideList);
+        firstSlideList.clone().appendTo(slideList);
+
+        prevBtn.click(prevSlide);
+        nextBtn.click(nextSlide);
+
+        function prevSlide() {
+            clearInterval(timer);
+            slide('prevBtn');
+            pagination(num - 1);
+            timer = setInterval(autoSlide, 2000);
+        }
+        function nextSlide() {
+            clearInterval(timer);
+            slide('nextBtn');
+            pagination(num - 1);
+            timer = setInterval(autoSlide, 2000);
+        }
+        
+        pagerList.click(function () {
+            clearInterval(timer);
+            let idx = $(this).index();
+            pagination(idx);
+            slideList.addClass('on');
+            moveSlide(idx + 1);
+            timer = setInterval(autoSlide, 2000);
+        });
+        
+        function pagination(cnt) {
+            pagerList.removeClass('active');
+            pagerList.eq(cnt).addClass('active');
+        }
+
+        function slide(btn) {
+            if (btn === 'prevBtn') {
+                num--;
+                if (num < 1) {
+                    num = slideListItem.length;
+                    slideList.removeClass('on');
+                    moveSlide(num + 1);
+                }
+            } else {
+                num++;
+                slideList.addClass('on');
+                if (num > slideListItem.length) {
+                    num = 1;
+                    slideList.removeClass('on');
+                    moveSlide(num - 1);
+                }
+            }
+            setTimeout(function () {
+                slideList.addClass('on');
+                moveSlide(num);
+            }, 100);
+        }
+
+        function moveSlide(cnt) {
+            let posX = cnt * slideListItemWidth * -1;
+            slideList.css({ left: posX + '%' });
+            return false;
+
+        }
+
+        let timer = setInterval(autoSlide, 2000);
+
+        function autoSlide() {
+            slide('nextBtn');
+            pagination(num - 1);
+        }
+
+    </script>
 </body>
 
 </html>
