@@ -117,24 +117,27 @@
             탭2 내용을 화면에 표시
 
             이벤트: click
-            메서드: index(), eq(), addClass(), removeClass(), ciblings()
+            메서드: classList.add(), classList.remove(),
             키워드: this
          */
-        const tabBtn = $('.tabBtns li');
-        const tabCont = $('#tabs > div');
+        const tabBtn = document.querySelectorAll('.tabBtns li');
+        const tabCont = document.querySelectorAll('#tabs > div');
 
-        // taBtn을 클릭하면 함수 실행
-        tabBtn.click(function(){
-            let idx = $(this).index();
-            // 모든 버튼의 on클래스 제거
-            tabBtn.removeClass('on');
-            // 클릭한 버튼만 on 클래스 추가, 형제들은 제거
-            $(this).addClass('on').siblings().removeClass('on');
+        for (let i = 0; i < tabBtn.length; i++) {
+        tabBtn[i].onclick = function(){
+            tabBtn[0].classList.remove('on');
+            tabBtn[1].classList.remove('on');
+            tabBtn[2].classList.remove('on');
+            tabBtn[3].classList.remove('on');
+            this.classList.add('on');
             
-            // idx번째에 해당하는 내용만 보이고. 형제들은 숨김. 
-            tabCont.eq(idx).addClass('on').siblings().removeClass('on');
-        });
-    
+            tabCont[0].classList.remove('on');
+            tabCont[1].classList.remove('on');
+            tabCont[2].classList.remove('on');
+            tabCont[3].classList.remove('on');
+            tabCont[i].classList.add('on');
+            };
+        }
   </script>
     
 </body>
