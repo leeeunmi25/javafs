@@ -37,16 +37,17 @@
     }
 
     img {
-        vertical-align: middle;
+        vertical-align: top;
+        width: 100%
     }
 
     #act {
         position: absolute;
         width: 1460px;
         height: 660px;
-        top: 150px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50% -50%);
     }
 
     /* thumbnail image */
@@ -63,6 +64,9 @@
         border-bottom: 1px solid #eee;
         font-size: 1.8rem;
     }
+    .thumb li img {
+        width: 110px;
+    }
 
     .thumb li.active {
         border-bottom: 2px solid #ffa500;
@@ -74,7 +78,7 @@
         margin-left: 20px;
     }
 
-    /* 이미지 애니메이션 */
+    /* 큰이미지 */
     .big {
         position: absolute;
         left: 400px;
@@ -148,6 +152,7 @@
 <body>
     <div id="act" class="section">
         <!-- 썸네일 이미지와 텍스트 -->
+        <!-- <110*110> -->
         <ul class="thumb">
             <li class="active">
                 <img src="images/big1.png" alt="메이크업 유어 라이프">
@@ -171,7 +176,8 @@
             </li>
         </ul>
 
-        <!-- 가운데 큰 이미지 -->
+        <!-- 가운데 큰 이미지 --> 
+        <!-- <580*660> -->
         <ul class="big">
             <li><img src="images/somebu1.png" alt="메이크업 유어 라이프"></li>
             <li><img src="images/somebu2.png" alt="핑크리본 캠페인"></li>
