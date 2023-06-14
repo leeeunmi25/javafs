@@ -103,48 +103,47 @@
         </div>
 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
-        let btn1 = $("button:nth-of-type(1)");
-        let btn2 = $("button:nth-of-type(2)");
-        let btn3 = $("button:nth-of-type(3)");
-        let btn4 = $("button:nth-of-type(4)");
-        let no1 = $(".name1 span");
-        let no2 = $(".name2 span");
-        let no3 = $(".name3 span");
+        let btn1 = document.querySelector("button:nth-of-type(1)");
+        let btn2 = document.querySelector("button:nth-of-type(2)");
+        let btn3 = document.querySelector("button:nth-of-type(3)");
+        let btn4 = document.querySelector("button:nth-of-type(4)");
+        let no1 = document.querySelector(".name1 span");
+        let no2 = document.querySelector(".name2 span");
+        let no3 = document.querySelector(".name3 span");
 
-        btn1.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src", "images/car2.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car3.jpg");
-            no1.html("그렌저");
-            no2.html("싼타페");
-            no3.html("투싼");
-        });
-        btn2.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src","images/car2.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car3.jpg");
-            no1.html("그렌저");
-            no2.html("싼타페");
-            no3.html("투싼");
-        });
-        btn3.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src", "images/car3.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car2.jpg");
-            no1.html("그렌저");
-            no2.html("투싼");
-            no3.html("싼타페");
-        });
-        btn4.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src", "images/car2.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car3.jpg");
-            no1.html("그렌저");
-            no2.html("싼타페");
-            no3.html("투싼");
-        });
+        btn1.onclick = function () {
+            document.querySelector(".no1 img").setAttribute("src", "images/car1.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(1)").setAttribute("src", "images/car2.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(2)").setAttribute("src", "images/car3.jpg");
+            no1.innerHTML = "그렌저";
+            no2.innerHTML = "싼타페";
+            no3.innerHTML = "투싼";
+        }
+        btn2.onclick = function () {
+            document.querySelector(".no1 img").setAttribute("src", "images/car1.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(1)").setAttribute("src","images/car2.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(2)").setAttribute("src", "images/car3.jpg");
+            no1.innerHTML = "그렌저";
+            no2.innerHTML = "싼타페";
+            no3.innerHTML = "투싼";
+        }
+        btn3.onclick = function () {
+            document.querySelector(".no1 img").setAttribute("src", "images/car1.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(1)").setAttribute("src", "images/car3.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(2)").setAttribute("src", "images/car2.jpg");
+            no1.innerHTML = "그렌저";
+            no2.innerHTML = "투싼";
+            no3.innerHTML = "싼타페";
+        }
+        btn4.onclick = function () {
+            document.querySelector(".no1 img").setAttribute("src", "images/car1.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(1)").setAttribute("src", "images/car2.jpg");
+            document.querySelector(".img_wrap img:nth-of-type(2)").setAttribute("src", "images/car3.jpg");
+            no1.innerHTML = "그렌저";
+            no2.innerHTML = "싼타페";
+            no3.innerHTML = "투싼";
+        }
 
     </script>
 </body>

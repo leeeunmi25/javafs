@@ -33,6 +33,7 @@
             width: 432px;
             height: 576px;
         }
+
         .no1 img {
             width: 100%;
             height: auto;
@@ -65,6 +66,7 @@
             display: flex;
             justify-content: space-around;
         }
+
         .img_wrap img {
             width: 224px;
         }
@@ -105,47 +107,39 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
-        let btn1 = $("button:nth-of-type(1)");
-        let btn2 = $("button:nth-of-type(2)");
-        let btn3 = $("button:nth-of-type(3)");
-        let btn4 = $("button:nth-of-type(4)");
-        let no1 = $(".name1 span");
-        let no2 = $(".name2 span");
-        let no3 = $(".name3 span");
+        const btn = $(".btn_wrap button"),
+            no1 = $(".name1 span"),
+            no2 = $(".name2 span"),
+            no3 = $(".name3 span"),
+            topImg1 = $(".no1 img"),
+            topImg2 = $(".img_wrap img:nth-of-type(1)"),
+            topImg3 = $(".img_wrap img:nth-of-type(2)");
 
-        btn1.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src", "images/car2.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car3.jpg");
+        btn.click(function () {
+            let idx = $(this).index();
+            if (idx === 2) {
+                tab3()
+            } else {
+                tabs()
+            }
+        });
+
+        function tabs() {
+            topImg1.attr("src", "images/car1.jpg");
+            topImg2.attr("src", "images/car2.jpg");
+            topImg3.attr("src", "images/car3.jpg");
             no1.html("그렌저");
             no2.html("싼타페");
             no3.html("투싼");
-        });
-        btn2.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src","images/car2.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car3.jpg");
-            no1.html("그렌저");
-            no2.html("싼타페");
-            no3.html("투싼");
-        });
-        btn3.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src", "images/car3.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car2.jpg");
+        }
+        function tab3() {
+            topImg1.attr("src", "images/car1.jpg");
+            topImg2.attr("src", "images/car3.jpg");
+            topImg3.attr("src", "images/car2.jpg");
             no1.html("그렌저");
             no2.html("투싼");
             no3.html("싼타페");
-        });
-        btn4.click(function () {
-            $(".no1 img").attr("src", "images/car1.jpg");
-            $(".img_wrap img:nth-of-type(1)").attr("src", "images/car2.jpg");
-            $(".img_wrap img:nth-of-type(2)").attr("src", "images/car3.jpg");
-            no1.html("그렌저");
-            no2.html("싼타페");
-            no3.html("투싼");
-        });
-
+        }
     </script>
 </body>
 
