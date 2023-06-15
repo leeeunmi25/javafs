@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 클래스 이름은 정해져있는 것임으로 바꾸면 안됌! -->
+    <div class="jumbotron text-center">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p>
+    </div>
+
+    <!-- container(max:1200), container-fluid(가로100%) -->
+    <!-- color : .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light. -->
+    <section class="container bg-primary text-white">
+        <section class="row">
+            <!-- col-*-* sm:576 md:768 lg:992 xl:1200 -->
+            <!-- 첫번째 *: sm, md, lg, xl -->
+            <!-- 두번째 *: 1~12 / 총 합이 12개가 넘으면 안됌 -->
+            <div class="col-sm-6 col-md">
+                <h3>Column 1</h3>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="col-sm-6 col-md">
+                <h3>Column 2</h3>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="col-sm-6 col-md">
+                <h3>Column 3</h3>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="col-sm-6 col-md">
+                <h3>Column 3</h3>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+
+            <!-- 2개의 그리드 -->
+            <!-- <div class="col-sm-6 ">
+                <h3>Column 1</h3>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Column 2</h3>
+                <p>Lorem ipsum dolor..</p>
+            </div> -->
+        </section>
+    </section>
+</body>
+
+</html>
