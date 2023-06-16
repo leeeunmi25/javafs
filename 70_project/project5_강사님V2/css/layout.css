@@ -1,4 +1,4 @@
-@charset 'utf-8';
+@charset "utf-8";
 
 /* 커스텀 스크롤바: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
 body {
@@ -25,7 +25,7 @@ body {
     background: #FEC401;
 }
 
-#footer {
+#fullpage #footer  {
+    height: auto;
     background: #111;
-    padding: 100px 0;
 }

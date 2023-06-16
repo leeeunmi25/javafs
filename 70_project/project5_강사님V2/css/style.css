@@ -18,11 +18,11 @@
     width: 100%;
     top: 0;
     background: transparent;
+    /* background: rgb(255, 179, 0); */
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
-    /* background: rgb(255, 179, 0); */
-    transition: .5s .5s;
+    transition: .5s .3s;
 }
 
 /* 로고 */
@@ -327,7 +327,6 @@
     left: 980px;
     width: 410px;
     margin-left: 70px;
-    /* text-align: left; */
 }
 
 #section3 .txt li {
@@ -444,6 +443,7 @@
     animation-name: btmMotion;
 }
 
+/* 글자가 비어보이지 않게 계속 돌아가게 함 */
 @keyframes topMotion {
     0% {
         left: -105.5%;
@@ -610,36 +610,6 @@
     text-align: right;
 }
 
-/* 푸터 */
-#footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 70px 80px 70px 330px;
-    background: #2c2d2f url(images/bose_logo.jpg) no-repeat 80px 50%/10%;
-    color: rgba(255, 255, 255, 0.3);
-}
-
-#footer .bnb ul {
-    display: flex;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-#footer .bnb ul a {
-    color: #fff;
-}
-
-#footer .bnb li:not(:last-of-type)::after {
-    content: '|';
-    margin: 0 16px;
-    color: rgba(255, 255, 255, 0.2);
-}
-
-#footer .copy {
-    margin-top: 30px;
-}
-
 /* 패밀리사이트 */
 #footer .fs {
     position: relative;
@@ -680,4 +650,36 @@
     color: #b9b9b9;
     line-height: 2;
 }
+
+/* 푸터 */
+#footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 80px 70px 330px;
+    background: #2c2d2f url(images/bose_logo.jpg) no-repeat 80px 50%/10%;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#footer .bnb ul {
+    display: flex;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#footer .bnb ul a {
+    color: #fff;
+}
+
+#footer .bnb li:not(:last-of-type)::after {
+    content: '|';
+    margin: 0 16px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+#footer .copy {
+    margin-top: 30px;
+}
+
+
 
