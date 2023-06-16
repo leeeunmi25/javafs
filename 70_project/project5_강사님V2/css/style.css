@@ -18,10 +18,11 @@
     width: 100%;
     top: 0;
     background: transparent;
-    /* background: rgb(255, 179, 0); */
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
+    /* background: rgb(255, 179, 0); */
+    transition: .5s .5s;
 }
 
 /* 로고 */

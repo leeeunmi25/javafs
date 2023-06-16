@@ -1,5 +1,9 @@
 // 문서가 준비되면 함수 실행
 $(function () {
+
+    // 헤더
+    const headerBg = $('#header');
+
     // 내비게이션바
     $('.main > li > a').mouseenter(function (e) {
         e.preventDefault // a태그 기본 이벤트 제거
@@ -98,7 +102,7 @@ $(function () {
     // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
     $(window).scroll(function () {
         // 스크롤바를 스크롤한 양을 st에 저장
-        let st = document.documentElement.scrollTop;
+        let st = $(this).scrollTop;
         let stVal = 600;
         console.log(st);
 
@@ -108,6 +112,7 @@ $(function () {
             btn.css({ opacity: 1 })
             txt1.css({ left: 360 });
             txt2.css({ left: 360 });
+            
         } else {
             btn.css({ opacity: 0 });
             txt1.css({ left: -800 });
@@ -191,7 +196,7 @@ $(function () {
 
 
     // 풀페이지 레이아웃
-    /* $('.section').mousewheel(function (e, delta) {
+    $('.section').mousewheel(function (e, delta) {
         let prev;
         if (delta > 0) {
             prev = $(this).prev().offset().top;
@@ -202,33 +207,6 @@ $(function () {
             console.log(next);
             $('html').stop().animate({ scrollTop: next }, 400, 'easeOutExpo');
         }
-    }); */
+    });
 
-    // 풀페이지 레이아웃
-    window.onload = function () {
-        let elNavi = document.querySelector("#fullpage");
-        let aElSection = document.querySelectorAll(".section");
-        let curSIdx = 0;
-
-        let wheelTimer;
-        window.onwheel = function (e) {
-            clearTimeout(wheelTimer);
-            wheelTimer = setTimeout(function () {
-                if (e.deltaY > 0) {
-                    doScroll(++curSIdx);
-                } else { doScroll(--curSIdx) };
-            }, 200);
-        };
-
-        function doScroll(sidx) {
-            sidx = sidx < 0 ? 0 : sidx;
-            sidx = sidx > aElSection.length - 1 ? aElSection.length - 1 : sidx;
-
-            curSIdx = sidx;
-
-            aElSection[curSIdx].scrollIntoView({
-                block: "start", inline: "start", behavior: "smooth"
-            });
-        }
-    };
 });
