@@ -2,9 +2,9 @@
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron&family=Play&display=swap');
 @import url('http://fonts.cdnfonts.com/css/trajan-pro');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
-
 @import url('typo.css');
 @import url('nav.css');
 @import url('layout.css');
@@ -607,4 +607,75 @@
     right: 37px;
     top: 230px;
     text-align: right;
+}
+
+/* 푸터 */
+#footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 80px 70px 330px;
+    background: #2c2d2f url(images/bose_logo.jpg) no-repeat 80px 50%/10%;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#footer .bnb ul {
+    display: flex;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#footer .bnb ul a {
+    color: #fff;
+}
+
+#footer .bnb li:not(:last-of-type)::after {
+    content: '|';
+    margin: 0 16px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+#footer .copy {
+    margin-top: 30px;
+}
+
+/* 패밀리사이트 */
+#footer .fs {
+    position: relative;
+    top: 80px;
+    width: 240px;
+    height: 50px;
+}
+
+#footer .fs .fsBtn {
+    display: inline-block;
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #494949;
+    border: 1px solid #676767;
+    color: #b9b9b9;
+    font-weight: 700;
+}
+
+#footer .fs i {
+    margin-left: 40px;
+}
+
+#footer .fs ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    background: #494949;
+    border: 1px solid #676767;
+    border-bottom: none;
+    padding: 15px 40px;
+}
+
+#footer .fs ul a {
+    color: #b9b9b9;
+    line-height: 2;
 }

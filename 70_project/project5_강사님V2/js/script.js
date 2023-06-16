@@ -178,6 +178,54 @@ $(function () {
             $('html').stop().animate({ scrollTop: next }, 400, 'easeOutExpo');
         }
     }); */
+
+    // 패밀리사이트
+    const fs = $('.fs'),
+            fsLst = fs.find('ul'),
+            fsIcon = fs.find('i'),
+            fsTxt = fs.find('span'),
+            fsBtn = fs.find('.fsBtn');
+
+        let state = 0;
+        // .fsBtn을 클릭하면 함수 실행
+        fsBtn.click(function () {
+            // $('.fs ul').toggle();
+
+            /* 
+                효과 메서드
+                hide()
+                show()
+                toggle()
+                fadeIn()
+                fadeOut()
+                fadeTo()
+                fadeToggle()
+                slideDown()
+                slideUp()
+                slideToggle()
+                animate()
+                stop()
+            
+                토글(toggle)이란? 두 가지 상태를 번갈아 반복
+            */
+            fsLst.slideToggle();
+
+            /* 삼각형 모양 바꾸기 */
+            if (state == 0) {
+                // $('선택자').메서드();
+                // $('선택자').attr(속성, 값); ~ 하나의 속성만
+                // $('선택자').attr({HTML속성: 값, 속성: 값, ...}); ~ 여러 개의 속성
+                // $('선택자').css({CSS속성: 값, 속성: 값, ...}); ~ 여러 개의 속성
+                faIcon.attr({ class: 'fa-solid fa-minus' });
+                faTxt.text('관련 사이트 닫기');
+                state = 1;
+            } else {
+                $('.fs i').attr({ class: 'fa-solid fa-plus' });
+                faTxt.text('관련 사이트 열기');
+                state = 0;
+            }
+        });
+
     // 풀페이지 레이아웃
     window.onload = function () {
         let elNavi = document.querySelector("#fullpage");
