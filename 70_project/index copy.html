@@ -6,13 +6,13 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>이은미</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/style_time.css">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
-     <script src="https://kit.fontawesome.com/3396824a06.js" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-     <script src="js/clock.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</head>
+
 </head>
 
 <body>
@@ -29,24 +29,15 @@
           </nav>
      </header>
 
-      <!-- 섹션1 -->
-     <section id="home" class="container-fluid">
+     <!-- 섹션1 -->
+     <section id="home">
           <!-- 로고 -->
           <!-- <h1 class="logo"><a href="#">LEE EUN MI</a></h1> -->
           <!-- <img src="images/my4.jpg" alt="내 사진"> -->
-          <div class="clock">
-               <span class="yy">년</span>
-               <span class="mo">월</span>
-               <span class="dd">일</span>
-               <span class="we">요일</span>
-               <span class="hh">시</span>
-               <span class="mm">분</span>
-               <span class="ss">초</span>
-           </div>
      </section>
 
      <!-- 섹션2 -->
-     <section id="about" class="container">
+     <section id="about">
           <h2>나의 소개</h2>
           <p><em>I love coding</em></p>
           <div class="container">
@@ -88,13 +79,13 @@
                </div> <!--//skill-->
           </div> <!-- container -->
      </section>
-
      <div id="counter" class="container-fluid">
+         <!-- row 를 display: flex -->
          <ul class="row">
-             <li class="col-sm6 col-md"><span>9+</span>Planning</li>
-             <li class="col-sm6 col-md"><span>4+</span>Frontend Projects Done</li>
-             <li class="col-sm6 col-md"><span>3+</span>Backend Projects Done</li>
-             <li class="col-sm6 col-md"><span>2+</span>National Technical Qualification</li>
+             <li class="col-sm-6 col-md"><span>9+</span>Page Count</li>
+             <li class="col-sm-6 col-md"><span>4+</span>Frontend Projects Done</li>
+             <li class="col-sm-6 col-md"><span>3</span>Backend Projects Done</li>
+             <li class="col-sm-6 col-md"><span>2</span>National Technical Qualification</li>
          </ul>
      </div>
 
@@ -114,9 +105,7 @@
                     <li><img src="images/ima7.png" alt="포트폴리오7"></li>
                     <li><img src="images/ima8.png" alt="포트폴리오8"></li>
                </ul>
-               <div class="moreBtn"><a href="#">LOAD MORE</a></div>
-
-             
+               <div class="moreBtn"><button type="button" class="btn btn-outline-info">LOAD MORE</button></div>
           </div> <!-- //.contianer -->
      </section>
 
