@@ -147,7 +147,7 @@ section h2 + p {
 #counter ul {
     align-items: center;
 }
-.counter span {
+#counter span {
     display: block;
 }
 /* section3 */
