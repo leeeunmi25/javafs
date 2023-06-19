@@ -1,86 +1,88 @@
 /* 
-    제이쿼리
-    $(funtion(){});
-    자바스크립트
-    document.addEventListener('DOMContentLoaded', function (){});
+문서의 DOM내용을 읽은 후 함수를 실행
+제이쿼리
+$(function(){});
+
+자바스크립트
+document.addEventListener('DOMContentLoaded', function(){});
 */
+document.addEventListener('DOMContentLoaded', function(){
 
-// 문서의 Dom내용을 전부 읽은 후 함수를 실행시킨다
-document.addEventListener('DOMContentLoaded', function () {
-
-    const d_yy = document.querySelector('.yy'),
-        d_mo = document.querySelector('.mo'),
-        d_dd = document.querySelector('.dd'),
-        d_we = document.querySelector('.we'),
-        d_hh = document.querySelector('.hh'),
-        d_mm = document.querySelector('.mm'),
-        d_ss = document.querySelector('.ss');
-
-    setInterval(timer, 1000);
-
+    //변수
+    const yArea = document.querySelector('.yy'),
+    oArea = document.querySelector('.mo'),
+    dArea = document.querySelector('.dd'),
+    wArea = document.querySelector('.we'),
+    hArea = document.querySelector('.hh'),
+    mArea = document.querySelector('.mm'),
+    sArea = document.querySelector('.ss');
+    
+    setInterval (timer, 1000);
+    
     function timer() {
-        // Tue May 23 2023 16:17:30 GMT+0900 (한국 표준시)
+
+        //날짜와 시간 d 객체 생성
         let d = new Date();
-        // 년(yyyy)
-        d_yy.innerHTML = d.getFullYear() + '년';
-        // 월(mm) : 0(1월) ~ 11(12월)
-        d_mo.innerHTML = d.getMonth() + 1 + '월';
-        // 일(dd)
-        d_dd.innerHTML = d.getDate() + '일';
+        //년(yyyy)
+        yArea.innerHTML = d.getFullYear() + '년';
+        //월(mm): 0(1월) ~ 11(12월)
+        oArea.innerHTML = d.getMonth() + 1 +'월';
+        //일(dd)
+        dArea.innerHTML = d.getDate() + '일';
+        //요일(week): 0(일) ~ 6(토)
+        //if를 사용하여 요일을 일요일 ~ 토요일까지 문자열로 표시하기
 
-        // 요일(week) : 0(일) ~ 6(토)
-        // document.write(d.getDay(),'<br>')
-        //요일을 일요일~토요일까지 문자열로 표시하기
         let week = d.getDay();
+
+
         if (week === 0) {
-            week = '일요일<br>';
+            week = '일';
         } else if (week === 1) {
-            week = '월요일<br>';
+            week = '월';
         } else if (week === 2) {
-            week = '화요일<br>';
+            week = '화';
         } else if (week === 3) {
-            week = '수요일<br>';
+            week = '수';
         } else if (week === 4) {
-            week = '목요일<br>';
+            week = '목';
         } else if (week === 5) {
-            week = '금요일<br>';
+            week = '금';
         } else {
-            week = '토요일<br>';
+            week = '토';
         }
-        d_we.innerHTML = week;
+        wArea.innerHTML = week + '요일';
 
-        // 시(hh)
-        // document.write(d.getHours(),'시<br>')
-        // 오전과 오후를 구분하여 12시간제로 표시하기
-        let hours = d.getHours();
-        if (hours < 12) {
-            hh = '오전 ' + hours + '시';
-        } else if (hours === 12) {
-            hh = '오후 ' + (hours) + '시';
-        } else if (hours === 0) {
-            hh = '오전 ' + (hours + 12) + '시';
+        //시(hh)
+        let hh = d.getHours();
+        if (hh >= 13) {
+            hh = 'PM' + (hh - 12);
+        } else if (hh >= 10) {
+            hh = 'AM' + hh;
+        } else {
+            hh = 'AM 0' + hh;
         }
-        else {
-            hh = '오후 ' + (hours - 12) + '시';
-        }
-        d_hh.innerHTML = hh;
+        hArea.innerHTML = hh + '시';
 
-        // 분(mm)
-        // document.write(d.getMinutes(), '분<br>');
-        // 01~09~10~60
+
+        //분(mm)
+        //00 ~ 09, 10 ~ 60
         let mm = d.getMinutes();
         if (mm < 10) {
             mm = '0' + mm;
         }
-        d_mm.innerHTML = mm + '분';
+        mArea.innerHTML = mm +'분';
 
-        // 초(ss)
-        // document.write(d.getSeconds(), '초<br>')
-        // 01~09 ~10~60
+        //초(ss)
+        // 01 ~ 09 ~ 10 ~ 60
+
         let ss = d.getSeconds();
         if (ss < 10) {
             ss = '0' + ss;
         }
-        d_ss.innerHTML = ss + '초';
-    };
-})
+        sArea.innerHTML = ss + '초';
+        d.getTime()
+
+        var d2 = new Date(2020, 1, 20);
+        console.log(d2);
+    }
+});

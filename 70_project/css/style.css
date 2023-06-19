@@ -35,6 +35,7 @@ header i {
     height: 1050px;
     background: url(../images/my4.jpg) no-repeat 50% 10%/contain fixed;
 }
+
 /* 요소를 부모 안에 정가운데 배치 */
 .logo {
     position: absolute;
@@ -48,8 +49,8 @@ header i {
 
 /* section2~4 공통 */
 .container {
-    width: 960px;
-    margin: 0 auto;
+    /* width: 960px;
+    margin: 0 auto;  */
     padding-bottom:  81px;
 }
 section h2 {
@@ -73,31 +74,29 @@ section h2 + p {
 }
 
 /* section2 */
-.profile {
+/* .profile {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+} */
 .profile p {
     text-align: justify;
     word-break: break-all; /* 영어 사용시 */
 }
 .profile p:first-of-type{
-    flex: 100%;
+    /* flex: 100%; */
     margin-bottom: 54px;
 } 
 .profiles div {
-    flex: 0 0 48%;
+    /* flex: 0 0 48%; */
     text-align: center;
 }
-.profile p:last-of-type{
+/* .profile p:last-of-type{
     flex: 0 0 48%;
-} 
-.photo {
+}  */
+/* .photo {
     width: 425px;
-    /* height: 290px; 
-    overflow: hidden; */
-}
+} */
 .photo img {
     margin-top: 54px;
 }
@@ -109,14 +108,14 @@ section h2 + p {
     margin: 54px 0;
     text-align: center;
 }
-.progress.lst > span {
+/* .progress .lst > span {
     display: inline-block;
     margin: 16px;
 }
 .progress .lst div {
-    /* height: 34px; */
+    /* height: 34px;
     background: #eee;
-}
+} */
 .progress .lst div span {
     display: block;
     height: 34px;
@@ -131,22 +130,39 @@ section h2 + p {
 }
 .progress .lst:nth-of-type(3) div span {
     width: 85%;
+} */
+
+#skill .progress {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 16px;
 }
-.counter {
+
+#skill .progress div {
+    width: 0%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #04AA6D;
+    text-align: center;
+    color: white;
+}
+
+/* 카운터 */
+#counter ul{
     /* display: flex;
     justify-content: space-around; */
+    /* height: 132px; */
     align-items: center;
     text-align: center;
-    height: 132px;
     color:#fff;
     background: #616161;
 }
 #counter .row {
     display: flex;
 }
-#counter ul {
+/* #counter ul {
     align-items: center;
-}
+} */
 #counter span {
     display: block;
 }
