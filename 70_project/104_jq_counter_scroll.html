@@ -10,7 +10,6 @@
         div {
             height: 100vh;
         }
-
     </style>
 </head>
 
@@ -27,17 +26,18 @@
         const elem = $('#counter span');
         $(window).scroll(function(){
             // 윈도우 스크롤이 150이상이면
-            if($(this).scrollTop() >= 150){
+            console.log($(this).scrollTop());
+            if ($(this).scrollTop() >= 150) {
                 move();
             }
         });
 
         function move() {
-            var num = 0;
+            let num = 0;
             // counter 함수를 0.1초마다 실행
             const timer = setInterval(counter, 100);
             function counter() {
-                if (num >= 5) {
+                if (num >= 16) {
                     clearInterval(timer);
                 } else {
                     num++;
@@ -45,13 +45,15 @@
                 }
             }
         }
+    </script>
 
-        /* const elem = $('#counter span');
+    <!-- <script>
+          const elem = $('#counter span');
         $(window).scroll(function (){
-            consle.log('이벤트발생')
+            console.log('이벤트발생');
+            // let st = $(this).scrollTop(); 
             move();
         });
-        // let st = $(this).scrollTop; 
 
         function move() {
             let num = 0;
@@ -68,8 +70,55 @@
                 }
             }
         }
-        */
-    </script>
+    </script> -->
+
+    <!-- <script>
+        const elem = document.querySelector('#counter span');
+
+        window.onscroll = function () {
+            let scr_e = document.documentElement.scrollTop;
+            console.log(scr_e);
+            if (scr_e >= 150) {
+                move();
+            }
+        }
+
+        function move() {
+            let i = 0;
+            setInterval(function () {
+                if (i > 55) {
+                    return;
+                }
+                elem.innerHTML = i + "+";
+                i++
+            }, 100)
+
+            //  ^ 아래 함수를 묶음
+
+            // setTimeout(function () {
+            //     elem.innerHTML = 1 + "%";
+            // }, 100);
+            // setTimeout(function () {
+            //     elem.innerHTML = 2 + "%";
+            // }, 200);
+            // setTimeout(function () {
+            //     elem.innerHTML = 3 + "%";
+            // }, 300);
+            // setTimeout(function () {
+            //     elem.innerHTML = 4 + "%";
+            // }, 400);
+            // setTimeout(function () {
+            //     elem.innerHTML = 5 + "%";
+            // }, 500);
+            // setTimeout(function () {
+            //     elem.innerHTML = 6 + "%";
+            // }, 500);
+            // setTimeout(function () {
+            //     elem.innerHTML = 55 + "%";
+            // }, 500);
+
+        }
+    </script> -->
 </body>
 
 </html>

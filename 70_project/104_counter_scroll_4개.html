@@ -8,12 +8,12 @@
     <title>Counter</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin:0;
+            padding:0;
             box-sizing: border-box;
         }
         li {
-            list-style: none;
+            list-style:none;
         }
         div {
             height: 100vh;
@@ -41,46 +41,47 @@
     <script>
         const elem = $('#counter span');
         let state = 0;
-
+        
         $(window).scroll(function(){
             // 윈도우 스크롤이 150이상이면
-            console.log(($this).scrolltop());
-            if($(this).scrollTop() >= 150) {
-               if(state === 0) {
-                   move(0, 32, 100);
-                   move(1, 8, 200);
-                   move(2, 4, 300);
-                   move(3, 3, 400);
-                   state = 1;
-               } else {
-                state = 0;
-                return;
-               }
+            console.log($(this).scrollTop());
+            if ($(this).scrollTop() >= 150) {
+                if (state === 0) {
+                    move(0, 32, 100);
+                    move(1, 8, 200);
+                    move(2, 4, 300);
+                    move(3, 3, 400);
+                    state = 1;
+                } else {
+                    return;
+                }
             } else {
-
+                state = 0;
             }
         });
 
-        function move(idx, manCnt, mSec) {
-            var num = 0;
+        function move(idx, maxCnt, mSec) {
+            let num = 0;
             // counter 함수를 0.1초마다 실행
             const timer = setInterval(counter, mSec);
             function counter() {
-                if (num >= 16) {
+                if (num >= maxCnt) {
                     clearInterval(timer);
                 } else {
                     num++;
-                    elem.text(`${num}+`);
+                    elem.eq(idx).text(`${num}+`);
                 }
             }
         }
+    </script>
 
-        /* const elem = $('#counter span');
+    <!-- <script>
+          const elem = $('#counter span');
         $(window).scroll(function (){
-            consle.log('이벤트발생')
+            console.log('이벤트발생');
+            // let st = $(this).scrollTop(); 
             move();
         });
-        // let st = $(this).scrollTop; 
 
         function move() {
             let num = 0;
@@ -97,8 +98,43 @@
                 }
             }
         }
-        */
-    </script>
+    </script> -->
+
+    <!-- <script>
+        const elem = document.querySelector('#counter span');
+        // 추가된 점 = j
+        // move() 함수가 실행되면 j가 1이 됨. 중복 실행 막음.
+        // span이 화면을 벗어나면, j = 0; 초기화. 재실행 가능
+        let j = 0;
+        
+        window.onscroll = function () {
+            let scr_e = document.documentElement.scrollTop;
+            console.log(scr_e);
+            if (scr_e >= 150) {
+                if (j === 0) {
+                    move();
+                    j = 1;
+                } else {
+                    return;
+                }
+            } else {
+                j = 0;
+            }
+        };
+
+        function move() {
+            let i = 0;
+            setInterval(function () {
+                if (i > 55) {
+                    return;
+                }
+                elem.innerHTML = i + "+";
+                i++
+            }, 100)
+            // 재실행 방지 j
+            // j = 1;
+        }
+    </script> -->
 </body>
 
 </html>
