@@ -13,38 +13,49 @@
             top: 300px;
             width: 200px;
             height: 200px;
-            background: blue;
+            background: blue;           
         }
     </style>
 </head>
 
 <body>
     <button>버튼</button>
-    <span>offsetTop</span>
+    <span></span>
     <div></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
             요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
         */
-        /* 
-            버튼을 클릭하면 
-            div의 창으로 수직 위치를 span 요소에 표시하시오.
-            
-            이벤트: click
-            메서드: offset(), Test()
-            속성: top
-        */
-        const btn = $('button');
-        const val = $('span');
-        const box = $('div');
 
-        // btn을 클릭하면 함수 실행
-        btn.click(function(){
-        // 박스의 창으로부터 수직위치
-           let ot = box.offset.Top;
-        // span 요소의 내용을 ot 지정
-            val.text(ot);
+        /* 
+        버튼을 클릭하면 span 요소에 div의 창으로 수직 위치를 표시하시오.
+        */
+       /* 
+       이벤트: click
+       메서드: offset(), text()
+       속성: top
+       */
+        /* const divTag = document.querySelector('div');
+
+        const ab =  divTag.offsetTop;
+        alert(ab); */
+        /*const btn = document.querySelector('button');
+        const blueBox = document.querySelector('div');
+        const num = document.querySelector('span');
+
+        btn.onclick = function (){
+            let ab = blueBox.offsetTop;
+            num.innerText = ab;
+        }; */
+
+        const btn = $('button');
+        const span = $('span');
+        const divTag = $('div');
+        
+        btn.click(function (){
+            let ab = divTag.offset().top;
+            span.text(ab);
         });
 
 

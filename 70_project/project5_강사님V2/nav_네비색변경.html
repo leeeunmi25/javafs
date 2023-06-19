@@ -7,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        /* reset */
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        /* 초기화 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
         * {
             margin: 0;
-            padding: 0;
+            border: 0;
             box-sizing: border-box;
         }
 
         html {
             font-size: 10px;
+            height: 2000px;
         }
 
         li {
             list-style: none;
+
         }
 
         a {
@@ -32,20 +34,18 @@
         body {
             font-family: 'Noto Sans KR', sans-serif;
             font-size: 1.5rem;
-            /* 스크롤바 생성하기 */
-            height: 2000;
         }
 
         /* 헤더 */
         #header {
             position: fixed;
-            width: 100px;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 60px;
             background: #fdd000;
-        }
+            transition: 0.5s 0.5s;
 
         /* 로고 */
         .logo {
@@ -53,16 +53,18 @@
             letter-spacing: .5rem;
             line-height: 1;
         }
+
         .logo b {
             display: block;
             font-weight: normal;
             font-size: 2.2rem;
         }
+
         .logo span {
             font-size: 1.6rem;
         }
 
-        /* GNB(Global Navigation Bar) */
+        /* GNB(Golobal Navigation Bar) */
         #gnb {
             z-index: 99999;
             position: relative;
@@ -72,13 +74,13 @@
         .nav_bg {
             position: absolute;
             left: 0;
-            /* 메인메뉴 높이만큼 내려준다. */
+
             top: 94px;
             width: 100%;
             background: rgba(0, 0, 0, 0.7);
         }
 
-        /* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다. */
+        /* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다   */
         /* 1depth: main */
         .main {
             display: flex;
@@ -86,9 +88,9 @@
         }
 
         .main>li {
-            /* 삼각형 모양 기준 */
             position: relative;
-            width: 160px;
+            width: 180px;
+
             /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
             text-align: center;
         }
@@ -111,16 +113,17 @@
             content: '';
             position: absolute;
             bottom: 30px;
-            left: 0px;
+            left: 0;
             transform: scaleX(0);
             transition: .3s;
             width: 100%;
-            border: 1px solid #705b00;
+            border: 1px solid #876f05;
             color: #ccc;
         }
 
         .main>li>a:hover:after {
             transform: scaleX(1);
+
         }
 
         /* 2depth: sub */
@@ -138,12 +141,12 @@
         }
 
         .sub a:hover {
-            color: #fdd000;
+            color: rgba(253, 207, 0, 0.5);
         }
 
-        /* 로그인/회원가입 */
         .member a {
-            margin:0 8px;
+            font-size: 1.3rem;
+            margin: 0 8px;
         }
     </style>
 </head>
@@ -153,6 +156,7 @@
         <h1 class="logo"><a href="#"><b>MEGACOFFEE</b><span>메가커피</span></a></h1>
         <!-- 서브메뉴의 배경 -->
         <div class="nav_bg"></div>
+        <!-- nav#gnb>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
         <nav id="gnb">
             <ul class="main">
                 <li><a href="#">메가스토리</a>
@@ -186,7 +190,6 @@
                 </li>
             </ul>
         </nav>
-
         <!-- 로그인/회원가입 -->
         <div class="member">
             <a href="#">로그인</a>
@@ -196,9 +199,19 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
+        const header = $('header');
+        $(window).scroll(function () {
+            let sT = $(this).scrollTop();
+            if (sT <= 0) {
+                header.css({ background: '#fdd000' });
+            } else {
+                header.css({ background: 'transparent' });
+            }
+        });
+
+
         // 내비게이션바
-        $('.main > li > a').mouseenter(function (e) {
-            // a태그 기본 이벤트 제거
+        $('.main >li > a').mouseenter(function (e) {
             e.preventDefault();
             $('.sub').stop().slideDown(400);
             $('.nav_bg').stop().animate({ height: 180 }, 400);
